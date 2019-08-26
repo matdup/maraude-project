@@ -6,10 +6,8 @@
     <title>TODO</title>
     <%= csrf_meta_tags %>
     <%= action_cable_meta_tag %>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <%= stylesheet_link_tag 'application', media: 'all' %>
-    <%= stylesheet_pack_tag 'application', media: 'all' %>
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> <!-- Uncomment if you import CSS in app/javascript/packs/application.js -->
+    <%#= stylesheet_pack_tag 'application', media: 'all' %><!-- Uncomment if you import CSS in app/javascript/packs/application.js -->
   </head>
   <body>
 
@@ -30,12 +28,7 @@
       </div>
     </div>
 
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-      AOS.init();
-    </script>
-
     <%= javascript_include_tag 'application' %>
-    <%#= javascript_pack_tag 'application' %>
+    <%= javascript_pack_tag 'application' %>
   </body>
 </html>

@@ -2,6 +2,7 @@ import mapboxgl from 'mapbox-gl';
 import MapboxGeocoder from '@mapbox/mapbox-gl-geocoder';
 
 const mapElement = document.getElementById('map');
+console.log(mapElement);
 
 const buildMap = () => {
   mapboxgl.accessToken = mapElement.dataset.mapboxApiKey;
@@ -26,6 +27,7 @@ const fitMapToMarkers = (map, markers) => {
 };
 
 const initMapbox = () => {
+  console.log('toto')
   if (mapElement) {
     const map = buildMap();
     const markers = JSON.parse(mapElement.dataset.markers);

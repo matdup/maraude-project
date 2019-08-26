@@ -1,6 +1,9 @@
-    <div class= "container">
+  <%= render 'shared/navbar' %>
+
+  <div class= "container">
+    <div>
       <div class="cards pt-5">
-        <% @maraudess.each do |maraude| %>
+        <% @maraudes.each do |maraude| %>
         <div class="card zoom" data-aos="zoom-in-up">
           <div class="card-picture" data-id="<%= maraude.id %>">
             <% if !maraude.photo.nil? %>
@@ -24,5 +27,15 @@
         </div>
         <% end %>
       </div>
+      <div>
+        <div
+          id="map"
+          style="width: 100%;
+          height: 600px;"
+          data-markers="<%= @markers.to_json %>"
+          data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
+        </div>
+      </div>
     </div>
+  </div>
 

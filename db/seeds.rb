@@ -8,134 +8,166 @@
 Booking.destroy_all
 Maraude.destroy_all
 User.destroy_all
-
+​
+puts "User 1 : Creation du compte de Marie-France !"
 User.create!(
-  user_name: "Mika le grand",
-  first_name: "Mike",
-  last_name: "Bout",
-  address: "16 rue villa gaudelet, Paris",
+  first_name: "Marie-France",
+  last_name: "Dupont",
+  address: "18 place de la madeleine, paris",
   photo: "",
-  email: "test1@test.com",
+  email: "marie-france.dupont@outlook.com",
   password: "123456",
-  admin: true
+  phone_number: "06 53 38 95 10"
   )
-
+puts "User 1 - Marie-France : compte créé !"
+​
+puts "User 2 : Creation du compte de Wadi !"
 User.create!(
-  user_name: "Wadi l'invaincu",
   first_name: "Wadi",
-  last_name: "Ben",
-  address: "14 rue crespin du gast, Paris",
+  last_name: "Ben Mimoun",
+  address: "13 rue de clichy, paris",
   photo: "",
-  email: "test2@test.com",
+  email: "wadi.benmimoun@outlook.com",
   password: "123456",
-  admin: true
+  phone_number: "06 53 38 95 10"
   )
-
+puts "User 2 - Wadi : compte créé !"
+​
+puts "User 3 : Creation du compte de Marie-France !"
 User.create!(
-  user_name: "Mathias le redouté",
-  first_name: "Matt",
-  last_name: "Duper",
-  address: "14 rue crespin du gast, Paris",
+  first_name: "Michael",
+  last_name: "Boutelet",
+  address: "16 rue villa gaudelet, paris",
   photo: "",
-  email: "test3@test.com",
+  email: "michael.boutelet@outlook.com",
   password: "123456",
-  admin: true
+  phone_number: "06 53 38 95 10"
   )
-
+puts "User 3 - Michael : compte créé !"
+​
+puts "User 4 : Creation du compte de Quentin !"
 User.create!(
-  user_name: "Qwent le vaillant",
   first_name: "Quentin",
   last_name: "Debray",
-  address: "16 rue villa gaudelet, Paris",
+  address: "18 place de clichy, paris",
   photo: "",
-  email: "test4@test.com",
+  email: "quentin.debray@outlook.com",
   password: "123456",
-  admin: true
+  phone_number: "06 53 38 95 10"
   )
-
+puts "User 4 - Quentin : compte créé !"
+​
+puts "User 5 : Creation du compte de Mathieu !"
 User.create!(
-  user_name: "Dania, princesse de bagdad",
-  first_name: "Dania",
-  last_name: "Aflik",
-  address: "16 rue villa gaudelet, Paris",
+  first_name: "Mathieu",
+  last_name: "Dupré",
+  address: "35 rue crespin du gasp",
   photo: "",
-  email: "test5@test.com",
+  email: "mathieu.dupré@outlook.com",
   password: "123456",
-  admin: true
+  phone_number: "06 53 38 95 10"
   )
+puts "User 5 - Mathieu : compte créé !"
+​
+​
+puts "User 6 : Creation du compte de Germain !"
+User.create!(
+  first_name: "Germain",
+  last_name: "Loret",
+  address: "10 boulevard brune, paris",
+  photo: "",
+  email: "germain.loret@outlook.com",
+  password: "123456",
+  phone_number: "06 53 38 95 10"
+  )
+puts "User 6 - Germain : compte créé !"
+​
+puts "User 7 : Creation du compte d'Edward !"
+User.create!(
+  first_name: "Edward",
+  last_name: "shults",
+  address: "16 rue villa gaudelet, paris",
+  photo: "",
+  email: "edward.shults@outlook.com",
+  password: "123456",
+  phone_number: "06 53 38 95 10"
+  )
+puts "User 7 - Edward : compte créé !"
+​
+puts "User 8 - Asso Croix Rouge : compte créé !"
+User.create!(
+  first_name: "La Croix",
+  last_name: "Rouge",
+  address: "91 avenue de la république, paris",
+  photo: "https://www.francebenevolat.org/sites/default/files/thumbnails/t_5b738cd1a435e429923841.jpg",
+  email: "la.croix.rouge@outlook.com",
+  password: "123456",
+  phone_number: "06 53 38 95 10"
+  )
+puts "User 8 - Asso Croix Rougee : compte créé !"
 
+puts "User 9 - Asso Emmaus : compte créé !"
+User.create!(
+  first_name: "Emma",
+  last_name: "Huss",
+  address: "7 rue jacques louvel tessier, paris",
+  photo: "https://www.lamanchelibre.fr/photos/maxi/119363.jpg",
+  email: "emma.huss@outlook.com",
+  password: "123456",
+  phone_number: "06 53 38 95 10"
+  )
+puts "User 9 - Asso Emmaus : compte créé !"
+
+puts "User 10 - Asso Robin des Rues : compte créé !"
+User.create!(
+  first_name: "Robin",
+  last_name: "des Rues",
+  address: "9 Rue Arthur Groussier, paris",
+  photo: "https://pbs.twimg.com/profile_images/854972620462317568/PvvjvVXo.jpg",
+  email: "robin.desrues@outlook.com",
+  password: "123456",
+  phone_number: "06 53 38 95 10"
+  )
+puts "User 10 - Asso Robin des Ruese : compte créé !"
+
+puts "User 11 - Asso Abbé Pierre : compte créé !"
+User.create!(
+  first_name: "Abbé",
+  last_name: "Pierre",
+  address: "78-80 Rue de la Réunion, paris",
+  photo: "https://www.tousbenevoles.org/images/association/1565005876.png",
+  email: "abbe.pierre@outlook.com",
+  password: "123456",
+  phone_number: "06 53 38 95 10"
+  )
+puts "User 11 - Asso Abbé Pierre : compte créé !"
+
+puts "User 12 - Asso Action Sociale : compte créé !"
+User.create!(
+  first_name: "Action",
+  last_name: "Sociale",
+  address: "43-45 Boulevard de Charonne, paris",
+  photo: "http://jamaity.org/wp-content/uploads/2014/05/10513362_701072216606508_1489077459206566147_n-500x500.jpg",
+  email: "action.sociale@outlook.com",
+  password: "123456",
+  phone_number: "06 53 38 95 10"
+  )
+puts "User 12 - Asso Action Sociale : compte créé !"
+
+​
+puts "Maraude 1 - Creation maraude"
 a = Maraude.new(
-  title: "Arène du bout de la rue",
-  address: "Rue du Bon-Secours, Brussel",
-  description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore ",
-  photo: "https://images.unsplash.com/photo-1495555687398-3f50d6e79e1e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80",
+  title: "La maraude du bonheur",
+  address: "",
+  description: "",
+  photo: "",
   user_id: User.first.id,
   capacity: 10
 )
-
 a.save!
-
-a = Maraude.new(
-  title: "Arène du Mika",
-  address: "Rue du seigneur",
-  description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore",
-  photo: "https://images.unsplash.com/photo-1542720046-1e772598ea39?ixlib=rb-1.2.1&auto=format&fit=crop&w=1252&q=80",
-  user_id: User.all[1].id,
-  capacity: 12
-)
-a.save!
-
-
-a = Maraude.new(
-  title: "Arène de wesh Wadi",
-  address: "Rue du olé",
-  description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore",
-  photo: "https://images.unsplash.com/photo-1509563268479-0f004cf3f58b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80",
-  user_id: User.all[2].id,
-  capacity: 15
-)
-a.save!
-
-a = Maraude.new(
-  title: "Arène de Mathias",
-  address: "Rue du pokémon",
-  description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore",
-  photo: "https://images.unsplash.com/photo-1560191832-d3bb3d4852a9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1334&q=80",
-  user_id: User.all[3].id,
-  capacity: 20
-)
-a.save!
-
-a = Maraude.new(
-  title: "Arène du Qwentinator",
-  address: "Rue du bon vivant",
-  description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore",
-  photo: "https://images.unsplash.com/photo-1542457953430-c046813ffa86?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80",
-  user_id: User.all[3].id,
-  capacity: 8
-)
-a.save!
-
-a = Maraude.new(
-  title: "Arène de la folie",
-  address: "Rue des blessés",
-  description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore",
-  photo: "https://images.unsplash.com/photo-1542459629-519887d476da?ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80",
-  user_id: User.all[2].id,
-  capacity: 30
-)
-a.save!
-
-a = Maraude.new(
-  title: "Arène de la folie",
-  address: "Rue des blessés",
-  description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore",
-  photo: "https://images.unsplash.com/photo-1542459629-519887d476da?ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80",
-  user_id: User.all[2].id,
-  capacity: 30
-)
-a.save!
-
+puts "Maraude 1 - Creation maraude"
+​
+​
 b = Booking.new(
   maraude_id: Maraude.first.id,
   user_id: User.first.id,
@@ -143,95 +175,95 @@ b = Booking.new(
   ends_at: 2019_10_12_095145,
   status: "pending"
 )
-
+​
 b.save!
-
+​
 b = Booking.new(
   maraude_id: Maraude.first.id + 2,
   user_id: User.first.id,
   start_at: 2019_08_22_095145,
   ends_at: 2019_10_12_095145,
   status: "pending"
-
+​
 )
 b.save!
-
+​
 b = Booking.new(
   maraude_id: Maraude.all[1].id,
   user_id: User.all[3].id,
   start_at: 2019_08_22_095145,
   ends_at: 2019_10_12_095145,
   status: "pending"
-
+​
 )
 b.save!
-
+​
 b = Booking.new(
   maraude_id: Maraude.all[2].id,
   user_id: User.all[3].id,
   start_at: 2019_08_22_095145,
   ends_at: 2019_10_12_095145,
   status: "pending"
-
+​
 )
 b.save!
-
+​
 b = Booking.new(
   maraude_id: Maraude.all[1].id,
   user_id: User.all[3].id,
   start_at: 2019_08_22_095145,
   ends_at: 2019_10_12_095145,
   status: "pending"
-
+​
 )
 b.save!
-
+​
 b = Booking.new(
   maraude_id: Maraude.all[1].id,
   user_id: User.all[1].id,
   start_at: 2019_08_22_095145,
   ends_at: 2019_10_12_095145,
   status: "pending"
-
+​
 )
 b.save!
-
+​
 b = Booking.new(
   maraude_id: Maraude.all[2].id,
   user_id: User.all[1].id,
   start_at: 2019_08_22_095145,
   ends_at: 2019_10_12_095145,
   status: "pending"
-
+​
 )
 b.save!
-
+​
 b = Booking.new(
   maraude_id: Maraude.all[3].id,
   user_id: User.all[4].id,
   start_at: 2019_08_22_095145,
   ends_at: 2019_10_12_095145,
   status: "pending"
-
+​
 )
 b.save!
-
+​
 b = Booking.new(
   maraude_id: Maraude.all[3].id,
   user_id: User.all[4].id,
   start_at: 2019_08_22_095145,
   ends_at: 2019_10_12_095145,
   status: "pending"
-
+​
 )
 b.save!
-
+​
 b = Booking.new(
   maraude_id: Maraude.all[1].id,
   user_id: User.all[4].id,
   start_at: 2019_08_22_095145,
   ends_at: 2019_10_12_095145,
   status: "pending"
-
+​
 )
 b.save!
