@@ -10,32 +10,18 @@
             <h1><%= @maraude.title %></h1>
             <h2> <%= @maraude.address%></h2>
             <p><%=@maraude.description%></p>
-
-
-                <%= link_to edit_maraude_path do %>
-                  <i class="fas fa-pencil-alt"></i>
-                <% end %>
-
-                <%= link_to maraude_path, method: :delete, data: { confirm: "Are you sure?"} do %>
-                  <i class="fas fa-trash"></i>
-                <% end %>
+            <p><%=@maraude.starts_at%></p>
+            <p><%=@maraude.ends_at%></p>
           </div>
+
           <div class="m-2">
              <%= cl_image_tag(@maraude.photo, style: "height: 350px")%>
           </div>
 
-          <div class="m-2 bg-white p-3 h-100">
-
-              <%= simple_form_for [@maraude, @booking] do |f| %>
-                <%= f.input :start_at, as: :string %>
-                <%= f.input :ends_at, as: :string %>
-                <%= f.submit "Book this maraude", class: "btn btn-primary" %>
-              <% end %>
-
-          </div>
         </div>
 
       </div>
+
 
       <div
         id="map"
@@ -43,6 +29,14 @@
         height: 600px;"
         data-markers="<%= @markers.to_json %>"
         data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
+      </div>
+
+      <div class="m-2 bg-white p-3 h-100">
+        <%= simple_form_for [@maraude, @booking] do |f| %>
+          <%= f.input :start_at, as: :string %>
+          <%= f.input :ends_at, as: :string %>
+          <%= f.submit "Book this maraude", class: "btn btn-primary" %>
+        <% end %>
       </div>
 
     </div>
