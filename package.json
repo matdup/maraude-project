@@ -2,6 +2,7 @@
   "name": "maraude-project",
   "private": true,
   "dependencies": {
+    "@mapbox/mapbox-gl-geocoder": "^4.4.1",
     "bootstrap": "^4.3.1",
     "mapbox-gl": "^1.2.1",
     "places.js": "^1.16.4"
