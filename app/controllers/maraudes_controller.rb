@@ -2,7 +2,7 @@ class MaraudesController < ApplicationController
 before_action :set_maraude, only: [:show]
 
   def index
-    @maraudess = Maraude.all
+    @maraudes = Maraude.all
   end
 
   def show

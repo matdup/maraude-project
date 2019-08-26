@@ -1,5 +1,5 @@
 class BookingsController < ApplicationController
-before_action :set_maraude, only: [:new, :create]
+  before_action :set_maraude, only: [:new, :create]
   def new
     @booking = Booking.new
   end
@@ -8,7 +8,6 @@ before_action :set_maraude, only: [:new, :create]
     @booking = Booking.new(booking_params)
     @booking.user = current_user
     @booking.maraude = @maraude
-    @booking.status = "pending"
     if @booking.save
       redirect_to dashboard_path
     else
