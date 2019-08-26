@@ -9,7 +9,8 @@ class CreateMaraudes < ActiveRecord::Migration[5.2]
       t.float :lng_starts
       t.float :ltd_ends
       t.float :lng_ends
-      t.string :address
+      t.string :address_start
+      t.string :address_end
       t.string :capacity
       t.string :photo
       t.datetime :starts_at
