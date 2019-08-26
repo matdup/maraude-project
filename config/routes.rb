@@ -2,18 +2,12 @@ Rails.application.routes.draw do
   devise_for :users
   root to: 'pages#home'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-  get "/dashboard", to: "users#dashboard"
+  get "dashboard", to: "dashboard#index"
 
-  resources :maraudes do
-    resources :bookings, only: :create
+  resources :maraudes, only: [:index, :show] do
+  resources :bookings, only:  [:new, :create]
   end
 
-
-resources :bookings, only: [:show] do
-    member do
-      patch :accept
-      patch :decline
-    end
+  resources :dashboard, only: [:show] do
   end
-
 end

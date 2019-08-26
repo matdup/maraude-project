@@ -9,9 +9,7 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <% if user_signed_in? %>
-        <li class="nav-item active">
-          <%= link_to "Add a maraude", new_maraude_path, class: "nav-link #{"home-nav-item color-black" if params[:controller] == "maraudes" && params[:action] == "index"}" %>
-        </li>
+
         <li class="nav-item">
           <%= link_to "My dashboard", "/dashboard", class: "nav-link #{"home-nav-item color-black" if params[:controller] == "maraudes" && params[:action] == "index"}" %>
         </li>
