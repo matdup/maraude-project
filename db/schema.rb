@@ -10,9 +10,57 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 2019_08_26_102558) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+  create_table "bookings", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.bigint "maraude_id"
+    t.bigint "user_id"
+    t.index ["maraude_id"], name: "index_bookings_on_maraude_id"
+    t.index ["user_id"], name: "index_bookings_on_user_id"
+  end
+
+  create_table "maraudes", force: :cascade do |t|
+    t.string "title"
+    t.string "description"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.float "ltd_starts"
+    t.float "lng_starts"
+    t.float "ltd_ends"
+    t.float "lng_ends"
+    t.string "address"
+    t.string "capacity"
+    t.string "photo"
+    t.datetime "starts_at"
+    t.datetime "ends_at"
+    t.string "status"
+    t.bigint "user_id"
+    t.index ["user_id"], name: "index_maraudes_on_user_id"
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.string "first_name"
+    t.string "last_name"
+    t.string "address"
+    t.string "photo"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "phone_number"
+    t.string "email", default: "", null: false
+    t.string "encrypted_password", default: "", null: false
+    t.string "reset_password_token"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
+    t.index ["email"], name: "index_users_on_email", unique: true
+    t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+  end
+
+  add_foreign_key "bookings", "maraudes"
+  add_foreign_key "bookings", "users"
+  add_foreign_key "maraudes", "users"
 end

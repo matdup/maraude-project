@@ -1,0 +1,2 @@
+class Maraude < ApplicationRecord
+end

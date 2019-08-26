@@ -1,5 +1,9 @@
 {
   "name": "maraude-project",
   "private": true,
-  "dependencies": {}
+  "dependencies": {
+    "bootstrap": "^4.3.1",
+    "mapbox-gl": "^1.2.1",
+    "places.js": "^1.16.4"
+  }
 }
