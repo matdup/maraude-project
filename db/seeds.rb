@@ -94,6 +94,66 @@ User.create!(
   )
 puts "User 7 - Edward : compte créé !"
 ​
+puts "User 8 - Asso Croix Rouge : compte créé !"
+User.create!(
+  first_name: "La Croix",
+  last_name: "Rouge",
+  address: "91 avenue de la république, paris",
+  photo: "https://www.francebenevolat.org/sites/default/files/thumbnails/t_5b738cd1a435e429923841.jpg",
+  email: "la.croix.rouge@outlook.com",
+  password: "123456",
+  phone_number: "06 53 38 95 10"
+  )
+puts "User 8 - Asso Croix Rougee : compte créé !"
+
+puts "User 9 - Asso Emmaus : compte créé !"
+User.create!(
+  first_name: "Emma",
+  last_name: "Huss",
+  address: "7 rue jacques louvel tessier, paris",
+  photo: "https://www.lamanchelibre.fr/photos/maxi/119363.jpg",
+  email: "emma.huss@outlook.com",
+  password: "123456",
+  phone_number: "06 53 38 95 10"
+  )
+puts "User 9 - Asso Emmaus : compte créé !"
+
+puts "User 10 - Asso Robin des Rues : compte créé !"
+User.create!(
+  first_name: "Robin",
+  last_name: "des Rues",
+  address: "9 Rue Arthur Groussier, paris",
+  photo: "https://pbs.twimg.com/profile_images/854972620462317568/PvvjvVXo.jpg",
+  email: "robin.desrues@outlook.com",
+  password: "123456",
+  phone_number: "06 53 38 95 10"
+  )
+puts "User 10 - Asso Robin des Ruese : compte créé !"
+
+puts "User 11 - Asso Abbé Pierre : compte créé !"
+User.create!(
+  first_name: "Abbé",
+  last_name: "Pierre",
+  address: "78-80 Rue de la Réunion, paris",
+  photo: "https://www.tousbenevoles.org/images/association/1565005876.png",
+  email: "abbe.pierre@outlook.com",
+  password: "123456",
+  phone_number: "06 53 38 95 10"
+  )
+puts "User 11 - Asso Abbé Pierre : compte créé !"
+
+puts "User 12 - Asso Action Sociale : compte créé !"
+User.create!(
+  first_name: "Action",
+  last_name: "Sociale",
+  address: "43-45 Boulevard de Charonne, paris",
+  photo: "http://jamaity.org/wp-content/uploads/2014/05/10513362_701072216606508_1489077459206566147_n-500x500.jpg",
+  email: "action.sociale@outlook.com",
+  password: "123456",
+  phone_number: "06 53 38 95 10"
+  )
+puts "User 12 - Asso Action Sociale : compte créé !"
+
 ​
 puts "Maraude 1 - Creation maraude"
 a = Maraude.new(
