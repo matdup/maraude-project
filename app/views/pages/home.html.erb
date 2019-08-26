@@ -1,5 +1,77 @@
+<header class="home-header">
+  <div class="title">
+    <h1>ALVEOLE</h1>
+    <p>Le premier site de mise en relation de Maraudes</p>
+  </div>
+  <div class="search-navbar">
+     <%= simple_form_for :search, url: root_path, method: :get do |f| %>
+      <div class="search-form-control form-group">
+        <input class="form-control string required" type="text" name="search[query]" id="search_query" />
+        <button name="button" type="submit" class="btn btn-warning">
+          <i class="fas fa-search"></i> Search
+        </button>
+      </div>
+    <% end %>
+  </div>
+  <button type="submit" class="btn btn-warning">chercher</button>
+  <div class="wrapper">
+    <div class="main-features">
+      <div class="main-feature">
+        <img src="" alt="">
+        <h3>Action</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque sequi animi consectetur nesciunt consequuntur.</p>
+      </div>
+      <div class="main-feature">
+        <img src="" alt="">
+        <h3>Social</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque sequi animi consectetur nesciunt consequuntur.</p>
+      </div>
+      <div class="main-feature">
+        <img src="" alt="">
+        <h3>Solidarité</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque sequi animi consectetur nesciunt consequuntur.</p>
+      </div>
+    </div>
+  </div>
+</header>
 
-  <div class="container">
+<div class="container">
+  <h2 class="mt-3 text-center">The Lastest maraudes</h2>
+  <div class="cards">
+    <% @maraudes.last(6).each do |maraude| %>
+        <div class="card zoom">
+          <div class="card-picture" data-id="<%= maraude.id %>">
+            <% if !maraude.photo.nil? %>
+              <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)),
+           url('<%= cl_image_path maraude.photo, height: 300, width: 400, crop: :fill %>')">
+              </div>
+            <% else %>
+              <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)),
+           url('https://images.unsplash.com/photo-1519741347686-c1e0aadf4611?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1980&q=80')">
+              </div>
+            <% end %>
+          </div>
+          <div class="card-body">
+            <h4><%= maraude.title %></h4>
+          </div>
+        </div>
+    <% end %>
+  </div>
+  <div class="partners">
+    <div class="partner">
+      <img src="" alt="">
+    </div>
+    <div class="partner">
+      <img src="" alt="">
+    </div>
+    <div class="partner">
+      <img src="" alt="">
+    </div>
+  </div>
+</div>
+
+
+  <!-- <div class="container">
     <h1><strong>Alveole</strong></h1>
     <p>
       <span id="banner-typed-text"></span>
@@ -36,4 +108,4 @@
         </div>
         <% end %>
   </div>
-</div>
+</div> -->
