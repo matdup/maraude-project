@@ -1,7 +1,7 @@
 <div class="m-5">
   <div class="row">
     <div class="col-11" style="margin:auto;">
-      <div class="">
+      <div>
 
         <div class="d-flex justify-content-around align-item-center my-3">
           <div class="m-2">
@@ -22,21 +22,22 @@
 
       </div>
 
+      <div>
+        <div
+          id="map"
+          style="width: 100%;
+          height: 600px;"
+          data-markers="<%= @markers.to_json %>"
+          data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
+        </div>
 
-      <div
-        id="map"
-        style="width: 100%;
-        height: 600px;"
-        data-markers="<%= @markers.to_json %>"
-        data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
-      </div>
-
-      <div class="m-2 bg-white p-3 h-100">
-        <%= simple_form_for [@maraude, @booking] do |f| %>
-          <%= f.input :start_at, as: :string %>
-          <%= f.input :ends_at, as: :string %>
-          <%= f.submit "Book this maraude", class: "btn btn-primary" %>
-        <% end %>
+        <div class="m-2 bg-white p-3 h-100">
+          <%= simple_form_for [@maraude, @booking] do |f| %>
+            <%= f.input :start_at, as: :string %>
+            <%= f.input :ends_at, as: :string %>
+            <%= f.submit "Book this maraude", class: "btn btn-primary" %>
+          <% end %>
+        </div>
       </div>
 
     </div>
