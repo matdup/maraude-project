@@ -1,5 +1,5 @@
 class MaraudesController < ApplicationController
-before_action :set_maraude, only: [:show]
+  before_action :set_maraude, only: [:show]
 
   def index
     @maraudes = Maraude.all
