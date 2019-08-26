@@ -1,3 +1,4 @@
+<%= render 'shared/navbar' %>
 <div class="m-5">
   <div class="row">
     <div class="col-11" style="margin:auto;">
@@ -8,10 +9,11 @@
 
             <%= link_to "Back to all maraudes", maraudes_path %>
             <h1><%= @maraude.title %></h1>
-            <h2> <%= @maraude.address%></h2>
-            <p><%=@maraude.description%></p>
-            <p><%=@maraude.starts_at%></p>
-            <p><%=@maraude.ends_at%></p>
+            <h2> <%= @maraude.address %></h2>
+            <p><%= @maraude.description%></p>
+            <p><%= @maraude.starts_at %></p>
+            <p><%= @maraude.ends_at %></p>
+
           </div>
 
           <div class="m-2">
