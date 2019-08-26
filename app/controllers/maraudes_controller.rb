@@ -1,8 +1,9 @@
 class MaraudesController < ApplicationController
 
   def index
-    @maraudes = Maraude.all
-    @markers = @maraudes.map do |maraude|
+    @maraudess = Maraude.all
+    @maraudes = Maraude.geocoded
+    @markers = @maraudess.map do |maraude|
       {
         lat: maraude.ltd_starts,
         lng: maraude.lng_starts,
