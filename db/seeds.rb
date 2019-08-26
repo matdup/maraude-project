@@ -10,58 +10,48 @@ Maraude.destroy_all
 User.destroy_all
 
 User.create!(
-  user_name: "Mika le grand",
   first_name: "Mike",
   last_name: "Bout",
   address: "16 rue villa gaudelet, Paris",
   photo: "",
   email: "test1@test.com",
-  password: "123456",
-  admin: true
+  password: "123456"
   )
 
 User.create!(
-  user_name: "Wadi l'invaincu",
   first_name: "Wadi",
   last_name: "Ben",
   address: "14 rue crespin du gast, Paris",
   photo: "",
   email: "test2@test.com",
-  password: "123456",
-  admin: true
+  password: "123456"
   )
 
 User.create!(
-  user_name: "Mathias le redouté",
   first_name: "Matt",
   last_name: "Duper",
   address: "14 rue crespin du gast, Paris",
   photo: "",
   email: "test3@test.com",
-  password: "123456",
-  admin: true
+  password: "123456"
   )
 
 User.create!(
-  user_name: "Qwent le vaillant",
   first_name: "Quentin",
   last_name: "Debray",
   address: "16 rue villa gaudelet, Paris",
   photo: "",
   email: "test4@test.com",
-  password: "123456",
-  admin: true
+  password: "123456"
   )
 
 User.create!(
-  user_name: "Dania, princesse de bagdad",
   first_name: "Dania",
   last_name: "Aflik",
   address: "16 rue villa gaudelet, Paris",
   photo: "",
   email: "test5@test.com",
-  password: "123456",
-  admin: true
+  password: "123456"
   )
 
 a = Maraude.new(
@@ -139,9 +129,8 @@ a.save!
 b = Booking.new(
   maraude_id: Maraude.first.id,
   user_id: User.first.id,
-  start_at: 2019_08_22_095145,
-  ends_at: 2019_10_12_095145,
-  status: "pending"
+  created_at: 2019_08_22_095145,
+  updated_at: 2019_10_12_095145
 )
 
 b.save!
@@ -149,89 +138,71 @@ b.save!
 b = Booking.new(
   maraude_id: Maraude.first.id + 2,
   user_id: User.first.id,
-  start_at: 2019_08_22_095145,
-  ends_at: 2019_10_12_095145,
-  status: "pending"
-
+  created_at: 2019_08_22_095145,
+  updated_at: 2019_10_12_095145
 )
 b.save!
 
 b = Booking.new(
   maraude_id: Maraude.all[1].id,
   user_id: User.all[3].id,
-  start_at: 2019_08_22_095145,
-  ends_at: 2019_10_12_095145,
-  status: "pending"
-
+  created_at: 2019_08_22_095145,
+  updated_at: 2019_10_12_095145
 )
 b.save!
 
 b = Booking.new(
   maraude_id: Maraude.all[2].id,
   user_id: User.all[3].id,
-  start_at: 2019_08_22_095145,
-  ends_at: 2019_10_12_095145,
-  status: "pending"
-
+  created_at: 2019_08_22_095145,
+  updated_at: 2019_10_12_095145
 )
 b.save!
 
 b = Booking.new(
   maraude_id: Maraude.all[1].id,
   user_id: User.all[3].id,
-  start_at: 2019_08_22_095145,
-  ends_at: 2019_10_12_095145,
-  status: "pending"
-
+  created_at: 2019_08_22_095145,
+  updated_at: 2019_10_12_095145
 )
 b.save!
 
 b = Booking.new(
   maraude_id: Maraude.all[1].id,
   user_id: User.all[1].id,
-  start_at: 2019_08_22_095145,
-  ends_at: 2019_10_12_095145,
-  status: "pending"
-
+  created_at: 2019_08_22_095145,
+  updated_at: 2019_10_12_095145
 )
 b.save!
 
 b = Booking.new(
   maraude_id: Maraude.all[2].id,
   user_id: User.all[1].id,
-  start_at: 2019_08_22_095145,
-  ends_at: 2019_10_12_095145,
-  status: "pending"
-
+  created_at: 2019_08_22_095145,
+  updated_at: 2019_10_12_095145
 )
 b.save!
 
 b = Booking.new(
   maraude_id: Maraude.all[3].id,
   user_id: User.all[4].id,
-  start_at: 2019_08_22_095145,
-  ends_at: 2019_10_12_095145,
-  status: "pending"
-
+  created_at: 2019_08_22_095145,
+  updated_at: 2019_10_12_095145
 )
 b.save!
 
 b = Booking.new(
   maraude_id: Maraude.all[3].id,
   user_id: User.all[4].id,
-  start_at: 2019_08_22_095145,
-  ends_at: 2019_10_12_095145,
-  status: "pending"
-
+  created_at: 2019_08_22_095145,
+  updated_at: 2019_10_12_095145
 )
 b.save!
 
 b = Booking.new(
   maraude_id: Maraude.all[1].id,
   user_id: User.all[4].id,
-  start_at: 2019_08_22_095145,
-  ends_at: 2019_10_12_095145,
-  status: "pending"
-
+  created_at: 2019_08_22_095145,
+  updated_at: 2019_10_12_095145
 )
 b.save!
