@@ -1,0 +1,38 @@
+<div class="container">
+  <div class="row justify-content-center align-item-center">
+    <div class="col-6">
+      <div class="fight-form" data-aos="fade-down"
+     data-aos-easing="linear"
+     data-aos-duration="1500">
+
+
+        <%= simple_form_for @maraude do |f| %>
+
+          <%= f.input :title, placeholder: "Title", label: false %>
+
+          <%= f.input :address, label: false, placeholder: "Address" %>
+
+          <%= f.input :description, label: false, placeholder: "Description"  %>
+
+          <%= f.input :photo, input_html: { id: 'photo-input'}, label: false %>
+
+
+          <%= f.input :capacity, label: false, placeholder: "Capacity"  %>
+
+          <div class="d-flex justify-content-between">
+              <button type="button" class="btn btn-primary review-btn" data-toggle="modal" data-target="#exampleModalCenter">
+              Review Your Maraude
+              </button>
+
+            <%= f.submit %>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+

@@ -1,0 +1,50 @@
+<div class="m-5">
+  <div class="row">
+    <div class="col-11" style="margin:auto;">
+      <div class="">
+
+        <div class="d-flex justify-content-around align-item-center my-3">
+          <div class="m-2">
+
+            <%= link_to "Back to all maraudes", maraudes_path %>
+            <h1><%= @maraude.title %></h1>
+            <h2> <%= @maraude.address%></h2>
+            <p><%=@maraude.description%></p>
+
+
+                <%= link_to edit_maraude_path do %>
+                  <i class="fas fa-pencil-alt"></i>
+                <% end %>
+
+                <%= link_to maraude_path, method: :delete, data: { confirm: "Are you sure?"} do %>
+                  <i class="fas fa-trash"></i>
+                <% end %>
+          </div>
+          <div class="m-2">
+             <%= cl_image_tag(@maraude.photo, style: "height: 350px")%>
+          </div>
+
+          <div class="m-2 bg-white p-3 h-100">
+
+              <%= simple_form_for [@maraude, @booking] do |f| %>
+                <%= f.input :start_at, as: :string %>
+                <%= f.input :ends_at, as: :string %>
+                <%= f.submit "Book this maraude", class: "btn btn-primary" %>
+              <% end %>
+
+          </div>
+        </div>
+
+      </div>
+
+      <div
+        id="map"
+        style="width: 100%;
+        height: 600px;"
+        data-markers="<%= @markers.to_json %>"
+        data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
+      </div>
+
+    </div>
+  </div>
+</div>

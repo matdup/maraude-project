@@ -1,0 +1,10 @@
+
+<h1>Edit maraude</h1>
+
+<%= render "form" %>
+
+<%= link_to maraude_path, method: :delete, data: { confirm: "Are you sure?"} do %>
+<i class="fas fa-trash"></i>
+<% end %>
+
+<%= link_to "Back to all maraudes", maraudes_path %>

@@ -1,0 +1,25 @@
+    <div class= "container">
+      <div class="cards pt-5">
+        <% @maraudess.each do |maraude| %>
+        <div class="card zoom" data-aos="zoom-in-up">
+          <div class="card-picture" data-id="<%= maraude.id %>">
+            <% if !maraude.photo.nil? %>
+              <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)),
+           url('<%= image_path maraude.photo, height: 300, width: 400, crop: :fill %>')">
+              </div>
+            <% else %>
+              <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)),
+           url('https://images.unsplash.com/photo-1519741347686-c1e0aadf4611?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1980&q=80')">
+              </div>
+            <% end %>
+          </div>
+          <div class="card-body">
+            <h2><%= maraude.title %>❗️</h2>
+              <p class="card-text">📌<%=  maraude.address %></p>
+              <p class="card-text">📝<%=  maraude.description %></p>
+              <p class="card-text"><%=  maraude.capacity %></p>
+          </div>
+        </div>
+        <% end %>
+      </div>
+    </div>
