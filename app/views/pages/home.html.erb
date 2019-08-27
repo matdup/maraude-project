@@ -40,27 +40,24 @@
 
 <div class="container">
   <h2 class="mt-3 text-center">The Lastest maraudes</h2>
-  <div class="cards">
-    <% @maraudes.last(6).each do |maraude| %>
-        <div class="card zoom">
-          <div class="card-picture" data-id="<%= maraude.id %>">
-            <% if !maraude.photo.nil? %>
-              <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)),
-           url('<%= cl_image_path maraude.photo, height: 300, width: 400, crop: :fill %>')">
-              </div>
-            <% else %>
-              <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)),
-           url('https://images.unsplash.com/photo-1519741347686-c1e0aadf4611?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1980&q=80')">
-              </div>
-            <% end %>
-          </div>
-          <div class="card-body">
-            <h4><%= maraude.title %></h4>
+  <div class="row">
+    <% @maraudes.each do |maraude| %>
+      <div class="col-4 mt-5" style="padding: 10px;">
+        <div class="card-trip" data-aos="zoom-in-down">
+          <%= cl_image_tag maraude.photo %>
+          <div class="card-trip-infos">
+            <div>
+              <h2><%= maraude.title %></h2>
+              <p><%= maraude.starts_at %></p>
+            </div>
+            <h2 class="card-trip-pricing"><%= maraude.capacity%> places disponibles</h2>
+            <img src="<%= maraude.user.photo %>" class="card-trip-user avatar-bordered" />
           </div>
         </div>
+      </div>
     <% end %>
   </div>
-  <div class="partners">
+  <div class="partners" data-aos="flip-left">
     <div class="partner">
       <%= image_tag "partner1.svg", alt: "Le Wagon", width: 300, height: 230 %>
     </div>
