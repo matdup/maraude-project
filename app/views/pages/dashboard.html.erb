@@ -1,0 +1,31 @@
+<%= render 'shared/navbar' %>
+<h1>Hello <%= "#{current_user.first_name}" %></h1>
+<br>
+<h3>Here are all your past maraudes : </h3>
+
+<ul>
+  <% @past_bookings.each do |booking| %>
+    <li><%= booking.maraude.title %></li>
+    <li><%= booking.maraude.description %></li>
+    <li><%= booking.maraude.starts_at %></li>
+    <li><%= booking.maraude.ends_at %></li>
+  <% end %>
+</ul>
+
+<br>
+<br>
+<h3>Here are all your futur maraudes :</h3>
+
+<ul>
+  <% @current_bookings.each do |booking| %>
+    <li><%= booking.maraude.title %></li>
+    <li><%= booking.maraude.description %></li>
+    <li><%= booking.maraude.starts_at %></li>
+    <li><%= booking.maraude.ends_at %></li>
+  <% end %>
+</ul>
+
+
+
+<%#= @my_bookings %>
+<%#= @my_maraudes %>

@@ -1,16 +1,71 @@
-.home-header{
+body {
   background-color: #fff;
 }
+
 .home-title {
-  margin-top: 80px;
+  margin-top: 50px;
   text-align: center;
+}
+.home-title h1{
+  font-family: 'Montserrat','sans-serif';
+  font-weight: 800;
+
 }
 
 .search-navbar{
   margin: 80px auto;
-  width: 50%;
+  margin-bottom: 0;
+  width: 100%;
 }
 .form-flex {
   display: flex;
 }
+
+.form-control {
+  padding: 25px;
+  box-shadow: 0px 26px 29px -13px rgba(0,0,0,0.75);
+
+}
+.btn-warning {
+  width: 250px;
+  margin-left: 30px;
+  box-shadow: 0px 26px 29px -13px rgba(0,0,0,0.75);
+  background-color: #ffe436;
+  border: 1px solid #ffe436;
+
+}
+.wrapper {
+  background-image: image-url('blue.svg');
+  background-size: cover;
+  padding-bottom: 80px;
+}
+
+.main-features{
+  margin-top: 7%;
+  display: flex;
+  justify-content: space-between;
+
+}
+
+.main-feature{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 30%;
+  text-align: justify;
+}
+
+.main-feature h4{
+  margin-top: 30px;
+}
+
+.partners {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+
+
+
 
