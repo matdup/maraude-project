@@ -174,7 +174,7 @@ puts "#######################################"
 
 puts "Maraude 1 - Creation maraude"
 a = Maraude.new(
-  title: "La maraude du bonheur",
+  title: "La maraude de Pars 1",
   address_start: "16 rue villa gaudelet, paris",
   address_end: "13 rue de clichy, paris",
   description: "Les assos de maraudes mettent en place des maraudes à destination des personnes sans abri, à la rue. Le but est de maintenir un lien social, d'encourager l'orientation vers des travailleurs sociaux et d'alerter les pouvoirs publics en recensant les situations rencontrées.",
@@ -182,8 +182,8 @@ a = Maraude.new(
   user_id: User.all[8].id,
   capacity: 10,
   status: "available",
-  starts_at: 2019_09_07_215145,
-  ends_at: 2019_09_07_225145,
+  starts_at: DateTime.new(2018, 9, 7, 21, 30),
+  ends_at: DateTime.new(2018, 9, 7, 23, 30)
 )
 a.save!
 puts "Maraude 1 - Maraude crée"
@@ -192,7 +192,7 @@ puts ""
 
 puts "Maraude 2 - Creation maraude"
 a = Maraude.new(
-  title: "La maraude du bonheur",
+  title: "La maraude de Paris 2",
   address_start: "41 rue maubeuge, paris",
   address_end: "2 rue richomme, paris",
   description: "Les assos de maraudes mettent en place des maraudes à destination des personnes sans abri, à la rue. Le but est de maintenir un lien social, d'encourager l'orientation vers des travailleurs sociaux et d'alerter les pouvoirs publics en recensant les situations rencontrées.",
@@ -200,8 +200,8 @@ a = Maraude.new(
   user_id: User.all[9].id,
   capacity: 15,
   status: "available",
-  starts_at: 2019_09_08_215145,
-  ends_at: 2019_09_08_225145,
+  starts_at: DateTime.new(2018, 10, 7, 21, 30),
+  ends_at: DateTime.new(2018, 10, 7, 23, 30)
 )
 a.save!
 puts "Maraude 2 - Maraude crée"
@@ -209,7 +209,7 @@ puts ""
 
 puts "Maraude 3 - Creation maraude"
 a = Maraude.new(
-  title: "La maraude du bonheur",
+  title: "La maraude de Paris 3",
   address_start: "3 rue du département, paris",
   address_end: "15 boulevard de la villette, paris",
   description: "Les assos de maraudes mettent en place des maraudes à destination des personnes sans abri, à la rue. Le but est de maintenir un lien social, d'encourager l'orientation vers des travailleurs sociaux et d'alerter les pouvoirs publics en recensant les situations rencontrées.",
@@ -217,8 +217,8 @@ a = Maraude.new(
   user_id: User.all[10].id,
   capacity: 20,
   status: "available",
-  starts_at: 2019_09_09_215145,
-  ends_at: 2019_09_09_225145,
+  starts_at: DateTime.new(2020, 12, 7, 21, 30),
+  ends_at: DateTime.new(2020, 12, 7, 23, 30)
 )
 a.save!
 puts "Maraude 3 - Mauraude créé"
@@ -226,7 +226,7 @@ puts ""
 
 puts "Maraude 4 - Creation maraude"
 a = Maraude.new(
-  title: "La maraude du bonheur",
+  title: "La maraude de Paris 4",
   address_start: "15 boulevard de belleville, paris",
   address_end: "5 rue de la fayette, paris",
   description: "Les assos de maraudes mettent en place des maraudes à destination des personnes sans abri, à la rue. Le but est de maintenir un lien social, d'encourager l'orientation vers des travailleurs sociaux et d'alerter les pouvoirs publics en recensant les situations rencontrées.",
@@ -234,8 +234,8 @@ a = Maraude.new(
   user_id: User.all[11].id,
   capacity: 25,
   status: "available",
-  starts_at: 2019_09_10_215145,
-  ends_at: 2019_09_10_225145,
+  starts_at: DateTime.new(2019, 3, 18, 21, 30),
+  ends_at: DateTime.new(2019, 3, 18, 23, 30)
 )
 a.save!
 puts "Maraude 4 - Mauraude créé"
@@ -243,7 +243,7 @@ puts ""
 
 puts "Maraude 5 - Creation maraude"
 a = Maraude.new(
-  title: "La maraude du bonheur",
+  title: "La maraude de Paris 5",
   address_start: "16 rue villa gaudelet, paris",
   address_end: "13 rue de clichy, paris",
   description: "Les assos de maraudes mettent en place des maraudes à destination des personnes sans abri, à la rue. Le but est de maintenir un lien social, d'encourager l'orientation vers des travailleurs sociaux et d'alerter les pouvoirs publics en recensant les situations rencontrées.",
@@ -251,8 +251,8 @@ a = Maraude.new(
   user_id: User.all[11].id,
   capacity: 30,
   status: "available",
-  starts_at: 2019_09_12_215145,
-  ends_at: 2019_09_12_225145,
+  starts_at: DateTime.new(2019, 5, 6, 21, 30),
+  ends_at: DateTime.new(2019, 5, 6, 23, 30)
 )
 a.save!
 puts "Maraude 5 - Mauraude créé"
@@ -260,7 +260,7 @@ puts ""
 
 puts "Maraude 6 - Creation maraude"
 a = Maraude.new(
-  title: "La maraude du bonheur",
+  title: "La maraude de Paris 6",
   address_start: "16 rue villa gaudelet, paris",
   address_end: "13 rue du chemin vert, paris",
   description: "Les assos de maraudes mettent en place des maraudes à destination des personnes sans abri, à la rue. Le but est de maintenir un lien social, d'encourager l'orientation vers des travailleurs sociaux et d'alerter les pouvoirs publics en recensant les situations rencontrées.",
@@ -268,8 +268,8 @@ a = Maraude.new(
   user_id: User.all[11].id,
   capacity: 35,
   status: "available",
-  starts_at: 2019_09_17_215145,
-  ends_at: 2019_09_17_225145,
+  starts_at: DateTime.new(2019, 10, 9, 21, 30),
+  ends_at: DateTime.new(2019, 10, 9, 23, 30)
 )
 a.save!
 puts "Maraude 6 - Mauraude créé"
@@ -277,7 +277,7 @@ puts ""
 
 puts "Maraude 7 - Creation maraude"
 a = Maraude.new(
-  title: "La maraude du bonheur",
+  title: "La maraude de Paris 7",
   address_start: "16 boulevard voltaire, paris",
   address_end: "5 rue jaucourt, paris",
   description: "Les assos de maraudes mettent en place des maraudes à destination des personnes sans abri, à la rue. Le but est de maintenir un lien social, d'encourager l'orientation vers des travailleurs sociaux et d'alerter les pouvoirs publics en recensant les situations rencontrées.",
@@ -285,8 +285,8 @@ a = Maraude.new(
   user_id: User.all[8].id,
   capacity: 40,
   status: "available",
-  starts_at: 2019_09_22_215145,
-  ends_at: 2019_09_22_225145,
+  starts_at: DateTime.new(2019, 6, 17, 17, 30),
+  ends_at: DateTime.new(2019, 6, 17, 19, 30)
 )
 a.save!
 puts "Maraude 7 - Mauraude créé"
@@ -294,7 +294,7 @@ puts ""
 
 puts "Maraude 8 - Creation maraude"
 a = Maraude.new(
-  title: "La maraude du bonheur",
+  title: "La maraude de Paris 8",
   address_start: "16 rue de lagny, paris",
   address_end: "13 rue de clichy, paris",
   description: "Les assos de maraudes mettent en place des maraudes à destination des personnes sans abri, à la rue. Le but est de maintenir un lien social, d'encourager l'orientation vers des travailleurs sociaux et d'alerter les pouvoirs publics en recensant les situations rencontrées.",
@@ -302,8 +302,8 @@ a = Maraude.new(
   user_id: User.all[9].id,
   capacity: 10,
   status: "available",
-  starts_at: 2019_09_28_215145,
-  ends_at: 2019_09_28_225145,
+  starts_at: DateTime.new(2018, 12, 25, 21, 30),
+  ends_at: DateTime.new(2018, 12, 25, 23, 30)
 )
 a.save!
 puts "Maraude 8 - Mauraude créé"
@@ -311,7 +311,7 @@ puts ""
 
 puts "Maraude 9 - Creation maraude"
 a = Maraude.new(
-  title: "La maraude du bonheur",
+  title: "La maraude de Paris 9",
   address_start: "5 rue de charonne, paris",
   address_end: "13 rue de candie, paris",
   description: "Les assos de maraudes mettent en place des maraudes à destination des personnes sans abri, à la rue. Le but est de maintenir un lien social, d'encourager l'orientation vers des travailleurs sociaux et d'alerter les pouvoirs publics en recensant les situations rencontrées.",
@@ -319,8 +319,8 @@ a = Maraude.new(
   user_id: User.all[10].id,
   capacity: 15,
   status: "available",
-  starts_at: 2019_09_30_215145,
-  ends_at: 2019_09_30_225145,
+  starts_at: DateTime.new(2019, 8, 27, 21, 30),
+  ends_at: DateTime.new(2019, 8, 27, 23, 30)
 )
 a.save!
 puts "Maraude 9 - Mauraude créé"
@@ -328,7 +328,7 @@ puts ""
 
 puts "Maraude 10 - Creation maraude"
 a = Maraude.new(
-  title: "La maraude du bonheur",
+  title: "La maraude dee Paris 10",
   address_start: "5 rue de lyon, paris",
   address_end: "6 rue clovis, paris",
   description: "Les assos de maraudes mettent en place des maraudes à destination des personnes sans abri, à la rue. Le but est de maintenir un lien social, d'encourager l'orientation vers des travailleurs sociaux et d'alerter les pouvoirs publics en recensant les situations rencontrées.",
@@ -336,8 +336,8 @@ a = Maraude.new(
   user_id: User.all[11].id,
   capacity: 20,
   status: "available",
-  starts_at: 2019_08_12_215145,
-  ends_at: 2019_10_12_225145,
+  starts_at: DateTime.new(2019, 9, 7, 21, 30),
+  ends_at: DateTime.new(2019, 9, 7, 23, 30)
 )
 a.save!
 puts "Maraude 10 - Mauraude créé"
@@ -345,7 +345,7 @@ puts ""
 
 puts "Maraude 11 - Creation maraude"
 a = Maraude.new(
-  title: "La maraude du bonheur",
+  title: "La maraude de Paris 11",
   address_start: "16 rue villa gaudelet, paris",
   address_end: "13 rue de clichy, paris",
   description: "Les assos de maraudes mettent en place des maraudes à destination des personnes sans abri, à la rue. Le but est de maintenir un lien social, d'encourager l'orientation vers des travailleurs sociaux et d'alerter les pouvoirs publics en recensant les situations rencontrées.",
@@ -353,8 +353,8 @@ a = Maraude.new(
   user_id: User.all[9].id,
   capacity: 25,
   status: "available",
-  starts_at: 2019_08_22_215145,
-  ends_at: 2019_10_22_225145,
+  starts_at: DateTime.new(2019, 4, 15, 21, 30),
+  ends_at: DateTime.new(2019, 4, 15, 23, 30)
 )
 a.save!
 puts "Maraude 11 - Mauraude créé"
@@ -362,7 +362,7 @@ puts ""
 
 puts "Maraude 12 - Creation maraude"
 a = Maraude.new(
-  title: "La maraude du bonheur",
+  title: "La maraude de Paris 12",
   address_start: "16 rue villa gaudelet, paris",
   address_end: "13 rue de clichy, paris",
   description: "Les assos de maraudes mettent en place des maraudes à destination des personnes sans abri, à la rue. Le but est de maintenir un lien social, d'encourager l'orientation vers des travailleurs sociaux et d'alerter les pouvoirs publics en recensant les situations rencontrées.",
@@ -370,8 +370,8 @@ a = Maraude.new(
   user_id: User.all[8].id,
   capacity: 30,
   status: "available",
-  starts_at: 2019_08_22_215145,
-  ends_at: 2019_10_22_225145,
+  starts_at: DateTime.new(2019, 7, 7, 21, 30),
+  ends_at: DateTime.new(2019, 7, 7, 23, 30)
 )
 a.save!
 puts "Maraude 12 - Mauraude créé"
@@ -379,7 +379,7 @@ puts ""
 
 puts "Maraude 13 - Creation maraude"
 a = Maraude.new(
-  title: "La maraude du bonheur",
+  title: "La maraude de Paris 13",
   address_start: "16 rue rollin, paris",
   address_end: "13 rue de tournon, paris",
   description: "Les assos de maraudes mettent en place des maraudes à destination des personnes sans abri, à la rue. Le but est de maintenir un lien social, d'encourager l'orientation vers des travailleurs sociaux et d'alerter les pouvoirs publics en recensant les situations rencontrées.",
@@ -387,8 +387,8 @@ a = Maraude.new(
   user_id: User.all[9].id,
   capacity: 15,
   status: "available",
-  starts_at: 2019_08_22_215145,
-  ends_at: 2019_10_22_225145,
+  starts_at: DateTime.new(2019, 11, 7, 21, 30),
+  ends_at: DateTime.new(2019, 11, 7, 23, 30)
 )
 a.save!
 puts "Maraude 13 - Mauraude créé"
@@ -396,7 +396,7 @@ puts ""
 
 puts "Maraude 14 - Creation maraude"
 a = Maraude.new(
-  title: "La maraude du bonheur",
+  title: "La maraude de l'Amooouuuurrrr",
   address_start: "6 rue racine, paris",
   address_end: "13 rue de saussure, paris",
   description: "Les assos de maraudes mettent en place des maraudes à destination des personnes sans abri, à la rue. Le but est de maintenir un lien social, d'encourager l'orientation vers des travailleurs sociaux et d'alerter les pouvoirs publics en recensant les situations rencontrées.",
@@ -404,8 +404,8 @@ a = Maraude.new(
   user_id: User.all[10].id,
   capacity: 15,
   status: "available",
-  starts_at: 2019_08_22_215145,
-  ends_at: 2019_10_22_225145,
+  starts_at: DateTime.new(2019, 2, 24, 21, 30),
+  ends_at: DateTime.new(2019, 2, 24, 23, 30)
 )
 a.save!
 puts "Maraude 14 - Mauraude créé"
@@ -413,7 +413,7 @@ puts ""
 
 puts "Maraude 15 - Creation maraude"
 a = Maraude.new(
-  title: "La maraude du bonheur",
+  title: "La maraude de Paris 15",
   address_start: "3 rue monge, paris",
   address_end: "11 rue des fermiers, paris",
   description: "Les assos de maraudes mettent en place des maraudes à destination des personnes sans abri, à la rue. Le but est de maintenir un lien social, d'encourager l'orientation vers des travailleurs sociaux et d'alerter les pouvoirs publics en recensant les situations rencontrées.",
@@ -421,8 +421,8 @@ a = Maraude.new(
   user_id: User.all[11].id,
   capacity: 20,
   status: "available",
-  starts_at: 2019_08_28_215145,
-  ends_at: 2019_10_28_225145,
+  starts_at: DateTime.new(2019, 6, 16, 21, 30),
+  ends_at: DateTime.new(2019, 6, 16, 23, 30)
 )
 a.save!
 puts "Maraude 15 - Mauraude créé"
@@ -430,7 +430,7 @@ puts ""
 
 puts "Maraude 16 - Creation maraude"
 a = Maraude.new(
-  title: "La maraude du bonheur",
+  title: "La maraude de Paris 16",
   address_start: "16 rue villa gaudelet, paris",
   address_end: "14 rue saint victor, paris",
   description: "Les assos de maraudes mettent en place des maraudes à destination des personnes sans abri, à la rue. Le but est de maintenir un lien social, d'encourager l'orientation vers des travailleurs sociaux et d'alerter les pouvoirs publics en recensant les situations rencontrées.",
@@ -438,8 +438,8 @@ a = Maraude.new(
   user_id: User.all[8].id,
   capacity: 25,
   status: "available",
-  starts_at: 2019_08_28_215145,
-  ends_at: 2019_10_28_225145,
+  starts_at: DateTime.new(2019, 9, 7, 21, 30),
+  ends_at: DateTime.new(2019, 9, 7, 23, 30)
 )
 a.save!
 puts "Maraude 16 - Mauraude créé"
@@ -453,7 +453,7 @@ puts ""
 puts "Creation de Booking 1 - User 1"
 b = Booking.new(
   maraude_id: Maraude.all[1].id,
-  user_id: User.all[1].id,
+  user_id: User.all[1].id
 )
 b.save!
 puts "Booking 1 créé"
@@ -461,15 +461,15 @@ puts "Booking 1 créé"
 puts "Creation de Booking 2 - User 2"
 b = Booking.new(
   maraude_id: Maraude.all[2].id,
-  user_id: User.all[2].id,
+  user_id: User.all[1].id
 )
 b.save!
 puts "Booking 2 créé"
 
-puts "Creation de Booking 3 - User 3"
+puts "Creation de Booking 3 - User 2"
 b = Booking.new(
   maraude_id: Maraude.all[3].id,
-  user_id: User.all[3].id,
+  user_id: User.all[1].id
 )
 b.save!
 puts "Booking 3 créé "
@@ -477,7 +477,7 @@ puts "Booking 3 créé "
 puts "Creation de Booking 4 - User 4"
 b = Booking.new(
   maraude_id: Maraude.all[4].id,
-  user_id: User.all[4].id,
+  user_id: User.all[4].id
 )
 b.save!
 puts "Booking 4 créé"
@@ -485,7 +485,7 @@ puts "Booking 4 créé"
 puts "Creation de Booking 5 - User 5"
 b = Booking.new(
   maraude_id: Maraude.all[5].id,
-  user_id: User.all[5].id,
+  user_id: User.all[5].id
 )
 b.save!
 puts "Booking 5 créé"
@@ -493,7 +493,7 @@ puts "Booking 5 créé"
 puts "Creation de Booking 6 - User 6"
 b = Booking.new(
   maraude_id: Maraude.all[6].id,
-  user_id: User.all[6].id,
+  user_id: User.all[6].id
 )
 b.save!
 puts "Booking 6 créé"
@@ -501,7 +501,7 @@ puts "Booking 6 créé"
 puts "Creation de Booking 7 - User 7"
 b = Booking.new(
   maraude_id: Maraude.all[7].id,
-  user_id: User.all[7].id,
+  user_id: User.all[7].id
 )
 b.save!
 puts "Booking 7 créé"
@@ -509,7 +509,7 @@ puts "Booking 7 créé"
 puts "Creation de Booking 8 - User 8"
 b = Booking.new(
   maraude_id: Maraude.all[8].id,
-  user_id: User.all[8].id,
+  user_id: User.all[8].id
 )
 b.save!
 puts "Booking 8 créé"
