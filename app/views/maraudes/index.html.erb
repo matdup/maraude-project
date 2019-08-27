@@ -1,14 +1,43 @@
-<% @maraudes.each do |maraude| %>
-  <div class="card-trip">
-    <%= cl_image_tag maraude.photo %>
-    <div class="card-trip-infos">
-      <div>
-        <h2><%= maraude.title %></h2>
-        <p><%= maraude.starts_at %></p>
+<div class= "container container-index">
+  <div class="banner">
+    BANNER
+  </div>
+  <div class="index-content">
+    <div class="index-left-part">
+      <div class="search-index">
+        SEARCHBAR
       </div>
-      <h2 class="card-trip-pricing"><%maraude.capacity%> places disponibles</h2>
-      <img src=<%= maraude.user.photo %> class="card-trip-user avatar-bordered" />
+      <div class="row" style="margin: 0;">
+        <% @maraudes.each do |maraude| %>
+        <div class="col-6" style="padding: 10px;">
+          <div class="card-trip">
+            <%= cl_image_tag maraude.photo %>
+            <div class="card-trip-infos">
+              <div>
+                <h2><%= maraude.title %></h2>
+                <p><%= maraude.starts_at %></p>
+              </div>
+              <h2 class="card-trip-pricing"><%= maraude.capacity%> places disponibles</h2>
+              <img src=<%= maraude.user.photo %> class="card-trip-user avatar-bordered" />
+            </div>
+          </div>
+        </div>
+        <% end %>
+      </div>
+    </div>
+    <div class="index-right-part">
+    <img id="map" src='https://raw.githubusercontent.com/lewagon/layouts-demo/gh-pages/images/mapbox.png'>
     </div>
   </div>
-<% end %>
+</div>
+
+
+
+
+
+
+
+
+
+
 
