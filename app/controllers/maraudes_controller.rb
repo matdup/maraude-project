@@ -1,6 +1,11 @@
 class MaraudesController < ApplicationController
 
   def index
+    if params[:query].present?
+      @maraudes = Maraude.where(address: params[:query])
+    else
+      @maraudes = Maraude.all
+    end
 
     @maraudes = Maraude.geocoded
     @markers = @maraudes.map do |maraude|
