@@ -1,21 +1,51 @@
-.home-header{
+body {
   background-color: #fff;
 }
+
 .home-title {
-  margin-top: 80px;
+  margin-top: 50px;
   text-align: center;
 }
 
 .search-navbar{
   margin: 80px auto;
-  width: 50%;
+  width: 100%;
+  box-shadow: 0px 26px 29px -13px rgba(0,0,0,0.75);
 }
 .form-flex {
   display: flex;
-
 }
 
 .form-control {
   padding: 25px;
 }
+.btn-warning {
+  width: 250px;
+  margin-left: 30px;
+}
+.wrapper {
+background-image: image-url('blue.svg');
+background-size: cover;
+}
+
+.main-features{
+  margin-top: 10%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.main-feature{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 30%;
+  text-align: justify;
+}
+.main-feature h3{
+  margin-top: 30px;
+}
+
+
+
+
 
