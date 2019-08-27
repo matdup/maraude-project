@@ -18,15 +18,19 @@
                 <p><%= maraude.starts_at %></p>
               </div>
               <h2 class="card-trip-pricing"><%= maraude.capacity%> places disponibles</h2>
-              <img src=<%= maraude.user.photo %> class="card-trip-user avatar-bordered" />
+              <img src="<%= maraude.user.photo %>" class="card-trip-user avatar-bordered" />
             </div>
           </div>
         </div>
         <% end %>
       </div>
     </div>
-    <div class="index-right-part">
-    <img id="map" src='https://raw.githubusercontent.com/lewagon/layouts-demo/gh-pages/images/mapbox.png'>
+    <div class="index-right-part"
+      id="map"
+          style="width: 604px;
+          "
+          data-markers="<%= @markers.to_json %>"
+          data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
     </div>
   </div>
 </div>

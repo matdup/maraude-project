@@ -15,14 +15,20 @@ const buildMap = () => {
 const addMarkersToMap = (map, markers) => {
   markers.forEach((marker) => {
     new mapboxgl.Marker()
-      .setLngLat([ marker.lng, marker.lat ])
+      .setLngLat([ marker.lng_starts, marker.lat_starts ])
+      .addTo(map);
+      new mapboxgl.Marker()
+      .setLngLat([ marker.lng_ends, marker.lat_ends ])
       .addTo(map);
   });
 };
 
 const fitMapToMarkers = (map, markers) => {
   const bounds = new mapboxgl.LngLatBounds();
-  markers.forEach(marker => bounds.extend([ marker.lng, marker.lat ]));
+  markers.forEach(marker => {
+    bounds.extend([ marker.lng_starts, marker.lat_starts ]);
+    bounds.extend([ marker.lng_ends, marker.lat_ends ]);
+  });
   map.fitBounds(bounds, { padding: 70, maxZoom: 15 });
 };
 
