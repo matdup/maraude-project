@@ -178,13 +178,14 @@ a = Maraude.new(
   address_start: "16 rue villa gaudelet, paris",
   address_end: "13 rue de clichy, paris",
   description: "Les assos de maraudes mettent en place des maraudes à destination des personnes sans abri, à la rue. Le but est de maintenir un lien social, d'encourager l'orientation vers des travailleurs sociaux et d'alerter les pouvoirs publics en recensant les situations rencontrées.",
-  photo: "https://images.unsplash.com/photo-1526928648912-6b2ac1cc14d7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=3902&q=80",
+  # photo: "https://images.unsplash.com/photo-1526928648912-6b2ac1cc14d7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=3902&q=80",
   user_id: User.all[8].id,
   capacity: 10,
   status: "available",
   starts_at: 2019_09_07_215145,
   ends_at: 2019_09_07_225145,
 )
+a.remote_photo_url = "https://images.unsplash.com/photo-1526928648912-6b2ac1cc14d7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=3902&q=80"
 a.save!
 puts "Maraude 1 - Maraude crée"
 puts ""
@@ -196,13 +197,14 @@ a = Maraude.new(
   address_start: "41 rue maubeuge, paris",
   address_end: "2 rue richomme, paris",
   description: "Les assos de maraudes mettent en place des maraudes à destination des personnes sans abri, à la rue. Le but est de maintenir un lien social, d'encourager l'orientation vers des travailleurs sociaux et d'alerter les pouvoirs publics en recensant les situations rencontrées.",
-  photo: "https://images.unsplash.com/photo-1537729958-061041429d90?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2784&q=80",
+  # photo: "https://images.unsplash.com/photo-1537729958-061041429d90?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2784&q=80",
   user_id: User.all[9].id,
   capacity: 15,
   status: "available",
   starts_at: 2019_09_08_215145,
   ends_at: 2019_09_08_225145,
 )
+a.remote_photo_url = "https://images.unsplash.com/photo-1537729958-061041429d90?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2784&q=80"
 a.save!
 puts "Maraude 2 - Maraude crée"
 puts ""
@@ -213,13 +215,14 @@ a = Maraude.new(
   address_start: "3 rue du département, paris",
   address_end: "15 boulevard de la villette, paris",
   description: "Les assos de maraudes mettent en place des maraudes à destination des personnes sans abri, à la rue. Le but est de maintenir un lien social, d'encourager l'orientation vers des travailleurs sociaux et d'alerter les pouvoirs publics en recensant les situations rencontrées.",
-  photo: "https://images.unsplash.com/photo-1523737000522-87c15d8efcc4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2551&q=80",
+  # photo: "https://images.unsplash.com/photo-1523737000522-87c15d8efcc4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2551&q=80",
   user_id: User.all[10].id,
   capacity: 20,
   status: "available",
   starts_at: 2019_09_09_215145,
   ends_at: 2019_09_09_225145,
 )
+a.remote_photo_url = "https://images.unsplash.com/photo-1523737000522-87c15d8efcc4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2551&q=80"
 a.save!
 puts "Maraude 3 - Mauraude créé"
 puts ""
@@ -230,13 +233,14 @@ a = Maraude.new(
   address_start: "15 boulevard de belleville, paris",
   address_end: "5 rue de la fayette, paris",
   description: "Les assos de maraudes mettent en place des maraudes à destination des personnes sans abri, à la rue. Le but est de maintenir un lien social, d'encourager l'orientation vers des travailleurs sociaux et d'alerter les pouvoirs publics en recensant les situations rencontrées.",
-  photo: "https://images.unsplash.com/photo-1516510717845-1d1758eb0824?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1234&q=80",
+  # photo: "https://images.unsplash.com/photo-1516510717845-1d1758eb0824?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1234&q=80",
   user_id: User.all[11].id,
   capacity: 25,
   status: "available",
   starts_at: 2019_09_10_215145,
   ends_at: 2019_09_10_225145,
 )
+a.remote_photo_url = "https://images.unsplash.com/photo-1516510717845-1d1758eb0824?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1234&q=80"
 a.save!
 puts "Maraude 4 - Mauraude créé"
 puts ""
@@ -247,7 +251,7 @@ a = Maraude.new(
   address_start: "16 rue villa gaudelet, paris",
   address_end: "13 rue de clichy, paris",
   description: "Les assos de maraudes mettent en place des maraudes à destination des personnes sans abri, à la rue. Le but est de maintenir un lien social, d'encourager l'orientation vers des travailleurs sociaux et d'alerter les pouvoirs publics en recensant les situations rencontrées.",
-  photo: "https://images.unsplash.com/photo-1541802645635-11f2286a7482?ixlib=rb-1.2.1&auto=format&fit=crop&w=2550&q=80",
+  # photo: "https://images.unsplash.com/photo-1541802645635-11f2286a7482?ixlib=rb-1.2.1&auto=format&fit=crop&w=2550&q=80",
   user_id: User.all[11].id,
   capacity: 30,
   status: "available",
@@ -264,13 +268,14 @@ a = Maraude.new(
   address_start: "16 rue villa gaudelet, paris",
   address_end: "13 rue du chemin vert, paris",
   description: "Les assos de maraudes mettent en place des maraudes à destination des personnes sans abri, à la rue. Le but est de maintenir un lien social, d'encourager l'orientation vers des travailleurs sociaux et d'alerter les pouvoirs publics en recensant les situations rencontrées.",
-  photo: "https://images.unsplash.com/photo-1526168637801-e9f490d6bc04?ixlib=rb-1.2.1&auto=format&fit=crop&w=2466&q=80",
+  # photo: "https://images.unsplash.com/photo-1526168637801-e9f490d6bc04?ixlib=rb-1.2.1&auto=format&fit=crop&w=2466&q=80",
   user_id: User.all[11].id,
   capacity: 35,
   status: "available",
   starts_at: 2019_09_17_215145,
   ends_at: 2019_09_17_225145,
 )
+a.remote_photo_url = "https://images.unsplash.com/photo-1526168637801-e9f490d6bc04?ixlib=rb-1.2.1&auto=format&fit=crop&w=2466&q=80"
 a.save!
 puts "Maraude 6 - Mauraude créé"
 puts ""
@@ -281,13 +286,14 @@ a = Maraude.new(
   address_start: "16 boulevard voltaire, paris",
   address_end: "5 rue jaucourt, paris",
   description: "Les assos de maraudes mettent en place des maraudes à destination des personnes sans abri, à la rue. Le but est de maintenir un lien social, d'encourager l'orientation vers des travailleurs sociaux et d'alerter les pouvoirs publics en recensant les situations rencontrées.",
-  photo: "https://images.unsplash.com/photo-1509059852496-f3822ae057bf?ixlib=rb-1.2.1&auto=format&fit=crop&w=2056&q=80",
+  # photo: "https://images.unsplash.com/photo-1509059852496-f3822ae057bf?ixlib=rb-1.2.1&auto=format&fit=crop&w=2056&q=80",
   user_id: User.all[8].id,
   capacity: 40,
   status: "available",
   starts_at: 2019_09_22_215145,
   ends_at: 2019_09_22_225145,
 )
+a.remote_photo_url = "https://images.unsplash.com/photo-1509059852496-f3822ae057bf?ixlib=rb-1.2.1&auto=format&fit=crop&w=2056&q=80"
 a.save!
 puts "Maraude 7 - Mauraude créé"
 puts ""
@@ -298,13 +304,14 @@ a = Maraude.new(
   address_start: "16 rue de lagny, paris",
   address_end: "13 rue de clichy, paris",
   description: "Les assos de maraudes mettent en place des maraudes à destination des personnes sans abri, à la rue. Le but est de maintenir un lien social, d'encourager l'orientation vers des travailleurs sociaux et d'alerter les pouvoirs publics en recensant les situations rencontrées.",
-  photo: "https://images.unsplash.com/photo-1531171074112-291d5807273d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2550&q=80",
+  # photo: "https://images.unsplash.com/photo-1531171074112-291d5807273d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2550&q=80",
   user_id: User.all[9].id,
   capacity: 10,
   status: "available",
   starts_at: 2019_09_28_215145,
   ends_at: 2019_09_28_225145,
 )
+a.remote_photo_url = "https://images.unsplash.com/photo-1531171074112-291d5807273d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2550&q=80"
 a.save!
 puts "Maraude 8 - Mauraude créé"
 puts ""
@@ -315,13 +322,14 @@ a = Maraude.new(
   address_start: "5 rue de charonne, paris",
   address_end: "13 rue de candie, paris",
   description: "Les assos de maraudes mettent en place des maraudes à destination des personnes sans abri, à la rue. Le but est de maintenir un lien social, d'encourager l'orientation vers des travailleurs sociaux et d'alerter les pouvoirs publics en recensant les situations rencontrées.",
-  photo: "https://images.unsplash.com/photo-1529520161780-2573a0926b31?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2550&q=80",
+  # photo: "https://images.unsplash.com/photo-1529520161780-2573a0926b31?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2550&q=80",
   user_id: User.all[10].id,
   capacity: 15,
   status: "available",
   starts_at: 2019_09_30_215145,
   ends_at: 2019_09_30_225145,
 )
+a.remote_photo_url = "https://images.unsplash.com/photo-1529520161780-2573a0926b31?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2550&q=80"
 a.save!
 puts "Maraude 9 - Mauraude créé"
 puts ""
@@ -332,13 +340,14 @@ a = Maraude.new(
   address_start: "5 rue de lyon, paris",
   address_end: "6 rue clovis, paris",
   description: "Les assos de maraudes mettent en place des maraudes à destination des personnes sans abri, à la rue. Le but est de maintenir un lien social, d'encourager l'orientation vers des travailleurs sociaux et d'alerter les pouvoirs publics en recensant les situations rencontrées.",
-  photo: "https://images.unsplash.com/photo-1519430044529-9a9a57177865?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2510&q=80",
+  # photo: "https://images.unsplash.com/photo-1519430044529-9a9a57177865?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2510&q=80",
   user_id: User.all[11].id,
   capacity: 20,
   status: "available",
   starts_at: 2019_08_12_215145,
   ends_at: 2019_10_12_225145,
 )
+a.remote_photo_url = "https://images.unsplash.com/photo-1519430044529-9a9a57177865?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2510&q=80"
 a.save!
 puts "Maraude 10 - Mauraude créé"
 puts ""
@@ -349,13 +358,14 @@ a = Maraude.new(
   address_start: "16 rue villa gaudelet, paris",
   address_end: "13 rue de clichy, paris",
   description: "Les assos de maraudes mettent en place des maraudes à destination des personnes sans abri, à la rue. Le but est de maintenir un lien social, d'encourager l'orientation vers des travailleurs sociaux et d'alerter les pouvoirs publics en recensant les situations rencontrées.",
-  photo: "https://images.unsplash.com/photo-1444664361762-afba083a4d77?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2000&q=80",
+  # photo: "https://images.unsplash.com/photo-1444664361762-afba083a4d77?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2000&q=80",
   user_id: User.all[9].id,
   capacity: 25,
   status: "available",
   starts_at: 2019_08_22_215145,
   ends_at: 2019_10_22_225145,
 )
+a.remote_photo_url = "https://images.unsplash.com/photo-1444664361762-afba083a4d77?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2000&q=80"
 a.save!
 puts "Maraude 11 - Mauraude créé"
 puts ""
@@ -366,13 +376,14 @@ a = Maraude.new(
   address_start: "16 rue villa gaudelet, paris",
   address_end: "13 rue de clichy, paris",
   description: "Les assos de maraudes mettent en place des maraudes à destination des personnes sans abri, à la rue. Le but est de maintenir un lien social, d'encourager l'orientation vers des travailleurs sociaux et d'alerter les pouvoirs publics en recensant les situations rencontrées.",
-  photo: "https://images.unsplash.com/photo-1502444330042-d1a1ddf9bb5b?ixlib=rb-1.2.1&auto=format&fit=crop&w=2553&q=80",
+  # photo: "https://images.unsplash.com/photo-1502444330042-d1a1ddf9bb5b?ixlib=rb-1.2.1&auto=format&fit=crop&w=2553&q=80",
   user_id: User.all[8].id,
   capacity: 30,
   status: "available",
   starts_at: 2019_08_22_215145,
   ends_at: 2019_10_22_225145,
 )
+a.remote_photo_url = "https://images.unsplash.com/photo-1502444330042-d1a1ddf9bb5b?ixlib=rb-1.2.1&auto=format&fit=crop&w=2553&q=80"
 a.save!
 puts "Maraude 12 - Mauraude créé"
 puts ""
@@ -383,13 +394,14 @@ a = Maraude.new(
   address_start: "16 rue rollin, paris",
   address_end: "13 rue de tournon, paris",
   description: "Les assos de maraudes mettent en place des maraudes à destination des personnes sans abri, à la rue. Le but est de maintenir un lien social, d'encourager l'orientation vers des travailleurs sociaux et d'alerter les pouvoirs publics en recensant les situations rencontrées.",
-  photo: "https://images.unsplash.com/photo-1531206715517-5c0ba140b2b8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=3150&q=80",
+  # photo: "https://images.unsplash.com/photo-1531206715517-5c0ba140b2b8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=3150&q=80",
   user_id: User.all[9].id,
   capacity: 15,
   status: "available",
   starts_at: 2019_08_22_215145,
   ends_at: 2019_10_22_225145,
 )
+a.remote_photo_url = "https://images.unsplash.com/photo-1531206715517-5c0ba140b2b8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=3150&q=80"
 a.save!
 puts "Maraude 13 - Mauraude créé"
 puts ""
@@ -400,13 +412,14 @@ a = Maraude.new(
   address_start: "6 rue racine, paris",
   address_end: "13 rue de saussure, paris",
   description: "Les assos de maraudes mettent en place des maraudes à destination des personnes sans abri, à la rue. Le but est de maintenir un lien social, d'encourager l'orientation vers des travailleurs sociaux et d'alerter les pouvoirs publics en recensant les situations rencontrées.",
-  photo: "",
+  # photo: "https://images.unsplash.com/photo-1531206715517-5c0ba140b2b8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=3150&q=80",
   user_id: User.all[10].id,
   capacity: 15,
   status: "available",
   starts_at: 2019_08_22_215145,
   ends_at: 2019_10_22_225145,
 )
+a.remote_photo_url = "https://images.unsplash.com/photo-1531206715517-5c0ba140b2b8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=3150&q=80"
 a.save!
 puts "Maraude 14 - Mauraude créé"
 puts ""
@@ -417,13 +430,14 @@ a = Maraude.new(
   address_start: "3 rue monge, paris",
   address_end: "11 rue des fermiers, paris",
   description: "Les assos de maraudes mettent en place des maraudes à destination des personnes sans abri, à la rue. Le but est de maintenir un lien social, d'encourager l'orientation vers des travailleurs sociaux et d'alerter les pouvoirs publics en recensant les situations rencontrées.",
-  photo: "https://images.unsplash.com/photo-1523325343676-4136d25d013b?ixlib=rb-1.2.1&auto=format&fit=crop&w=2550&q=80",
+  # photo: "https://images.unsplash.com/photo-1523325343676-4136d25d013b?ixlib=rb-1.2.1&auto=format&fit=crop&w=2550&q=80",
   user_id: User.all[11].id,
   capacity: 20,
   status: "available",
   starts_at: 2019_08_28_215145,
   ends_at: 2019_10_28_225145,
 )
+a.remote_photo_url = "https://images.unsplash.com/photo-1523325343676-4136d25d013b?ixlib=rb-1.2.1&auto=format&fit=crop&w=2550&q=80"
 a.save!
 puts "Maraude 15 - Mauraude créé"
 puts ""
@@ -434,13 +448,14 @@ a = Maraude.new(
   address_start: "16 rue villa gaudelet, paris",
   address_end: "14 rue saint victor, paris",
   description: "Les assos de maraudes mettent en place des maraudes à destination des personnes sans abri, à la rue. Le but est de maintenir un lien social, d'encourager l'orientation vers des travailleurs sociaux et d'alerter les pouvoirs publics en recensant les situations rencontrées.",
-  photo: "https://images.unsplash.com/photo-1523325343676-4136d25d013b?ixlib=rb-1.2.1&auto=format&fit=crop&w=2550&q=80",
+  # photo: "https://images.unsplash.com/photo-1523325343676-4136d25d013b?ixlib=rb-1.2.1&auto=format&fit=crop&w=2550&q=80",
   user_id: User.all[8].id,
   capacity: 25,
   status: "available",
   starts_at: 2019_08_28_215145,
   ends_at: 2019_10_28_225145,
 )
+a.remote_photo_url = "https://images.unsplash.com/photo-1523325343676-4136d25d013b?ixlib=rb-1.2.1&auto=format&fit=crop&w=2550&q=80"
 a.save!
 puts "Maraude 16 - Mauraude créé"
 puts ""
