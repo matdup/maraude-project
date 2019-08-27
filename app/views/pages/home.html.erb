@@ -3,55 +3,39 @@
     <h1>ALVEOLE</h1>
     <p class="mt-5">Le premier site de mise en relation de Maraudes</p>
   </div>
-<<<<<<< HEAD
-  <!-- <div class="search-navbar">
-     <%= simple_form_for :search, url: root_path, method: :get do |f| %>
-      <div class="search-form-control form-group">
-        <input class="form-control string required" type="text" name="search[query]" id="search_query" />
-       <%= f.button :submit %>
-      </div>
-    <% end %>
-  </div> -->
-  <%= form_tag movies_path, method: :get do %>
-  <%= text_field_tag :query,
-    params[:query],
-    class: "form-control",
-    placeholder: "Find a movie"
-  %>
-  <%= submit_tag "Search", class: "btn btn-primary" %>
-<% end %>
-  <!-- <button type="submit" class="btn btn-warning">chercher</button> -->
-=======
-  <div class="search-navbar">
-    <%= form_tag maraudes_path, class: "form-flex", method: :get do %>
-
-      <%= text_field_tag :query, params[:query], class: "form-control", placeholder: "Trouvez une Maraude..."%>
-      <%= submit_tag "Recherche", class: "btn btn-warning" %>
-    <% end %>
-  </div>
-
->>>>>>> 93e382909d9329007999637e5c6feddabff9a2bd
   <div class="wrapper">
-    <div class="main-features">
-      <div class="main-feature">
+    <div class="container">
+      <div class="search-navbar">
+        <%= form_tag maraudes_path, class: "form-flex", method: :get do %>
 
-        <img src="" alt="">
-        <h3>Action</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque sequi animi consectetur nesciunt consequuntur.</p>
+          <%= text_field_tag :query, params[:query], class: "form-control", placeholder: "Trouvez une Maraude..."%>
+          <%= submit_tag "Recherche", class: "btn btn-warning" %>
+        <% end %>
       </div>
-      <div class="main-feature">
-        <img src="" alt="">
-        <h3>Social</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque sequi animi consectetur nesciunt consequuntur.</p>
-      </div>
-      <div class="main-feature">
-        <img src="" alt="">
-        <h3>Solidarité</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque sequi animi consectetur nesciunt consequuntur.</p>
+
+      <div class="main-features">
+        <div class="main-feature">
+          <%= image_tag "action.svg", alt: "Le Wagon", width: 220, height: 226 %>
+          <h3>Action</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque sequi animi consectetur nesciunt consequuntur.</p>
+        </div>
+        <div class="main-feature">
+          <%= image_tag "social.svg", alt: "Le Wagon", width: 220, height: 226 %>
+
+          <h3>Social</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque sequi animi consectetur nesciunt consequuntur.</p>
+        </div>
+        <div class="main-feature">
+          <%= image_tag "solidarity.svg", alt: "Le Wagon", width: 220, height: 226 %>
+
+          <h3>Solidarité</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque sequi animi consectetur nesciunt consequuntur.</p>
+        </div>
       </div>
     </div>
+  </header>
+
   </div>
-</header>
 
 <div class="container">
   <h2 class="mt-3 text-center">The Lastest maraudes</h2>
@@ -89,41 +73,3 @@
 </div>
 
 
-  <!-- <div class="container">
-    <h1><strong>Alveole</strong></h1>
-    <p>
-      <span id="banner-typed-text"></span>
-    </p>
-
-    <h2><%= link_to "Chercher", maraudes_path, :class=>"btn btn-primary"%></h2>
-  </div>
-
-  <div class="d-flex justify-content-center">
-    <h2>Action</h2>
-    <h2>Social</h2>
-    <h2>Solidarité</h2>
-  </div>
-
-<div class= "container">
-    <h2 class="mt-3 text-center">The Lastest maraudes</h2>
-  <div class="cards">
-    <% @maraudes.last(6).each do |maraude| %>
-        <div class="card zoom">
-          <div class="card-picture" data-id="<%= maraude.id %>">
-            <% if !maraude.photo.nil? %>
-              <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)),
-           url('<%= cl_image_path maraude.photo, height: 300, width: 400, crop: :fill %>')">
-              </div>
-            <% else %>
-              <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)),
-           url('https://images.unsplash.com/photo-1519741347686-c1e0aadf4611?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1980&q=80')">
-              </div>
-            <% end %>
-          </div>
-          <div class="card-body">
-            <h4><%= maraude.title %></h4>
-          </div>
-        </div>
-        <% end %>
-  </div>
-</div> -->
