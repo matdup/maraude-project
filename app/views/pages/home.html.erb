@@ -1,8 +1,9 @@
 <header class="home-header">
-  <div class="title">
+  <div class="home-title">
     <h1>ALVEOLE</h1>
-    <p>Le premier site de mise en relation de Maraudes</p>
+    <p class="mt-5">Le premier site de mise en relation de Maraudes</p>
   </div>
+<<<<<<< HEAD
   <!-- <div class="search-navbar">
      <%= simple_form_for :search, url: root_path, method: :get do |f| %>
       <div class="search-form-control form-group">
@@ -20,6 +21,16 @@
   <%= submit_tag "Search", class: "btn btn-primary" %>
 <% end %>
   <!-- <button type="submit" class="btn btn-warning">chercher</button> -->
+=======
+  <div class="search-navbar">
+    <%= form_tag maraudes_path, class: "form-flex", method: :get do %>
+
+      <%= text_field_tag :query, params[:query], class: "form-control", placeholder: "Trouvez une Maraude..."%>
+      <%= submit_tag "Recherche", class: "btn btn-warning" %>
+    <% end %>
+  </div>
+
+>>>>>>> 93e382909d9329007999637e5c6feddabff9a2bd
   <div class="wrapper">
     <div class="main-features">
       <div class="main-feature">
