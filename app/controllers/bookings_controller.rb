@@ -5,7 +5,8 @@ class BookingsController < ApplicationController
   end
 
   def create
-    @booking = Booking.new(booking_params)
+    raise
+    @booking = Booking.new
     @booking.user = current_user
     @booking.maraude = @maraude
     if @booking.save
@@ -15,12 +16,7 @@ class BookingsController < ApplicationController
     end
   end
 
-private
-
-  def booking_params
-    params.require(:booking).permit(:created_at, :udpated_at, :user_id, :maraude_id)
-  end
-
+  private
 
   def set_maraude
     @maraude = Maraude.find(params[:maraude_id])
