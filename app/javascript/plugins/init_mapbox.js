@@ -13,6 +13,7 @@ const buildMap = () => {
 };
 
 const addMarkersToMap = (map, markers) => {
+  if (Array.isArray(markers)) {
   markers.forEach((marker) => {
     new mapboxgl.Marker()
       .setLngLat([ marker.lng_starts, marker.lat_starts ])
@@ -21,15 +22,28 @@ const addMarkersToMap = (map, markers) => {
       .setLngLat([ marker.lng_ends, marker.lat_ends ])
       .addTo(map);
   });
+} else {
+    new mapboxgl.Marker()
+        .setLngLat([ markers.lng, markers.lat ])
+        .addTo(map);
+  }
 };
 
 const fitMapToMarkers = (map, markers) => {
   const bounds = new mapboxgl.LngLatBounds();
+
   markers.forEach(marker => {
     bounds.extend([ marker.lng_starts, marker.lat_starts ]);
     bounds.extend([ marker.lng_ends, marker.lat_ends ]);
   });
+  if (Array.isArray(markers)) {
+  markers.forEach(marker => bounds.extend([ marker.lng, marker.lat ]));
+
   map.fitBounds(bounds, { padding: 70, maxZoom: 15 });
+} else {
+    bounds.extend([ markers.lng, markers.lat ]);
+  map.fitBounds(bounds, { padding: 70, maxZoom: 15 });
+  }
 };
 
 const initMapbox = () => {
