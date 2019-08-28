@@ -51,6 +51,7 @@ ActiveRecord::Schema.define(version: 2019_08_28_125410) do
     t.datetime "starts_at"
     t.datetime "ends_at"
     t.string "status"
+    t.json "direction"
     t.bigint "asso_id"
     t.index ["asso_id"], name: "index_maraudes_on_asso_id"
   end

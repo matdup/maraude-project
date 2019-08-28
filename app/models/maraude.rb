@@ -4,6 +4,7 @@ class Maraude < ApplicationRecord
   geocoded_by :address_start, latitude: :ltd_starts, longitude: :lng_starts
   after_validation :geocode, if: :will_save_change_to_address_start?
   after_validation :geocode_address_end, if: :will_save_change_to_address_end?
+  after_validation :direction_json, if: :will_save_change_to_address_end? || :will_save_change_to_address_start?
   mount_uploader :photo, PhotoUploader
 
   private
@@ -15,8 +16,13 @@ class Maraude < ApplicationRecord
   end
 
   # add column direction(json) to maraudes table
-
   # create a method 'calucalte_direction' after_validation
+
   # call to direction api if address_start or address_end changed
   # store api response in self.direction
+
+  def direction_json
+    self.direction = HTTP.get("https://api.mapbox.com/directions/v5/mapbox/walking/#{self.lng_starts},#{self.ltd_starts};#{self.lng_ends},#{self.ltd_ends}?steps=true&access_token=#{ENV['MAPBOX_API_KEY']}").body
+  end
+
 end

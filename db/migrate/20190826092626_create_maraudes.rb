@@ -16,6 +16,7 @@ class CreateMaraudes < ActiveRecord::Migration[5.2]
       t.datetime :starts_at
       t.datetime :ends_at
       t.string :status
+      t.json :direction
 
       t.timestamps
     end
