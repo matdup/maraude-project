@@ -13,4 +13,10 @@ class Maraude < ApplicationRecord
     self.ltd_ends = coordinates[0]
     self.lng_ends = coordinates[1]
   end
+
+  # add column direction(json) to maraudes table
+
+  # create a method 'calucalte_direction' after_validation
+  # call to direction api if address_start or address_end changed
+  # store api response in self.direction
 end
