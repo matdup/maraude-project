@@ -1,11 +1,22 @@
+<%= render 'shared/navbar' %>
 <div class= "container container-index">
   <div class="banner">
-    BANNER
+    <!-- BANNER -->
+    <div class="home-title">
+      <h1>ALVEOLE</h1>
+      <h3 class="mt-5">Le premier site de mise en relation de Maraudes</h3>
+    </div>
   </div>
   <div class="index-content">
     <div class="index-left-part">
       <div class="search-index">
-        SEARCHBAR
+        <!-- SEARCHBAR -->
+        <div class="search-navbar">
+          <%= form_tag maraudes_path, class: "form-flex", method: :get do %>
+          <%= text_field_tag :query, params[:query], class: "form-control", placeholder: "Trouvez une Maraude..."%>
+          <%= submit_tag "Recherche", class: "btn btn-warning" %>
+        <% end %>
+        </div>
       </div>
       <div class="row" style="margin: 0;">
         <% @maraudes.each do |maraude| %>
