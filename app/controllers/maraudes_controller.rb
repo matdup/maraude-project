@@ -1,4 +1,5 @@
 class MaraudesController < ApplicationController
+  skip_before_action :authenticate_user!, only: [:index, :show]
 
   def index
     if params[:query].present?
@@ -25,11 +26,9 @@ class MaraudesController < ApplicationController
     @maraudes = Maraude.geocoded #returns flats with coordinates
 
     @markers = {
-        lat: @maraude.ltd_starts,
-        lng: @maraude.lng_starts,
-        infoWindow: render_to_string(partial: "info_window", locals: { maraude: @maraude })
-      }
+      lat: @maraude.ltd_starts,
+      lng: @maraude.lng_starts,
+      infoWindow: render_to_string(partial: "info_window", locals: { maraude: @maraude })
+    }
   end
-
 end
-
