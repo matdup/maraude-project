@@ -8,11 +8,6 @@ class PagesController < ApplicationController
   def dashboard
     @past_bookings = current_user.bookings.select { |booking| booking.maraude.ends_at < Date.today }
     @current_bookings = current_user.bookings.select { |booking| booking.maraude.ends_at > Date.today }
-
-    # @my_bookings = current_user.bookings
-    # @my_maraudes = current_user.maraudes
-    # raise
-
   end
 
 end
