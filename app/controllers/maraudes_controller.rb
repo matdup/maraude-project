@@ -26,8 +26,10 @@ class MaraudesController < ApplicationController
     @maraudes = Maraude.geocoded #returns flats with coordinates
 
     @markers = {
-      lat: @maraude.ltd_starts,
-      lng: @maraude.lng_starts,
+      lat_starts: @maraude.ltd_starts,
+      lng_starts: @maraude.lng_starts,
+      lat_ends: @maraude.ltd_ends,
+      lng_ends: @maraude.lng_ends,
       infoWindow: render_to_string(partial: "info_window", locals: { maraude: @maraude })
     }
   end

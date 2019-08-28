@@ -23,8 +23,11 @@ const addMarkersToMap = (map, markers) => {
         .addTo(map);
     });
   } else {
-    new mapboxgl.Marker()
-      .setLngLat([ markers.lng, markers.lat ])
+      new mapboxgl.Marker()
+      .setLngLat([ markers.lng_starts, markers.lat_starts ])
+      .addTo(map);
+      new mapboxgl.Marker()
+      .setLngLat([ markers.lng_ends, markers.lat_ends ])
       .addTo(map);
   }
 };
@@ -38,8 +41,9 @@ const fitMapToMarkers = (map, markers) => {
     });
     map.fitBounds(bounds, { padding: 70, maxZoom: 15 });
   } else {
-    bounds.extend([ markers.lng, markers.lat ]);
-    map.fitBounds(bounds, { padding: 70, maxZoom: 15 });
+      bounds.extend([ markers.lng_starts, markers.lat_starts ]);
+      bounds.extend([ markers.lng_ends, markers.lat_ends ]);
+      map.fitBounds(bounds, { padding: 70, maxZoom: 15 });
   }
 };
 
