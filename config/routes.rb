@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   end
 
   get "dashboard", to: "pages#dashboard"
-  get "mycurrentbookings", to: "pages#mycurrentbookings"
-  get "mypastbookings", to: "pages#mypastbookings"
+  # get "mycurrentbookings", to: "pages#mycurrentbookings"
+  # get "mypastbookings", to: "pages#mypastbookings"
 
 end
