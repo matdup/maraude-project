@@ -15,7 +15,9 @@ class MaraudesController < ApplicationController
         lng_starts: maraude.lng_starts,
         lat_ends: maraude.ltd_ends,
         lng_ends: maraude.lng_ends,
-        infoWindow: render_to_string(partial: "info_window", locals: { maraude: maraude })
+        infoWindow: render_to_string(partial: "info_window", locals: { maraude: maraude }),
+        image_starts_url: helpers.asset_url('pin_starts'),
+        image_ends_url: helpers.asset_url('pin_ends')
       }
     end
   end
@@ -30,7 +32,9 @@ class MaraudesController < ApplicationController
       lng_starts: @maraude.lng_starts,
       lat_ends: @maraude.ltd_ends,
       lng_ends: @maraude.lng_ends,
-      infoWindow: render_to_string(partial: "info_window", locals: { maraude: @maraude })
+      infoWindow: render_to_string(partial: "info_window", locals: { maraude: @maraude }),
+      image_starts_url: helpers.asset_url('pin_starts'),
+      image_ends_url: helpers.asset_url('pin_ends')
     }
   end
 end

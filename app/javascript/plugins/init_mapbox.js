@@ -15,18 +15,49 @@ const buildMap = () => {
 const addMarkersToMap = (map, markers) => {
   if (Array.isArray(markers)) {
     markers.forEach((marker) => {
-      new mapboxgl.Marker()
+
+      const start_element = document.createElement('div');
+      start_element.className = 'marker';
+      start_element.style.backgroundImage = `url('${marker.image_starts_url}')`;
+      start_element.style.backgroundSize = 'contain';
+      start_element.style.width = '25px';
+      start_element.style.height = '25px';
+
+      const end_element = document.createElement('div');
+      end_element.className = 'marker';
+      end_element.style.backgroundImage = `url('${marker.image_ends_url}')`;
+      end_element.style.backgroundSize = 'contain';
+      end_element.style.width = '25px';
+      end_element.style.height = '25px';
+
+
+      new mapboxgl.Marker(start_element)
         .setLngLat([ marker.lng_starts, marker.lat_starts ])
         .addTo(map);
-        new mapboxgl.Marker()
+        new mapboxgl.Marker(end_element)
         .setLngLat([ marker.lng_ends, marker.lat_ends ])
         .addTo(map);
     });
   } else {
-      new mapboxgl.Marker()
+
+      const start_element = document.createElement('div');
+      start_element.className = 'marker';
+      start_element.style.backgroundImage = `url('${markers.image_starts_url}')`;
+      start_element.style.backgroundSize = 'contain';
+      start_element.style.width = '25px';
+      start_element.style.height = '25px';
+
+      const end_element = document.createElement('div');
+      end_element.className = 'marker';
+      end_element.style.backgroundImage = `url('${markers.image_ends_url}')`;
+      end_element.style.backgroundSize = 'contain';
+      end_element.style.width = '25px';
+      end_element.style.height = '25px';
+
+      new mapboxgl.Marker(start_element)
       .setLngLat([ markers.lng_starts, markers.lat_starts ])
       .addTo(map);
-      new mapboxgl.Marker()
+      new mapboxgl.Marker(end_element)
       .setLngLat([ markers.lng_ends, markers.lat_ends ])
       .addTo(map);
   }
