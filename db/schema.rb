@@ -10,10 +10,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_08_26_102558) do
+ActiveRecord::Schema.define(version: 2019_08_28_125410) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "assos", force: :cascade do |t|
+    t.string "name"
+    t.string "address"
+    t.string "photo"
+    t.string "phone_number"
+    t.bigint "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_assos_on_user_id"
+  end
 
   create_table "bookings", force: :cascade do |t|
     t.datetime "created_at", null: false
@@ -40,8 +51,8 @@ ActiveRecord::Schema.define(version: 2019_08_26_102558) do
     t.datetime "starts_at"
     t.datetime "ends_at"
     t.string "status"
-    t.bigint "user_id"
-    t.index ["user_id"], name: "index_maraudes_on_user_id"
+    t.bigint "asso_id"
+    t.index ["asso_id"], name: "index_maraudes_on_asso_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -61,7 +72,8 @@ ActiveRecord::Schema.define(version: 2019_08_26_102558) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "assos", "users"
   add_foreign_key "bookings", "maraudes"
   add_foreign_key "bookings", "users"
-  add_foreign_key "maraudes", "users"
+  add_foreign_key "maraudes", "assos"
 end
