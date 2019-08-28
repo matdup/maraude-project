@@ -1,0 +1,32 @@
+.booking-info {
+  width: 55%;
+}
+
+.booking-time p {
+  height: 20px;
+  border-radius: 5%;
+  border: 1px solid #4A4A4A;
+  border-radius: 50px;
+  padding:20px;
+
+}
+
+.booking-time {
+  display: flex;
+  align-items: center;
+
+}
+
+.green p {
+  background-color:green;
+  // opacity:0.2;
+  color: black;
+  vertical-align: middle;
+}
+
+.red p{
+  background-color:red;
+  // opacity:0.2;
+  color: black;
+  vertical-align: middle;
+}

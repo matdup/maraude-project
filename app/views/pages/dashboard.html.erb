@@ -1,9 +1,9 @@
 <%= render 'shared/navbar' %>
-<h1>Hello <%= "#{current_user.first_name}" %></h1>
+<h1 class="mt-5">Hello <%= "#{current_user.first_name}" %></h1>
 
-<div class="content d-flex">
+<div class="content d-flex mr-1 dashboard">
 
-  <div class="nav flex-column nav-pills sidebar border border-light " id="v-pills-tab" role="tablist" aria-orientation="vertical">
+  <div class="nav flex-column nav-pills sidebar border border-light ml-1 " id="v-pills-tab" role="tablist" aria-orientation="vertical">
     <a class="nav-link active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true">Profile</a>
     <a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false">Future bookings</a>
     <a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab" aria-controls="v-pills-messages" aria-selected="false">Past bookings</a>
@@ -11,34 +11,65 @@
   </div>
 
   <div class="right-part ml-3 p-3 border border-dark shadow p-3 mb-5 bg-white rounded">
-    <div class="tab-content" id="v-pills-tabContent">
-      <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
-        <p>profile</p>
-      </div>
+
+      <div class="tab-content" id="v-pills-tabContent">
+        <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
+          <h3>Profile Information</h3>
+          <p>First Name</p>
+          <%= current_user.first_name %>
+          <p>Last Name</p>
+          <%= current_user.last_name %>
+          <p>Email</p>
+          <%= current_user.email %>
+          <p>Phone Number</p>
+          <%= current_user.phone_number %>
+        </div>
 
       <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
         <h3>Here are all your futur maraudes :</h3>
-          <ul style="list-style: none">
-            <% if @current_bookings.nil? %>
-              <p>No futur booking yet</p>
+
+            <% if @current_bookings == [] %>
+              <p>No futur bookings yet. You can check all available maraudes :
+                <%= link_to "here", maraudes_path %> </p>
             <% else %>
               <% @current_bookings&.each do |booking| %>
-                <li><%= booking.maraude.title %></li>
-                <li><%= booking.maraude.description %></li>
-                <li><%= booking.maraude.starts_at %></li>
-                <li><%= booking.maraude.ends_at %></li>
+                <div class="card-product">
+                  <img src="<%= booking.maraude.photo %>" />
+                  <div class="card-product-infos">
+                    <div class="booking-info">
+                      <h2><%= booking.maraude.title %></h2>
+                      <p><%= booking.maraude.description %></p>
+                    </div>
+                    <div class="booking-time">
+                      <div class="green"><p><%= booking.maraude.starts_at %></p></div>
+                      <div class="red"><p><%= booking.maraude.ends_at %></p></div>
+                    </div>
+                  </div>
+                </div>
               <% end %>
             <% end %>
       </div>
 
       <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">
         <h3>Here are all your past maraudes : </h3>
-        <ul style="list-style: none">
-          <% @past_bookings&.each do |booking| %>
-            <li><%= booking.maraude.title %></li>
-            <li><%= booking.maraude.description %></li>
-            <li><%= booking.maraude.starts_at %></li>
-            <li><%= booking.maraude.ends_at %></li>
+          <% if @past_bookings.nil? %>
+            <p>No past bookings...</p>
+          <% else %>
+            <% @past_bookings&.each do |booking| %>
+                <div class="card-product">
+                  <img src="<%= booking.maraude.photo %>" />
+                  <div class="card-product-infos">
+                    <div class="booking-info">
+                      <h2><%= booking.maraude.title %></h2>
+                      <p><%= booking.maraude.description %></p>
+                    </div>
+                    <div class="booking-time">
+                      <div class="green"><p><%= booking.maraude.starts_at %></p></div>
+                      <div class="red"><p><%= booking.maraude.ends_at %></p></div>
+                    </div>
+                  </div>
+                </div>
+              <% end %>
           <% end %>
         </ul>
       </div>
