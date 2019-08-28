@@ -10,7 +10,7 @@
       <div class="row" style="margin: 0;">
         <% @maraudes.each do |maraude| %>
         <div class="col-6" style="padding: 10px;">
-          <div class="card-trip">
+          <div class="card-trip zoom picture" data-id='<%= maraude.id %>' >
             <%= cl_image_tag maraude.photo %>
             <div class="card-trip-infos">
               <div>

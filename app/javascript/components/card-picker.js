@@ -1,10 +1,12 @@
 const initCardPicker = () => {
-  const picture = document.querySelectorAll(".card-picture").forEach((cardPicture) => {
-    cardPicture.addEventListener("click", (event)  => {
-      window.location.href = `maraudes/${cardPicture.dataset.id}`;
+  const picture = document.querySelectorAll(".picture").forEach((picture) => {
+    picture.addEventListener("click", (event)  => {
+      window.location.href = `maraudes/${picture.dataset.id}`;
     })
   });
 };
+
+
 
 export { initCardPicker };
 
