@@ -15,12 +15,6 @@ class Maraude < ApplicationRecord
     self.lng_ends = coordinates[1]
   end
 
-  # add column direction(json) to maraudes table
-  # create a method 'calucalte_direction' after_validation
-
-  # call to direction api if address_start or address_end changed
-  # store api response in self.direction
-
   def direction_json
     self.direction = HTTP.get("https://api.mapbox.com/directions/v5/mapbox/walking/#{self.lng_starts},#{self.ltd_starts};#{self.lng_ends},#{self.ltd_ends}?steps=true&access_token=#{ENV['MAPBOX_API_KEY']}").body
   end
