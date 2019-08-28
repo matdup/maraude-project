@@ -34,6 +34,8 @@
           <div>
             <p>Inscrivez-vous :</p>
           </div>
+
+          <% if current_user  %>
           <%= simple_form_for [@maraude, @booking] do |f| %>
 
             <div class="d-flex justify-content-between mb-4">
@@ -62,6 +64,7 @@
 
               <%= f.submit "Réservez cette maraude", class: "btn", class: "w-100", style: "background-color: #FFE436"%>
 
+          <% end %>
           <% end %>
         </div>
       </div>
