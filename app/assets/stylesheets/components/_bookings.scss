@@ -5,15 +5,20 @@
 .booking-time p {
   height: 20px;
   border-radius: 5%;
-  border: 1px solid #4A4A4A;
-  border-radius: 50px;
-  padding:20px;
+  // border: 1px solid #4A4A4A;
+  // border-radius: 50px;
+  // padding:20px;
 
 }
 
 .booking-time {
   display: flex;
   align-items: center;
+
+}
+
+.booking-time p {
+  font-size: 14px;
 
 }
 
@@ -29,4 +34,9 @@
   // opacity:0.2;
   color: black;
   vertical-align: middle;
+}
+
+
+.booking-btn {
+  display:flow-root;
 }
