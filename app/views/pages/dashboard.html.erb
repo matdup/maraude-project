@@ -82,8 +82,10 @@
 
       <% if !@asso.nil? %>
         <div class="tab-pane fade" id="v-pills-maraudes" role="tabpanel" aria-labelledby="v-pills-maraudes-tab">
+          <div class="d-flex justify-content-between">
           <h3>Here are all your created maraudes</h3>
-          METTRE ICI LE LINK TO FORM CREATE MARAUDE
+           <%= link_to "Create a new maraude", new_maraude_path, class: "btn btn-primary" %>
+          </div>
           <% @maraudes_as_owner.each do |maraude| %>
             <div class="card-product">
               <img src="<%= maraude.photo %>" />
