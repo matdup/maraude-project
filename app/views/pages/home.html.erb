@@ -9,7 +9,7 @@
       <div class="search-navbar">
         <%= form_tag maraudes_path, class: "form-flex", method: :get do %>
 
-          <%= text_field_tag :query, params[:query], class: "form-control", placeholder: "Trouvez une Maraude..."%>
+          <%= text_field_tag :query, params[:query], class: "form-control autocomplete", placeholder: "Trouvez une Maraude..."%>
           <%= submit_tag "Recherche", class: "btn btn-warning" %>
         <% end %>
       </div>

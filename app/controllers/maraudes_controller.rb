@@ -27,7 +27,10 @@ class MaraudesController < ApplicationController
     @booking = Booking.new
     @maraudes = Maraude.geocoded #returns flats with coordinates
 
+
+
     @remaining_places = @maraude.capacity.to_i - @maraude.bookings.size
+
 
     @markers = {
       lat_starts: @maraude.ltd_starts,
