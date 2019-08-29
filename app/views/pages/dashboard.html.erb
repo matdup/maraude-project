@@ -20,7 +20,7 @@
         <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
           <h3>Here are all your futur maraudes :</h3>
           <% if @current_bookings == [] %>
-            <p>No futur bookings yet. You can check all available maraudes :
+            <p>No futur bookings yet 😱. You can check all available maraudes :
               <%= link_to "here", maraudes_path %> </p>
           <% else %>
             <% @current_bookings&.each do |booking| %>
