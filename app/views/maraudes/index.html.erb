@@ -8,10 +8,10 @@
     </div>
   </div>
   <div class="index-content">
-    <div class="index-left-part">
+    <div class="index-left-part pr-2">
       <div class="search-index">
         <!-- SEARCHBAR -->
-        <div class="search-navbar">
+        <div class="search-navbar pr-2">
           <%= form_tag maraudes_path, class: "form-flex", method: :get do %>
           <%= text_field_tag :query, params[:query], class: "form-control autocomplete", placeholder: "Trouvez une Maraude..."%>
           <%= submit_tag "Recherche", class: "btn btn-warning" %>
