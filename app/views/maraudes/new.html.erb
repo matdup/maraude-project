@@ -1,22 +1,27 @@
 <div class="container">
   <div class="row">
-    <div class="col-4 offset-4">
+    <!-- <div class="col-4 offset-4"> -->
       <h1>test création de maraude</h1>
       <br>
       <br>
       <br>
       <br>
       <br>
-      <%= simple_form_for @maraude do |f| %>
-        <%= f.input :title %>
-        <%= f.input :address_start, input_html: { class: "autocomplete" }%>
-        <%= f.input :address_end, input_html: { class: "autocomplete" } %>
-        <%= f.input :description %>
-        <%= f.input :capacity %>
-        <%= f.input :photo %>
+      <div class="test">
+        <%= simple_form_for @maraude do |f| %>
+          <%= f.input :title, input_html: { class: "create-style"} %>
+          <%= f.input :address_start, input_html: { class: "create-style autocomplete" }%>
+          <%= f.input :address_end, input_html: { class: "create-style autocomplete" } %>
+          <%= f.input :starts_at, as: :string, input_html: { id: "starts_at", class: "create-style"} %>
+          <%= f.input :ends_at, as: :string, input_html: { id: "ends_at", class: "create-style"} %>
+          <%= f.input :description, input_html: { class: "create-style"} %>
+          <%= f.input :capacity, input_html: { class: "create-style"} %>
+          <%= f.input :photo, input_html: { class: "create-style"} %>
 
-        <%= f.submit %>
-      <% end %>
+          <%= f.submit %>
+        <% end %>
+
+      </div>
       <br>
       <br>
       <br>
@@ -32,7 +37,7 @@
       <br>
       <br>
       <br>
-    </div>
+    <!-- </div> -->
   </div>
 </div>
 
