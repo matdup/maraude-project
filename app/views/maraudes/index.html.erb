@@ -26,7 +26,7 @@
             <div class="card-trip-infos">
               <div>
                 <h2><%= maraude.title %></h2>
-                <p><%= maraude.starts_at %></p>
+                <p><%= maraude.starts_at.strftime("%A %d %B %H:%M") %></p>
               </div>
               <h2 class="card-trip-pricing"><%= maraude.capacity%> places disponibles</h2>
               <img src="<%= maraude.asso.photo %>" class="card-trip-user avatar-bordered" />
