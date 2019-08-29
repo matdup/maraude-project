@@ -9,7 +9,7 @@
       <div class="search-navbar">
         <%= form_tag maraudes_path, class: "form-flex", method: :get do %>
 
-          <%= text_field_tag :query, params[:query], class: "form-control", placeholder: "Trouvez une Maraude..."%>
+          <%= text_field_tag :query, params[:query], class: "form-control autocomplete", placeholder: "Trouvez une Maraude..."%>
           <%= submit_tag "Recherche", class: "btn btn-warning" %>
         <% end %>
       </div>
@@ -39,7 +39,7 @@
 
 
 <div class="container">
-  <h2 class="mt-3 text-center">The Lastest maraudes</h2>
+  <h2 class="mt-3 text-center">The lastest maraudes</h2>
   <div class="row">
     <% @maraudes.each do |maraude| %>
       <div class="col-4 mt-5" style="padding: 10px;">
@@ -57,6 +57,8 @@
       </div>
     <% end %>
   </div>
+  <br>
+  <h2 class="mt-3 text-center">The lastest partners</h2>
   <div class="partners" data-aos="flip-left">
     <div class="partner">
       <%= image_tag "partner1.svg", alt: "Le Wagon", width: 300, height: 230 %>

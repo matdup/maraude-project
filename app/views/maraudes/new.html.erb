@@ -9,8 +9,8 @@
       <br>
       <%= simple_form_for @maraude do |f| %>
         <%= f.input :title %>
-        <%= f.input :address_start %>
-        <%= f.input :address_end %>
+        <%= f.input :address_start, input_html: { class: "autocomplete" }%>
+        <%= f.input :address_end, input_html: { class: "autocomplete" } %>
         <%= f.input :description %>
         <%= f.input :capacity %>
         <%= f.input :photo %>

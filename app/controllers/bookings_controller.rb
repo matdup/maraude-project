@@ -5,10 +5,10 @@ class BookingsController < ApplicationController
   end
 
   def create
-    raise
     @booking = Booking.new
     @booking.user = current_user
     @booking.maraude = @maraude
+    # raise
     if @booking.save
       redirect_to dashboard_path
     else
