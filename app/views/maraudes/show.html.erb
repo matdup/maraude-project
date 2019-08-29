@@ -39,7 +39,8 @@
         </div>
 
         <div class="mt-3 bg-white p-3 w-100 align-item-center">
-          <% if current_user && current_user.bookings.where(maraude: @maraude).exists? %>
+          <% if user_signed_in? %>
+          <% if current_user.bookings.where(maraude: @maraude).exists? %>
             <h3 class="text-center">Vous avez déjà réservé cette maraude </h3>
           <% elsif @remaining_places == 0 %>
             <h2>Il n'y a plus de place</h2>
@@ -76,6 +77,7 @@
                 <%= f.submit "Réservez cette maraude", class: "btn", style: "background-color: #FFE436; border-radius: 15px; padding: 10px; width: 330px;"%>
               </div>
 
+          <% end %>
           <% end %>
           <% end %>
         </div>
