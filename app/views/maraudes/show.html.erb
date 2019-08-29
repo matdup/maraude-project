@@ -21,14 +21,14 @@
             <p>Il reste <strong> <%= @remaining_places %> </strong> places ! </p>
           </div>
 
-          <div class="m-2">
+          <div class="m-2 d-flex justify-content-center m-4">
             <%= cl_image_tag(@maraude.photo, style: "height: 250px")%>
           </div>
 
         </div>
       </div>
 
-      <div style="box-shadow: 0 0 15px rgba(0,0,0,0.2); width: 100%;" class="p-3">
+      <div style="box-shadow: 0 0 15px rgba(0,0,0,0.2); width: 100%; height: 750px;" class="p-3">
         <div
           id="map"
           style="width: 604px;
