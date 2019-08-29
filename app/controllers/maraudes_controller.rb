@@ -49,12 +49,16 @@ class MaraudesController < ApplicationController
   def create
     @maraude = Maraude.new(maraude_params)
     @maraude.asso = current_user.assos.first
-    @maraude.save
+    if @maraude.save
+      redirect_to dashboard_path
+    else
+      render :new
+    end
   end
 
   private
 
   def maraude_params
-    params.require(:maraude).permit(:title, :address_start, :description, :capacity, :photo)
+    params.require(:maraude).permit(:title, :address_start, :description, :capacity, :photo, :address_end, :starts_at, :ends_at)
   end
 end

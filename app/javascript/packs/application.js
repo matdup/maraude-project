@@ -1,5 +1,5 @@
 import "bootstrap";
-// import { flatpicker } from "../components/flat_picker";
+import { flatpicker } from "../components/flat_picker";
 // import { reviewMaraude } from "../components/review_Maraude";
 // import { previewImageOnFileSelect } from "../components/preview_photo";
 // import { loadDynamicBannerText } from '../components/banner';
@@ -16,6 +16,6 @@ initMapbox();
 // previewImageOnFileSelect();
 // loadDynamicBannerText();
 // initUpdateNavbarOnScroll();
-// flatpicker();
+flatpicker();
 initAutocomplete();
 initCardPicker();
