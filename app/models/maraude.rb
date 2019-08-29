@@ -16,7 +16,7 @@ class Maraude < ApplicationRecord
   end
 
   def direction_json
-    self.direction = HTTP.get("https://api.mapbox.com/directions/v5/mapbox/walking/#{self.lng_starts},#{self.ltd_starts};#{self.lng_ends},#{self.ltd_ends}?steps=true&access_token=#{ENV['MAPBOX_API_KEY']}").body
+    self.direction = JSON.parse(HTTP.get("https://api.mapbox.com/directions/v5/mapbox/walking/#{self.lng_starts},#{self.ltd_starts};#{self.lng_ends},#{self.ltd_ends}?steps=true&access_token=#{ENV['MAPBOX_API_KEY']}").body)
   end
 
 end
