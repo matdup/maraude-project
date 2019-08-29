@@ -41,7 +41,7 @@ const addMarkersToMap = (map, markers) => {
       // create iti
       const steps = Array.from(marker.steps).map(data => data.maneuver.location)
       setTimeout(() => {
-        itineraire(map, steps, marker)
+        itineraire(map, steps, marker.maraude_id)
       }, 1000)
     });
   } else {
