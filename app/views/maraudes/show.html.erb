@@ -15,6 +15,7 @@
           <p style="font-weight: 600;"><%= @maraude.starts_at.strftime("%A %d %B %H:%M") %></p>
           <p style="font-weight: 100;"><%= @maraude.ends_at.strftime("%A %d %B %H:%M") %></p>
           <p>La demande de l'association est de <strong><%= @maraude.capacity %> personnes</strong></p>
+          <p>Il reste <strong> <%= @remaining_places %> </strong> places ! </p>
 
         </div>
 
@@ -34,41 +35,43 @@
         </div>
 
         <div class="mt-3 bg-white py-3 w-100 align-item-center">
-          <div>
-            <p>Inscrivez-vous :</p>
-          </div>
-
-          <% if current_user  %>
-          <%= simple_form_for [@maraude, @booking] do |f| %>
-
-            <div class="d-flex justify-content-between mb-4">
-
-              <div class="border-bottom" style="width: 290px;">
-                <%=  text_field_tag "user[first_name]", current_user.first_name, placeholder: 'first name', class: "border-0", style: "outline: none;" %>
-              </div>
-
-              <div class="border-bottom" style="width: 290px;">
-                <%= text_field_tag "user[last_name]", current_user.last_name, placeholder: 'last name', class: "border-0", style: "outline: none;" %>
-              </div>
-
+          <% if current_user.bookings.where(maraude: @maraude).exists? %>
+            <h2>Vous avez déjà réservé cette maraude</h2>
+          <% elsif @remaining_places == 0 %>
+            <h2>Il n'y a plus de place</h2>
+          <% else %>
+            <div>
+              <p>Inscrivez-vous :</p>
             </div>
+            <%= simple_form_for [@maraude, @booking] do |f| %>
 
-            <div class="d-flex justify-content-between mb-4 border-0">
+              <div class="d-flex justify-content-between mb-4">
 
-              <div class="border-bottom" style="width: 290px;">
-                <%= text_field_tag "user[email]", current_user.email, placeholder: 'email', class: "border-0 w-100", style: "outline: none;" %>
+                <div class="border-bottom" style="width: 290px;">
+                  <%=  text_field_tag "user[first_name]", current_user.first_name, placeholder: 'first name', class: "border-0", style: "outline: none;" %>
+                </div>
+
+                <div class="border-bottom" style="width: 290px;">
+                  <%= text_field_tag "user[last_name]", current_user.last_name, placeholder: 'last name', class: "border-0", style: "outline: none;" %>
+                </div>
+
               </div>
 
-              <div class="border-bottom" style="width: 290px;">
-                <%= text_field_tag "user[phone_number]", current_user.phone_number, placeholder: 'phone number', class: "border-0", style: "outline: none;" %>
+              <div class="d-flex justify-content-between mb-4 border-0">
+
+                <div class="border-bottom" style="width: 290px;">
+                  <%= text_field_tag "user[email]", current_user.email, placeholder: 'email', class: "border-0 w-100", style: "outline: none;" %>
+                </div>
+
+                <div class="border-bottom" style="width: 290px;">
+                  <%= text_field_tag "user[phone_number]", current_user.phone_number, placeholder: 'phone number', class: "border-0", style: "outline: none;" %>
+                </div>
+
               </div>
 
-            </div>
-
-              <%= f.submit "Réservez cette maraude", class: "btn", class: "w-100", style: "background-color: #FFE436"%>
-
-          <% end %>
-          <% end %>
+                <%= f.submit "Réservez cette maraude", class: "btn", class: "w-100", style: "background-color: #FFE436"%>
+              <% end %>
+            <% end %>
         </div>
       </div>
 
