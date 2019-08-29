@@ -1,13 +1,13 @@
 class MaraudesController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index, :show]
-  
+
   def index
     if params[:query].present?
       @maraudes = Maraude.where(address: params[:query])
     else
       @maraudes = Maraude.all
     end
-    
+
     @maraudes = Maraude.geocoded
     @markers = @maraudes.map do |maraude|
       {
@@ -21,12 +21,14 @@ class MaraudesController < ApplicationController
       }
     end
   end
-  
+
   def show
     @maraude = Maraude.find(params[:id])
     @booking = Booking.new
     @maraudes = Maraude.geocoded #returns flats with coordinates
-    
+
+    @remaining_places = @maraude.capacity.to_i - @maraude.bookings.size
+
     @markers = {
       lat_starts: @maraude.ltd_starts,
       lng_starts: @maraude.lng_starts,
@@ -47,7 +49,7 @@ class MaraudesController < ApplicationController
     @maraude.asso = current_user.assos.first
     @maraude.save
   end
-  
+
   private
 
   def maraude_params
