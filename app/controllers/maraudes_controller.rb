@@ -18,7 +18,8 @@ class MaraudesController < ApplicationController
         infoWindow: render_to_string(partial: "info_window", locals: { maraude: maraude }),
         image_starts_url: helpers.asset_url('pin_starts'),
         image_ends_url: helpers.asset_url('pin_ends'),
-        steps: JSON.parse(maraude.direction.first)["routes"].first["legs"].first["steps"]
+        steps: JSON.parse(maraude.direction.first)["routes"].first["legs"].first["steps"],
+        maraude_id: maraude.id
       }
     end
   end
