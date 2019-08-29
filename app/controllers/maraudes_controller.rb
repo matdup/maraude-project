@@ -17,7 +17,8 @@ class MaraudesController < ApplicationController
         lng_ends: maraude.lng_ends,
         infoWindow: render_to_string(partial: "info_window", locals: { maraude: maraude }),
         image_starts_url: helpers.asset_url('pin_starts'),
-        image_ends_url: helpers.asset_url('pin_ends')
+        image_ends_url: helpers.asset_url('pin_ends'),
+        steps: JSON.parse(maraude.direction.first)["routes"].first["legs"].first["steps"]
       }
     end
   end
@@ -26,12 +27,7 @@ class MaraudesController < ApplicationController
     @maraude = Maraude.find(params[:id])
     @booking = Booking.new
     @maraudes = Maraude.geocoded #returns flats with coordinates
-
-
-
     @remaining_places = @maraude.capacity.to_i - @maraude.bookings.size
-
-
     @markers = {
       lat_starts: @maraude.ltd_starts,
       lng_starts: @maraude.lng_starts,
@@ -41,6 +37,8 @@ class MaraudesController < ApplicationController
       image_starts_url: helpers.asset_url('pin_starts'),
       image_ends_url: helpers.asset_url('pin_ends')
     }
+    direction = JSON.parse(@maraude.direction.first)
+    @steps = direction["routes"].first["legs"].first["steps"]
   end
 
   def new

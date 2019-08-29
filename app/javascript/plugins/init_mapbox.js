@@ -2,7 +2,7 @@ import mapboxgl from 'mapbox-gl';
 import MapboxGeocoder from '@mapbox/mapbox-gl-geocoder';
 
 const mapElement = document.getElementById('map');
-console.log(mapElement);
+// console.log(mapElement);
 
 const buildMap = () => {
   mapboxgl.accessToken = mapElement.dataset.mapboxApiKey;
@@ -37,6 +37,12 @@ const addMarkersToMap = (map, markers) => {
         new mapboxgl.Marker(end_element)
         .setLngLat([ marker.lng_ends, marker.lat_ends ])
         .addTo(map);
+
+      // create iti
+      const steps = Array.from(marker.steps).map(data => data.maneuver.location)
+      setTimeout(() => {
+        itineraire(map, steps, marker)
+      }, 1000)
     });
   } else {
 
@@ -60,6 +66,12 @@ const addMarkersToMap = (map, markers) => {
       new mapboxgl.Marker(end_element)
       .setLngLat([ markers.lng_ends, markers.lat_ends ])
       .addTo(map);
+
+      // create iti
+      const steps = Array.from(JSON.parse(mapElement.dataset.steps)).map(data => data.maneuver.location)
+      setTimeout(() => {
+        itineraire(map, steps)
+      }, 1000)
   }
 };
 
@@ -79,7 +91,6 @@ const fitMapToMarkers = (map, markers) => {
 };
 
 const initMapbox = () => {
-  console.log('toto')
   if (mapElement) {
     const map = buildMap();
     const markers = JSON.parse(mapElement.dataset.markers);
@@ -88,5 +99,38 @@ const initMapbox = () => {
     map.addControl(new MapboxGeocoder({ accessToken: mapboxgl.accessToken }));
   }
 };
+
+
+const itineraire = (map, steps, id = 0) => {
+  // if (map.getSource('route')) {
+  //   map.removeLayer('route')
+  //   map.removeSource('route')
+  // } else {
+    map.addLayer({
+      "id": `route${id}`,
+      "type": "line",
+      "source": {
+        "type": "geojson",
+        "data": {
+          "type": "Feature",
+          "geometry": {
+            "type": "LineString",
+            "coordinates": steps
+          },
+          "properties": {},
+        }
+      },
+      "layout": {
+        "line-join": "round",
+        "line-cap": "round"
+      },
+      "paint": {
+        // pour changer la couleur de la route
+        "line-color": "#009661",
+        "line-width": 8,
+        "line-opacity": 0.8
+      }
+    });
+  };
 
 export { initMapbox };
