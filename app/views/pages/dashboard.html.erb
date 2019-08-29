@@ -12,11 +12,14 @@
 
     <a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab" aria-controls="v-pills-messages" aria-selected="false">Profile</a>
 
+    <a class="nav-link" id="v-pills-maraudes-tab" data-toggle="pill" href="#v-pills-maraudes" role="tab" aria-controls="v-pills-maraudes" aria-selected="false">My maraudes</a>
+
   </div>
 
   <div class="right-part ml-3 p-3 border border-dark shadow p-3 mb-5 bg-white rounded">
 
       <div class="tab-content" id="v-pills-tabContent">
+
         <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
           <h3>Here are all your futur maraudes :</h3>
           <% if @current_bookings == [] %>
@@ -46,8 +49,6 @@
           <% end %>
       </div>
 
-
-
       <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
         <h3>Here are all your past maraudes : </h3>
           <% if @past_bookings.nil? %>
@@ -68,8 +69,7 @@
       </div>
 
       <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">
-
-                    <h3>Profile Information</h3>
+        <h3>Profile Information</h3>
           <p>First Name</p>
           <%= current_user.first_name %>
           <p>Last Name</p>
@@ -78,8 +78,25 @@
           <%= current_user.email %>
           <p>Phone Number</p>
           <%= current_user.phone_number %>
-        </div>
       </div>
+
+      <% if !@asso.nil? %>
+        <div class="tab-pane fade" id="v-pills-maraudes" role="tabpanel" aria-labelledby="v-pills-maraudes-tab">
+          <h3>Here are all your created maraudes</h3>
+          METTRE ICI LE LINK TO FORM CREATE MARAUDE
+          <% @maraudes_as_owner.each do |maraude| %>
+            <div class="card-product">
+              <img src="<%= maraude.photo %>" />
+              <div class="card-product-infos">
+                <div class="maraude-info">
+                  <h2><%= maraude.title %></h2>
+                  <p><%= maraude.description %></p>
+                </div>
+              </div>
+            </div>
+          <% end %>
+        </div>
+      <% end %>
     </div>
   </div>
 </div>
