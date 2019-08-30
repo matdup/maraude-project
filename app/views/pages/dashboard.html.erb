@@ -12,8 +12,9 @@
 
     <a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab" aria-controls="v-pills-messages" aria-selected="false">Profile</a>
 
-    <a class="nav-link" id="v-pills-maraudes-tab" data-toggle="pill" href="#v-pills-maraudes" role="tab" aria-controls="v-pills-maraudes" aria-selected="false">My maraudes</a>
-
+    <% if !@asso.nil?  %>
+      <a class="nav-link" id="v-pills-maraudes-tab" data-toggle="pill" href="#v-pills-maraudes" role="tab" aria-controls="v-pills-maraudes" aria-selected="false">My maraudes</a>
+    <% end %>
   </div>
 
   <div class="right-part ml-3 p-3 border border-dark shadow p-3 mb-5 bg-white rounded">

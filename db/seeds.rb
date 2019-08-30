@@ -101,6 +101,19 @@ User.create!(
 puts "User 7 - Edward : compte créé !"
 puts ""
 
+puts "User 8 : Creation du compte de Bruce !"
+User.create!(
+  first_name: "Bruce",
+  last_name: "Banner",
+  address: "1 rue de Rivoli",
+  photo: "https://randomuser.me/api/portraits/men/67.jpg",
+  email: "bruce.banner@outlook.com",
+  password: "123456",
+  phone_number: "06 53 38 95 10"
+  )
+puts "User 8 - Bruce : compte créé !"
+puts ""
+
 ################################################################################
 # puts "#######################################"
 # puts ""
