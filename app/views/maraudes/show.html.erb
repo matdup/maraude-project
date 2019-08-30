@@ -9,7 +9,7 @@
       <h2><%= @maraude.title %></h2>
       <p><%= @maraude.starts_at.strftime("%A %d %B %H:%M") %> / <%= @maraude.ends_at.strftime("%H:%M") %></p>
       <p><%= @maraude.description%></p>
-      <p style="font-weight: 600;">départ : <%= @maraude.address_start %></p>
+      <p class="m-0"style="font-weight: 600;">départ : <%= @maraude.address_start %></p>
       <p style="font-weight: 100;">arrivée : <%= @maraude.address_end %></p>
       <p>La demande de <%=@maraude.asso.name %> est de <strong><%= @maraude.capacity %> personnes</strong></p>
       <p>Il reste <strong> <%= @remaining_places %> </strong> places ! </p>
