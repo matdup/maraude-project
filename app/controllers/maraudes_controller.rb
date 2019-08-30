@@ -3,12 +3,17 @@ class MaraudesController < ApplicationController
 
   def index
     if params[:query].present?
-      @maraudes = Maraude.where(address: params[:query])
+      @maraudes = Maraude.near(params[:query], 0.5)
+      actual_position = params[:query]
+      @markers_actual_position = {
+        lat: Geocoder.search("#{actual_position}").first.data["lat"],
+        lng: Geocoder.search("#{actual_position}").first.data["lon"],
+        # infoWindow: render_to_string(partial: "info_window", locals: { maraude: maraude })
+      }
     else
-      @maraudes = Maraude.all
+      @maraudes = Maraude.geocoded
     end
 
-    @maraudes = Maraude.geocoded
     @markers = @maraudes.map do |maraude|
       {
         lat_starts: maraude.ltd_starts,
