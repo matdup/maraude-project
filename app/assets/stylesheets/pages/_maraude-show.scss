@@ -1,0 +1,22 @@
+.mauraude-main-container {
+  display: flex;
+}
+
+.mauraude-main-container #map {
+  position: relative !important;
+  height: 350px;
+}
+
+
+.mauraude-container-left,
+.mauraude-container-right {
+  flex: 0 0 50%;
+}
+
+.maraude-title {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+

@@ -11,3 +11,11 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
+
+
+.content {
+  position: relative;
+  margin-top: 56px;
+  min-height: 100vh;
+  margin-bottom: 20px;
+}
