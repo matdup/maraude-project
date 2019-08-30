@@ -11,8 +11,7 @@
       <p><%= @maraude.description%></p>
       <p class="m-0"style="font-weight: 600;">départ : <%= @maraude.address_start %></p>
       <p style="font-weight: 100;">arrivée : <%= @maraude.address_end %></p>
-      <p>La demande de <%=@maraude.asso.name %> est de <strong><%= @maraude.capacity %> personnes</strong></p>
-      <p>Il reste <strong> <%= @remaining_places %> </strong> places ! </p>
+      <p class="mb-4">La demande de <%=@maraude.asso.name %> est de <%= @maraude.capacity %> personnes. Il reste <strong> <%= @remaining_places %> </strong> places !</p>
       <%= cl_image_tag(@maraude.photo, style: "height: 250px")%>
     </div>
 
