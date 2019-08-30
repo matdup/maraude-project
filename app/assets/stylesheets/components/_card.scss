@@ -10,6 +10,10 @@
   object-fit: cover;
 }
 
+.card-trip:hover {
+  cursor:pointer;
+}
+
 .card-trip h2 {
   font-size: 16px;
   font-weight: bold;

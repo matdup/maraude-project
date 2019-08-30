@@ -355,6 +355,7 @@ a = Maraude.new(
   starts_at: DateTime.new(2019, 5, 6, 21, 30),
   ends_at: DateTime.new(2019, 5, 6, 23, 30)
 )
+a.remote_photo_url = "https://images.unsplash.com/photo-1469571486292-0ba58a3f068b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2550&q=80"
 a.save!
 puts "Maraude 5 - Mauraude créé"
 puts ""
@@ -498,7 +499,7 @@ a = Maraude.new(
   starts_at: DateTime.new(2019, 11, 7, 21, 30),
   ends_at: DateTime.new(2019, 11, 7, 23, 30)
 )
-a.remote_photo_url = "https://images.unsplash.com/photo-1531206715517-5c0ba140b2b8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=3150&q=80"
+a.remote_photo_url = "https://images.unsplash.com/photo-1541802645635-11f2286a7482?ixlib=rb-1.2.1&auto=format&fit=crop&w=2550&q=80"
 a.save!
 puts "Maraude 13 - Mauraude créé"
 puts ""
