@@ -1,45 +1,49 @@
 <div class="container">
-  <div class="row">
-    <!-- <div class="col-4 offset-4"> -->
-      <h1>test création de maraude</h1>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <div class="test">
-        <%= simple_form_for @maraude do |f| %>
-          <%= f.input :title, input_html: { class: "create-style"} %>
-          <%= f.input :address_start, input_html: { class: "create-style autocomplete" }%>
-          <%= f.input :address_end, input_html: { class: "create-style autocomplete" } %>
-          <%= f.input :starts_at, as: :string, input_html: { id: "starts_at", class: "create-style"} %>
-          <%= f.input :ends_at, as: :string, input_html: { id: "ends_at", class: "create-style"} %>
-          <%= f.input :description, input_html: { class: "create-style"} %>
-          <%= f.input :capacity, input_html: { class: "create-style"} %>
-          <%= f.input :photo, input_html: { class: "create-style"} %>
+  <div class="black-form">
+    <div class="form-maraude">
+      <h1>Créez votre Maraude</h1>
+      <%= simple_form_for @maraude do |f| %>
+        <div class="form-maraude-top">
+          <div class="row">
+            <div class="col-6">
+              <%= f.input :title, label: "Titre", input_html: { class: "create-style"} %>
+            </div>
+            <div class="col-6">
+              <%= f.input :description, label: "Description",input_html: { class: "create-style"} %>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-6">
+              <%= f.input :address_start, label: "Adresse Départ",input_html: { class: "create-style autocomplete" }%>
+            </div>
+            <div class="col-6">
+              <%= f.input :address_end, label: "Adresse Arrivée",input_html: { class: "create-style autocomplete" } %>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-6">
+              <%= f.input :starts_at, label: "Débute le",as: :string, input_html: { id: "starts_at", class: "create-style"} %>
+            </div>
+            <div class="col-6">
+              <%= f.input :ends_at, label: "Termine le",as: :string, input_html: { id: "ends_at", class: "create-style"} %>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-6">
+              <%= f.input :capacity, label: "Nombre de place",input_html: { class: "create-style"} %>
+            </div>
+            <div class="col-6">
+            <%= f.input :photo, input_html: { class: "create-style"} %>
+            </div>
+          </div>
 
-          <%= f.submit %>
-        <% end %>
-
-      </div>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-    <!-- </div> -->
+        </div>
+        <%= f.submit "Valider", class: "cta-validate" %>
+      <% end %>
+    </div>
   </div>
 </div>
+
 
 
 
