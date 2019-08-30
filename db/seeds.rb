@@ -180,7 +180,7 @@ puts ""
 #   password: "123456",
 #   phone_number: "06 53 38 95 10"
 #   )
-# puts "User 12 - Asso Action Sociale : compte créé !"
+# puts "User 12 - Asso Actions Sociales : compte créé !"
 # puts ""
 
 ################################################################################
