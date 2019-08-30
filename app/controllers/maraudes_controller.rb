@@ -22,8 +22,8 @@ class MaraudesController < ApplicationController
         lat_ends: maraude.ltd_ends,
         lng_ends: maraude.lng_ends,
         infoWindow: render_to_string(partial: "info_window", locals: { maraude: maraude }),
-        image_starts_url: helpers.asset_url('pin_starts'),
-        image_ends_url: helpers.asset_url('pin_ends'),
+        image_starts_url: helpers.asset_url('pin_starts.png'),
+        image_ends_url: helpers.asset_url('pin_ends.png'),
         steps: maraude.direction["routes"].first["legs"].first["steps"],
         maraude_id: maraude.id
       }
@@ -41,8 +41,8 @@ class MaraudesController < ApplicationController
       lat_ends: @maraude.ltd_ends,
       lng_ends: @maraude.lng_ends,
       infoWindow: render_to_string(partial: "info_window", locals: { maraude: @maraude }),
-      image_starts_url: helpers.asset_url('pin_starts'),
-      image_ends_url: helpers.asset_url('pin_ends')
+      image_starts_url: helpers.asset_url('pin_starts.png'),
+      image_ends_url: helpers.asset_url('pin_ends.png')
     }
     direction = @maraude.direction
     @steps = direction["routes"].first["legs"].first["steps"]
