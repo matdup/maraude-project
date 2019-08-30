@@ -5,9 +5,10 @@ class MaraudesController < ApplicationController
     if params[:query].present?
       @maraudes = Maraude.near(params[:query], 0.5)
       actual_position = params[:query]
+      coordinates = Geocoder.search(actual_position).first.data
       @markers_actual_position = {
-        lat: Geocoder.search("#{actual_position}").first.data["lat"],
-        lng: Geocoder.search("#{actual_position}").first.data["lon"],
+        lat: coordinates["lat"],
+        lng: coordinates["lon"]
         # infoWindow: render_to_string(partial: "info_window", locals: { maraude: maraude })
       }
     else

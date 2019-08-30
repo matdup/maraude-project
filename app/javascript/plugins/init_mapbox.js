@@ -95,9 +95,12 @@ const initMapbox = () => {
     const map = buildMap();
     const markers = JSON.parse(mapElement.dataset.markers);
     const markersActualPosition =  JSON.parse(mapElement.dataset.markersActualPosition);
-    new mapboxgl.Marker()
-        .setLngLat([ markersActualPosition.lng, markersActualPosition.lat ])
-        .addTo(map);
+    if (markersActualPosition) {
+      const markersActualPosition =  JSON.parse(mapElement.dataset.markersActualPosition);
+      new mapboxgl.Marker()
+          .setLngLat([ markersActualPosition.lng, markersActualPosition.lat ])
+          .addTo(map);
+    }
     addMarkersToMap(map, markers);
     fitMapToMarkers(map, markers);
     map.addControl(new MapboxGeocoder({ accessToken: mapboxgl.accessToken }));
