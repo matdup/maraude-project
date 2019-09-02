@@ -1,18 +1,26 @@
 <div class="container ">
-  <div class="maraude-title">
-    <h1> <%=@maraude.asso.name %><%= cl_image_tag(@maraude.asso.photo, style: "height: 50px") %></h1>
+<%= link_to "Back to all maraudes", maraudes_path %>
+  <div class="maraude-title" style="height: 250px; width: 100%; background-size: cover; background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('<%= cl_image_path(@maraude.photo) %>');">
+
+    <div class="asso-photo">
+    <div> <%=@maraude.asso.name %> <%= cl_image_tag(@maraude.asso.photo, style: "height: 50px") %></div></div>
+    <h1 class="mt-4"> <%= @maraude.title %> </h1>
   </div>
   <div class="mauraude-main-container" style="">
     <div class="mauraude-container-left">
-      <%= link_to "Back to all maraudes", maraudes_path %>
 
-      <h2><%= @maraude.title %></h2>
       <p><%= @maraude.starts_at.strftime("%A %d %B %H:%M") %> / <%= @maraude.ends_at.strftime("%H:%M") %></p>
       <p><%= @maraude.description%></p>
-      <p class="m-0"style="font-weight: 600;">départ : <%= @maraude.address_start %></p>
-      <p style="font-weight: 100;">arrivée : <%= @maraude.address_end %></p>
-      <p class="mb-4">La demande de <%=@maraude.asso.name %> est de <%= @maraude.capacity %> personnes. Il reste <strong> <%= @remaining_places %> </strong> places !</p>
-      <%= cl_image_tag(@maraude.photo, style: "height: 250px")%>
+      <p class="ml-4" style="font-weight: 600;">départ : <%= @maraude.address_start %>
+        <i class="fas fa-map-marker-alt"></i>
+      </p>
+      <p class="ml-4" style="font-weight: 100;">arrivée : <%= @maraude.address_end %>
+        <i class="fas fa-flag-checkered"></i>
+      </p>
+      <p class="mb-4"> Il reste <strong> <%= @remaining_places %> </strong> places !</p>
+       <div class="button">
+       Participer à cette maraude
+       </div>
     </div>
 
     <div class="maraude-container-right">
@@ -22,51 +30,8 @@
         data-steps="<%= @steps.to_json %>"
         data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
       </div>
-
-      <div class="mt-3">
-        <% if user_signed_in? %>
-          <% if current_user.bookings.where(maraude: @maraude).exists? %>
-            <h3 class="text-center">Vous avez déjà réservé cette maraude </h3>
-          <% elsif @remaining_places == 0 %>
-            <h2>Il n'y a plus de place</h2>
-          <% else %>
-            <div class="mb-4">
-              <p>Inscrivez-vous :</p>
-            </div>
-            <%= simple_form_for [@maraude, @booking] do |f| %>
-
-              <div class="d-flex justify-content-between mb-4">
-
-                <div class="border-bottom mb-4" style="width: 270px;">
-                  <%=  text_field_tag "user[first_name]", current_user.first_name, placeholder: 'first name', class: "border-0", style: "outline: none; background-color: #F7F7F7;" %>
-                </div>
-
-                <div class="border-bottom mb-4" style="width: 270px;">
-                  <%= text_field_tag "user[last_name]", current_user.last_name, placeholder: 'last name', class: "border-0", style: "outline: none; background-color: #F7F7F7;" %>
-                </div>
-
-              </div>
-
-              <div class="d-flex justify-content-between mb-4 border-0">
-
-                <div class="border-bottom mb-4" style="width: 270px;">
-                  <%= text_field_tag "user[email]", current_user.email, placeholder: 'email', class: "border-0 w-100", style: "outline: none; background-color: #F7F7F7;" %>
-                </div>
-
-                <div class="border-bottom mb-4" style="width: 270px;">
-                  <%= text_field_tag "user[phone_number]", current_user.phone_number, placeholder: 'phone number', class: "border-0", style: "outline: none; background-color: #F7F7F7;" %>
-                </div>
-
-              </div>
-
-              <div class="d-flex justify-content-center">
-                <%= f.submit "Réservez cette maraude", class: "btn", style: "background-color: #FFE436; border-radius: 15px; padding: 10px; width: 330px;"%>
-              </div>
-            <% end %>
-          <% end %>
-        <% end %>
-      </div>
     </div>
+
   </div>
 </div>
 
