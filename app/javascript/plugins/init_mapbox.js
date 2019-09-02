@@ -34,10 +34,11 @@ const addMarkersToMap = (map, markers) => {
       new mapboxgl.Marker(start_element)
         .setLngLat([ marker.lng_starts, marker.lat_starts ])
         .addTo(map);
-        new mapboxgl.Marker(end_element)
-        .setLngLat([ marker.lng_ends, marker.lat_ends ])
-        .addTo(map);
-
+      const end = new mapboxgl.Marker(end_element)
+      .setLngLat([ marker.lng_ends, marker.lat_ends ])
+      .addTo(map);
+      end._element.dataset.markerEndId = marker.maraude_id;
+      end._element.style.display = "none";
       // create iti
       const steps = Array.from(marker.steps).map(data => data.maneuver.location)
       setTimeout(() => {
@@ -66,7 +67,6 @@ const addMarkersToMap = (map, markers) => {
       new mapboxgl.Marker(end_element)
       .setLngLat([ markers.lng_ends, markers.lat_ends ])
       .addTo(map);
-
       // create iti
       const steps = Array.from(JSON.parse(mapElement.dataset.steps)).map(data => data.maneuver.location)
       setTimeout(() => {
@@ -94,7 +94,6 @@ const initMapbox = () => {
   if (mapElement) {
     const map = buildMap();
     const markers = JSON.parse(mapElement.dataset.markers);
-    console.log(mapElement.dataset.markersActualPosition);
     if (mapElement.dataset.markersActualPosition && mapElement.dataset.markersActualPosition !== "null") {
       const markersActualPosition =  JSON.parse(mapElement.dataset.markersActualPosition);
       new mapboxgl.Marker()
@@ -103,10 +102,30 @@ const initMapbox = () => {
     }
     addMarkersToMap(map, markers);
     fitMapToMarkers(map, markers);
-    map.addControl(new MapboxGeocoder({ accessToken: mapboxgl.accessToken }));
+    displayItinerary(map);
+    map.addControl(new MapboxGeocoder({ accessToken: mapElement.dataset.mapboxApiKey }));
   }
 };
 
+const displayItinerary = (map) => {
+  const cards = document.querySelectorAll(".card-trip");
+  cards.forEach((card) => {
+    card.addEventListener('mouseover', (e) => {
+      const id = e.currentTarget.dataset.id;
+      document.querySelector(`[data-marker-end-id='${id}']`).style.display = "block";
+      map.setPaintProperty("route" + id, 'line-opacity', 0.8);
+      const bounds = new mapboxgl.LngLatBounds();
+      bounds.extend(map.getLayer("route" + id).metadata.start_coordinates);
+      bounds.extend(map.getLayer("route" + id).metadata.end_coordinates);
+      map.fitBounds(bounds, { padding: 70, maxZoom: 15 });
+    });
+    card.addEventListener('mouseout', (e) => {
+      const id = e.currentTarget.dataset.id;
+      document.querySelector(`[data-marker-end-id='${id}']`).style.display = "none";
+      map.setPaintProperty("route" + id, 'line-opacity', 0);
+    });
+  });
+};
 
 const itineraire = (map, steps, id = 0) => {
   // if (map.getSource('route')) {
@@ -116,6 +135,10 @@ const itineraire = (map, steps, id = 0) => {
     map.addLayer({
       "id": `route${id}`,
       "type": "line",
+      "metadata": {
+        "start_coordinates": steps[0],
+        "end_coordinates": steps[steps.length - 1]
+      },
       "source": {
         "type": "geojson",
         "data": {
@@ -135,7 +158,7 @@ const itineraire = (map, steps, id = 0) => {
         // pour changer la couleur de la route
         "line-color": "#009661",
         "line-width": 8,
-        "line-opacity": 0.8
+        "line-opacity": 0
       }
     });
   };
