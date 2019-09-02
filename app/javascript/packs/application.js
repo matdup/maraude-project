@@ -18,4 +18,4 @@ initMapbox();
 // initUpdateNavbarOnScroll();
 flatpicker();
 initAutocomplete();
-initCardPicker();
+// initCardPicker();
