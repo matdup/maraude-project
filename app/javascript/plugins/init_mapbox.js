@@ -94,7 +94,8 @@ const initMapbox = () => {
   if (mapElement) {
     const map = buildMap();
     const markers = JSON.parse(mapElement.dataset.markers);
-    if (mapElement.dataset.markersActualPosition) {
+    console.log(mapElement.dataset.markersActualPosition);
+    if (mapElement.dataset.markersActualPosition && mapElement.dataset.markersActualPosition !== "null") {
       const markersActualPosition =  JSON.parse(mapElement.dataset.markersActualPosition);
       new mapboxgl.Marker()
           .setLngLat([ markersActualPosition.lng, markersActualPosition.lat ])
