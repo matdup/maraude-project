@@ -18,7 +18,7 @@
 
       <div class="row" style="margin: 0;">
         <% @maraudes.each do |maraude| %>
-        <div class="col-6" style="padding: 18px;">
+        <div class="col-6" style="padding: 18px;" id="card">
             <%= link_to maraude_path(maraude) do %>
               <div class="card-trip zoom picture" data-id='<%= maraude.id %>' >
                 <%= cl_image_tag maraude.photo %>
