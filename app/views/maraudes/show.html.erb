@@ -15,14 +15,14 @@
     <div class="mauraude-container-left">
 
       <p><%= @maraude.starts_at.strftime("%A %d %B %H:%M") %> / <%= @maraude.ends_at.strftime("%H:%M") %></p>
-      <p style="font-weight: 100;"><%= @maraude.description%></p>
-      <p class="ml-4" style="font-weight: 600;"><i class="fas fa-map-marker-alt"></i> départ : <%= @maraude.address_start %>
+      <p class="mx-4"style="font-weight: 100;"><%= @maraude.description%></p>
+      <p class="mx-5" style="font-weight: 600;"><i class="fas fa-map-marker-alt"></i> départ : <%= @maraude.address_start %>
 
       </p>
-      <p class="ml-4" style="font-weight: 600;"><i class="fas fa-flag-checkered"></i> arrivée : <%= @maraude.address_end %>
+      <p class="mx-5" style="font-weight: 600;"><i class="fas fa-flag-checkered"></i> arrivée : <%= @maraude.address_end %>
 
       </p>
-      <p class="mb-4"> Il reste <strong> <%= @remaining_places %> </strong> places !</p>
+      <p class="mb-4 mx-4"> Il reste <strong> <%= @remaining_places %> </strong> places !</p>
        <div class="button">
        Participer à cette maraude
        </div>
