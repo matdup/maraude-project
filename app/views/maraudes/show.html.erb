@@ -1,26 +1,32 @@
-<div class="container ">
+
 <%= link_to "Back to all maraudes", maraudes_path %>
   <div class="maraude-title" style="height: 250px; width: 100%; background-size: cover; background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('<%= cl_image_path(@maraude.photo) %>');">
 
     <div class="asso-photo">
-    <div> <%=@maraude.asso.name %> <%= cl_image_tag(@maraude.asso.photo, style: "height: 50px") %></div></div>
+      <div> <%=@maraude.asso.name %> <%= cl_image_tag(@maraude.asso.photo, style: "height: 50px") %>
+      </div>
+    </div>
+
     <h1 class="mt-4"> <%= @maraude.title %> </h1>
+
   </div>
-  <div class="mauraude-main-container" style="">
+
+  <div class="mauraude-main-container">
     <div class="mauraude-container-left">
 
       <p><%= @maraude.starts_at.strftime("%A %d %B %H:%M") %> / <%= @maraude.ends_at.strftime("%H:%M") %></p>
-      <p><%= @maraude.description%></p>
-      <p class="ml-4" style="font-weight: 600;">départ : <%= @maraude.address_start %>
-        <i class="fas fa-map-marker-alt"></i>
+      <p style="font-weight: 100;"><%= @maraude.description%></p>
+      <p class="ml-4" style="font-weight: 600;"><i class="fas fa-map-marker-alt"></i> départ : <%= @maraude.address_start %>
+
       </p>
-      <p class="ml-4" style="font-weight: 100;">arrivée : <%= @maraude.address_end %>
-        <i class="fas fa-flag-checkered"></i>
+      <p class="ml-4" style="font-weight: 600;"><i class="fas fa-flag-checkered"></i> arrivée : <%= @maraude.address_end %>
+
       </p>
       <p class="mb-4"> Il reste <strong> <%= @remaining_places %> </strong> places !</p>
        <div class="button">
        Participer à cette maraude
        </div>
+
     </div>
 
     <div class="maraude-container-right">
@@ -33,5 +39,5 @@
     </div>
 
   </div>
-</div>
+
 
