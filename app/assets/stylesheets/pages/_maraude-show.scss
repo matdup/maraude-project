@@ -16,11 +16,30 @@
 
 .maraude-title {
   display: flex;
-  justify-content: center;
+
   margin-bottom: 20px;
+  align-items: center;
+  flex-direction: column;
+  color: white;
 }
 
 .mauraude-container-left {
-  padding-right: 50px;
+  padding-left: 10px;
+}
+
+.button {
+  background-color: #FFE436;
+  border-radius: 15px;
+  padding: 10px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.asso-photo{
+  width:100%;
+  display:flex;
+  justify-content: flex-end;
+  padding:10px;
 
 }
