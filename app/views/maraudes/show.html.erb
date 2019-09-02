@@ -1,5 +1,5 @@
 
-<%= link_to "Back to all maraudes", maraudes_path %>
+<%= link_to "Back to all maraudes", request.referer %>
   <div class="maraude-title" style="height: 250px; width: 100%; background-size: cover; background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('<%= cl_image_path(@maraude.photo) %>');">
 
     <div class="asso-photo">

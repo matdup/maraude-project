@@ -68,7 +68,7 @@ const addMarkersToMap = (map, markers) => {
       .setLngLat([ markers.lng_ends, markers.lat_ends ])
       .addTo(map);
       // create iti
-      const steps = Array.from(JSON.parse(mapElement.dataset.steps)).map(data => data.maneuver.location)
+      const steps = Array.from(JSON.parse(mapElement.dataset.steps)).map(data => data.maneuver.location);
       setTimeout(() => {
         itineraire(map, steps)
       }, 1000)
@@ -94,14 +94,16 @@ const initMapbox = () => {
   if (mapElement) {
     const map = buildMap();
     const markers = JSON.parse(mapElement.dataset.markers);
+    addMarkersToMap(map, markers);
+    fitMapToMarkers(map, markers);
     if (mapElement.dataset.markersActualPosition && mapElement.dataset.markersActualPosition !== "null") {
       const markersActualPosition =  JSON.parse(mapElement.dataset.markersActualPosition);
       new mapboxgl.Marker()
           .setLngLat([ markersActualPosition.lng, markersActualPosition.lat ])
           .addTo(map);
+      // map.setZoom(14);
+      // map.setCenter([ markersActualPosition.lng, markersActualPosition.lat ]);
     }
-    addMarkersToMap(map, markers);
-    fitMapToMarkers(map, markers);
     displayItinerary(map);
     map.addControl(new MapboxGeocoder({ accessToken: mapElement.dataset.mapboxApiKey }));
   }
@@ -128,39 +130,35 @@ const displayItinerary = (map) => {
 };
 
 const itineraire = (map, steps, id = 0) => {
-  // if (map.getSource('route')) {
-  //   map.removeLayer('route')
-  //   map.removeSource('route')
-  // } else {
-    map.addLayer({
-      "id": `route${id}`,
-      "type": "line",
-      "metadata": {
-        "start_coordinates": steps[0],
-        "end_coordinates": steps[steps.length - 1]
-      },
-      "source": {
-        "type": "geojson",
-        "data": {
-          "type": "Feature",
-          "geometry": {
-            "type": "LineString",
-            "coordinates": steps
-          },
-          "properties": {},
-        }
-      },
-      "layout": {
-        "line-join": "round",
-        "line-cap": "round"
-      },
-      "paint": {
-        // pour changer la couleur de la route
-        "line-color": "#009661",
-        "line-width": 8,
-        "line-opacity": 0
+  map.addLayer({
+    "id": `route${id}`,
+    "type": "line",
+    "metadata": {
+      "start_coordinates": steps[0],
+      "end_coordinates": steps[steps.length - 1]
+    },
+    "source": {
+      "type": "geojson",
+      "data": {
+        "type": "Feature",
+        "geometry": {
+          "type": "LineString",
+          "coordinates": steps
+        },
+        "properties": {},
       }
-    });
-  };
+    },
+    "layout": {
+      "line-join": "round",
+      "line-cap": "round"
+    },
+    "paint": {
+      // pour changer la couleur de la route
+      "line-color": "#009661",
+      "line-width": 8,
+      "line-opacity": (id === 0) ? 0.8 : 0
+    }
+  });
+};
 
 export { initMapbox };
