@@ -1,118 +1,121 @@
 <%= render 'shared/navbar' %>
 <br>
-<h1 class="mt-5 text-center">Hello <%= "#{current_user.first_name}" %> 👋</h1>
+<div class="full">
+  <div class="content d-flex mr-1 dashboard">
 
-<div class="content d-flex mr-1 dashboard">
+    <div class="nav flex-column nav-pills sidebar border border-light ml-1 " id="v-pills-tab" role="tablist" aria-orientation="vertical">
 
-  <div class="nav flex-column nav-pills sidebar border border-light ml-1 " id="v-pills-tab" role="tablist" aria-orientation="vertical">
+      <a class="nav-link active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true">Mes futures réservations</a>
 
-    <a class="nav-link active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true">Futur bookings</a>
+      <a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false">Mes réservations passées</a>
 
-    <a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false">Past bookings</a>
+      <a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab" aria-controls="v-pills-messages" aria-selected="false">Mon profil</a>
 
-    <a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab" aria-controls="v-pills-messages" aria-selected="false">Profile</a>
+      <% if !@asso.nil?  %>
+        <a class="nav-link" id="v-pills-maraudes-tab" data-toggle="pill" href="#v-pills-maraudes" role="tab" aria-controls="v-pills-maraudes" aria-selected="false">Mes maraudes</a>
+      <% end %>
+    </div>
 
-    <% if !@asso.nil?  %>
-      <a class="nav-link" id="v-pills-maraudes-tab" data-toggle="pill" href="#v-pills-maraudes" role="tab" aria-controls="v-pills-maraudes" aria-selected="false">My maraudes</a>
-    <% end %>
-  </div>
+    <div class="right-part p-3 bg-white rounded">
 
-  <div class="right-part ml-3 p-3 border border-dark shadow p-3 mb-5 bg-white rounded">
+        <div class="tab-content" id="v-pills-tabContent">
 
-      <div class="tab-content" id="v-pills-tabContent">
-
-        <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
-          <h3>Here are all your futur maraudes :</h3>
-          <% if @current_bookings == [] %>
-            <p>No futur bookings yet 😱. You can check all available maraudes :
-              <%= link_to "here", maraudes_path %> </p>
-          <% else %>
-            <% @current_bookings&.each do |booking| %>
-              <div class="card-product">
-                <img src="<%= booking.maraude.photo %>" />
-                <div class="card-product-infos">
-                  <div class="booking-info">
-                    <h2><%= booking.maraude.title %></h2>
-                    <p><%= booking.maraude.description %></p>
-                  </div>
-                  <div class="booking-time">
-                    <div>
-                      <p>Débute dans <strong><%= number_of_days(DateTime.now, booking.maraude.starts_at)%></strong> jours à <%=booking.maraude.starts_at.strftime("%H:%M")%>
-                        le <%= booking.maraude.starts_at.strftime("%d/%m/%Y") %></p>
-                        <div><p><%= link_to "Plus d'info", maraude_path(booking.maraude_id), class: 'btn btn-primary booking-btn' %></p></div>
-                    </div>
-                    <!-- <div class="red"><p><%= booking.maraude.ends_at %></p></div> -->
-                  </div>
-
-                </div>
-              </div>
-            <% end %>
-          <% end %>
-      </div>
-
-      <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
-        <h3>Here are all your past maraudes : </h3>
-          <% if @past_bookings.nil? %>
-            <p>No past bookings...</p>
-          <% else %>
-            <% @past_bookings&.each do |booking| %>
+          <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
+            <h3>Toutes les futures maraudes : </h3>
+            <% if @current_bookings == [] %>
+              <p>Pas de prochaines réservations 😱. Trouvez votre future maraude disponible :
+                <%= link_to "ici", maraudes_path %> </p>
+            <% else %>
+              <% @current_bookings&.each do |booking| %>
                 <div class="card-product">
                   <img src="<%= booking.maraude.photo %>" />
                   <div class="card-product-infos">
                     <div class="booking-info">
                       <h2><%= booking.maraude.title %></h2>
-                      <p><%= booking.maraude.description %></p>
+                      <p><i class="fas fa-map-marker-alt"></i> <%= booking.maraude.address_start %></p>
+                      <p> <i class="fas fa-flag-checkered"></i> <%= booking.maraude.address_end%></p>
                     </div>
+                    <div class="booking-time">
+                      <div>
+                        <p>Débute dans <strong><%= number_of_days(DateTime.now, booking.maraude.starts_at)%></strong> jours à <%=booking.maraude.starts_at.strftime("%H:%M")%>
+                          le <%= booking.maraude.starts_at.strftime("%d/%m/%Y") %></p>
+                          <div><p><%= link_to "Plus d'info", maraude_path(booking.maraude_id), class: 'btn btn-primary booking-btn' %></p></div>
+                      </div>
+                      <!-- <div class="red"><p><%= booking.maraude.ends_at %></p></div> -->
+                    </div>
+
                   </div>
                 </div>
               <% end %>
-          <% end %>
-      </div>
+            <% end %>
+        </div>
 
-      <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">
-        <h3>Profile Information</h3>
-          <p>First Name</p>
-          <%= current_user.first_name %>
-          <p>Last Name</p>
-          <%= current_user.last_name %>
-          <p>Email</p>
-          <%= current_user.email %>
-          <p>Phone Number</p>
-          <%= current_user.phone_number %>
-      </div>
-
-      <% if !@asso.nil? %>
-        <div class="tab-pane fade" id="v-pills-maraudes" role="tabpanel" aria-labelledby="v-pills-maraudes-tab">
-          <div class="d-flex justify-content-between">
-          <h3>Here are all your created maraudes</h3>
-           <%= link_to "Create a new maraude", new_maraude_path, class: "btn btn-primary" %>
-          </div>
-          <% @maraudes_as_owner.each do |maraude| %>
-            <div class="card-product">
-                <img src="<%= maraude.photo %>" />
-                <div class="card-product-infos">
-                  <div class="booking-info">
-                    <h2><%= maraude.title %></h2>
-                    <p><%= maraude.description %></p>
+        <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
+          <h3>Toutes les maraudes passées : </h3>
+            <% if @past_bookings.nil? %>
+              <p>Nous avons bien cherché mais n'avons pas trouvé de réservations.</p>
+            <% else %>
+              <% @past_bookings&.each do |booking| %>
+                  <div class="card-product">
+                    <img src="<%= booking.maraude.photo %>" />
+                    <div class="card-product-infos">
+                      <div class="booking-info">
+                        <h2><%= booking.maraude.title %></h2>
+                        <p><%= booking.maraude.description.truncate(15) %></p>
+                      </div>
+                    </div>
                   </div>
-                  <div class="booking-time">
-                    <div>
-                      <% if number_of_days(DateTime.now, maraude.starts_at) < 0 %>
-                        <p> La maraude s'est terminée il y a <strong><%= -number_of_days(DateTime.now, maraude.starts_at)%></strong> jours</p>
-                      <% else %>
-                        <p>Débute dans <strong><%= number_of_days(DateTime.now, maraude.starts_at)%></strong> jours à <%=maraude.starts_at.strftime("%H:%M")%>
-                        le <%= maraude.starts_at.strftime("%d/%m/%Y") %></p>
-                      <% end %>
-                        <div><p><%= link_to "Plus d'info", maraude_path(maraude), class: 'btn btn-primary booking-btn' %></p></div>
+                <% end %>
+            <% end %>
+        </div>
+
+        <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">
+          <h3>Information du profil</h3>
+            <p>Prénom</p>
+            <%= current_user.first_name %>
+            <p>Nom</p>
+            <%= current_user.last_name %>
+            <p>Email</p>
+            <%= current_user.email %>
+            <p>Numéro de téléphone</p>
+            <%= current_user.phone_number %>
+        </div>
+
+        <% if !@asso.nil? %>
+          <div class="tab-pane fade" id="v-pills-maraudes" role="tabpanel" aria-labelledby="v-pills-maraudes-tab">
+            <div class="d-flex justify-content-between">
+            <h3>Toutes les maraudes crées</h3>
+             <%= link_to "Créer une maraude", new_maraude_path, class: "btn btn-primary" %>
+            </div>
+            <% @maraudes_as_owner.each do |maraude| %>
+              <div class="card-product">
+                  <img src="<%= maraude.photo %>" />
+                  <div class="card-product-infos">
+                    <div class="booking-info">
+                      <h2><%= maraude.title %></h2>
+                      <p><i class="fas fa-map-marker-alt"></i> <%= maraude.address_start %></p>
+                      <p> <i class="fas fa-flag-checkered"></i> <%= maraude.address_end%></p>
+
+                    </div>
+                    <div class="booking-time">
+                      <div>
+                        <% if number_of_days(DateTime.now, maraude.starts_at) < 0 %>
+                          <p> La maraude s'est terminée il y a <strong><%= -number_of_days(DateTime.now, maraude.starts_at)%></strong> jours</p>
+                        <% else %>
+                          <p>Débute dans <strong><%= number_of_days(DateTime.now, maraude.starts_at)%></strong> jours à <%=maraude.starts_at.strftime("%H:%M")%>
+                          le <%= maraude.starts_at.strftime("%d/%m/%Y") %></p>
+                        <% end %>
+                          <div><p><%= link_to "Plus d'info", maraude_path(maraude), class: 'btn btn-primary booking-btn' %></p></div>
+                      </div>
+
                     </div>
 
                   </div>
-
                 </div>
-              </div>
-          <% end %>
-        </div>
-      <% end %>
+            <% end %>
+          </div>
+        <% end %>
+      </div>
     </div>
   </div>
 </div>

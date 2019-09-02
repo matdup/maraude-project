@@ -11,7 +11,7 @@ class PagesController < ApplicationController
 
 
     @asso = current_user.assos.first
-    @maraudes_as_owner = current_user.maraudes
+    @maraudes_as_owner = current_user.maraudes.order(created_at: :desc)
 
     #current_user.bookings.first.maraude.asso_id => l'id de l'asso par rapport au user
 
