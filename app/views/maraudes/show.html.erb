@@ -1,20 +1,11 @@
 
-<%= link_to "Back to all maraudes", request.referer %>
   <div class="maraude-title" style="height: 350px; width: 100%; background-size: cover; background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('<%= cl_image_path(@maraude.photo) %>');">
-
     <h1> <%= @maraude.title %> </h1>
+    <p class ="logo-asso"> <%= cl_image_tag(@maraude.asso.photo, style: "height: 80px") %></p>
 
   </div>
-  <div class="bandeau">
-      <p class="m-0 mr-4">
-        <%= cl_image_tag(@maraude.asso.photo, style: "height: 80px") %>
-      </p>
-      <p class="m-0 mr-4">
-        <%= @maraude.asso.address%>
-      </p>
-      <p class="m-0 mr-4">
-        <%= @maraude.asso.phone_number%>
-      </p>
+
+  <div class="bouton-maraude"><i class="fas fa-chevron-left"></i> <%= link_to "Revenir aux maraudes", maraudes_path %>
   </div>
 
   <div class="mauraude-main-container">

@@ -8,7 +8,7 @@ class BookingsController < ApplicationController
     @booking = Booking.new
     @booking.user = current_user
     @booking.maraude = @maraude
-    # raise
+    current_user.update(user_params)
     if @booking.save
       redirect_to dashboard_path
     else
@@ -21,4 +21,10 @@ class BookingsController < ApplicationController
   def set_maraude
     @maraude = Maraude.find(params[:maraude_id])
   end
+
+  def user_params
+    params.require(:user).permit(:first_name, :last_name, :email, :phone_number)
+  end
+
+
 end
