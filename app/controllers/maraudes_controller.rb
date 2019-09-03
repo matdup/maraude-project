@@ -56,9 +56,15 @@ class MaraudesController < ApplicationController
     @maraude = Maraude.new(maraude_params)
     @maraude.asso = current_user.assos.first
     if @maraude.save
-      redirect_to dashboard_path
+      respond_to do |format|
+        format.html { redirect_to maraude_path(@restaurant) }
+        format.js
+      end
     else
-      render :new
+      respond_to do |format|
+        format.html { render 'maraudes/new' }
+        format.js  # <-- idem
+      end
     end
   end
 
