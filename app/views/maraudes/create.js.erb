@@ -1,0 +1,7 @@
+sideNav = document.querySelector(".sidenav");
+sideNavRight = document.querySelector(".sidenav-right-part");
+sideNavRight.classList.remove("sidenav-transition");
+sideNav.classList.add("d-none");
+
+lastCard = document.querySelector(".maraude-dashboard");
+lastCard.insertAdjacentHTML('beforebegin', '<%= j render "maraudes/card_maraude_dashboard", maraude: @maraude %>');

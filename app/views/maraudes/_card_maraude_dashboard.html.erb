@@ -1,0 +1,24 @@
+<div class="card-product-dashboard maraude-dashboard">
+    <img src="<%= maraude.photo %>" />
+    <div class="card-product-dashboard-infos">
+      <div class="booking-info">
+        <h2><%= maraude.title %></h2>
+        <p><i class="fas fa-map-marker-alt"></i> <%= maraude.address_start %></p>
+        <p> <i class="fas fa-flag-checkered"></i> <%= maraude.address_end%></p>
+
+      </div>
+      <div class="booking-time">
+        <div>
+          <% if number_of_days(DateTime.now, maraude.starts_at) < 0 %>
+            <p> La maraude s'est terminée il y a <strong><%= -number_of_days(DateTime.now, maraude.starts_at)%></strong> jours</p>
+          <% else %>
+            <p>Débute dans <strong><%= number_of_days(DateTime.now, maraude.starts_at)%></strong> jours à <%=maraude.starts_at.strftime("%H:%M")%>
+            le <%= maraude.starts_at.strftime("%d/%m/%Y") %></p>
+          <% end %>
+            <div><p><%= link_to "Plus d'info", maraude_path(maraude), class: 'btn btn-primary booking-btn' %></p></div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
