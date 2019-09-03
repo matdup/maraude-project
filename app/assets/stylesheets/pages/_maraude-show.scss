@@ -1,11 +1,15 @@
 .mauraude-main-container {
   display: flex;
+  margin-right: 50px;
+  margin-left: 50px;
 }
 
 .mauraude-main-container #map {
   position: relative !important;
-  height: 350px;
-  width: 430px;
+  height: 650px;
+  width: 570px;
+  margin-bottom: 50px;
+  margin-left: 50px;
 }
 
 
@@ -16,16 +20,14 @@
 
 .maraude-title {
   display: flex;
-
-  margin-bottom: 20px;
+  margin-bottom: 0px;
   align-items: center;
-  flex-direction: column;
+  justify-content: center;
   color: white;
 }
 
 .mauraude-container-left {
-  margin-left: 100px;
-  margin-right: 100px;
+  margin-right: 50px;
 }
 
 .button {
@@ -37,10 +39,12 @@
   justify-content: center;
 }
 
-.asso-photo{
-  width:100%;
-  display:flex;
-  justify-content: flex-end;
-  padding:10px;
-
+.bandeau {
+  background-color: #FFEFBF;
+  color: black;
+  height: 200px;
+  display: flex;
+  justify-content:center;
+  align-items:center;
+  margin-bottom: 20px;
 }
