@@ -12,7 +12,6 @@
   margin-left: 50px;
 }
 
-
 .mauraude-container-left,
 .mauraude-container-right {
   flex: 0 0 50%;
@@ -40,11 +39,16 @@
 }
 
 .bandeau {
-  background-color: #CCCCCC;
+  background-color: #ffffff;
   color: black;
   height: 100px;
   display: flex;
-  justify-content:center;
-  align-items:center;
+  justify-content: center;
+  align-items: center;
   margin-bottom: 20px;
+  box-shadow: 0 4px 2px -2px gray;
+}
+
+body {
+  background-color: #F8F9FA;
 }
