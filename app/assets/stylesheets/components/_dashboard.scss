@@ -1,12 +1,41 @@
 .dashboard {
-  height: 80vh;
-  width : 900px;
+  min-height: 100vh;
 
 }
 
 .full {
   background-color: #c1dee2;
-  display: flex;
   justify-content: center;
 
 }
+
+.right-part-header {
+  margin-top : 10px;
+  border-bottom : 2px solid yellow;
+}
+
+.dashboard-activity-image {
+  background-size: cover;
+  background-position: center;
+  height: 100%;
+  width: 210px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  // opacity:0.2;
+  // position: relative;
+
+  // font-weight: bold;
+  // text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  // border-radius: 5px;
+  // box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  p {
+    color: black;
+    text-align: center;
+    font-size: 24px;
+    opacity: 1 !important;
+  }
+}
+
+// .dashboard-activity-image p {
+//   }
