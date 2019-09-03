@@ -5,3 +5,8 @@ sideNav.classList.add("d-none");
 
 lastCard = document.querySelector(".maraude-dashboard");
 lastCard.insertAdjacentHTML('beforebegin', '<%= j render "maraudes/card_maraude_dashboard", maraude: @maraude %>');
+
+inputs = document.querySelectorAll("input");
+inputs.forEach((input) => {
+  input.value = "";
+})
