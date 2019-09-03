@@ -18,13 +18,18 @@
 }
 
 .maraude-title {
+  position: relative;
+  top: 0px;
+  left: 0px;
+}
+
+.maraude-title {
   display: flex;
-  margin-bottom: 0px;
+  margin-bottom: 20px;
   align-items: center;
   justify-content: center;
   color: white;
 }
-
 .mauraude-container-left {
   margin-right: 50px;
 }
@@ -38,17 +43,25 @@
   justify-content: center;
 }
 
-.bandeau {
-  background-color: #ffffff;
-  color: black;
-  height: 100px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 20px;
-  box-shadow: 0 4px 2px -2px gray;
-}
-
 body {
   background-color: #F8F9FA;
+}
+
+.bouton-maraude {
+  color: white;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 0.9em;
+}
+
+.bouton-maraude a{
+  color: white;
+}
+
+.logo-asso {
+  position: relative;
+  top: 15px;
+  left: 60px;
+
 }

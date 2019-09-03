@@ -1,0 +1,24 @@
+
+.sidenav {
+  position: absolute;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  .sidenav-left-part {
+    background: #E0E0E0;
+    opacity: 0.7;
+    width: 50%;
+    flex-grow: 1;
+  }
+  .sidenav-right-part {
+    width: 0%;
+    background: white;
+    opacity: 1;
+  }
+  .sidenav-transition {
+    width: 50% !important;
+    transition: width 2s ease;
+  }
+}
+

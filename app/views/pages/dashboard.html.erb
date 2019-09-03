@@ -1,4 +1,4 @@
-<div class="full">
+<div class="full" style="position: relative;">
   <div class="d-flex dashboard">
     <div class="nav flex-column nav-pills sidebar border border-light" id="v-pills-tab" role="tablist" aria-orientation="vertical">
 
@@ -97,6 +97,7 @@
           <div class="tab-pane fade" id="v-pills-maraudes" role="tabpanel" aria-labelledby="v-pills-maraudes-tab">
             <div class="d-flex justify-content-between">
                <%= link_to "Créer une maraude", new_maraude_path, class: "btn btn-warning" %>
+
             </div>
             <!-- <div class="d-flex justify-content-between"> -->
               <div class="right-part-header">
@@ -104,7 +105,7 @@
               </div>
 
             <% @maraudes_as_owner.each do |maraude| %>
-              <div class="card-product-dashboard">
+              <div class="card-product-dashboard maraude-dashboard">
                   <img src="<%= maraude.photo %>" />
                   <div class="card-product-dashboard-infos">
                     <div class="booking-info">
@@ -131,6 +132,30 @@
             <% end %>
           </div>
         <% end %>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="sidenav d-none">
+    <div class="sidenav-left-part">
+
+    </div>
+    <div class="sidenav-right-part">
+      <div>
+            <%= simple_form_for Maraude.new, remote: true do |f| %>
+              <%= f.input :title, label: "Titre" %>
+              <%= f.input :description, label: "Description",input_html: { class: "create-style"} %>
+              <%= f.input :address_start, label: "Adresse Départ"%>
+              <%= f.input :address_end, label: "Adresse Arrivée"%>
+              <%= f.input :starts_at, label: "Débute le",as: :string, input_html: { id: "starts_at", class: "create-style"} %>
+              <%= f.input :ends_at, label: "Termine le",as: :string %>
+              <%= f.input :capacity, label: "Nombre de place",input_html: { class: "create-style"} %>
+              <%= f.input :photo, input_html: { class: "create-style"} %>
+              <%= f.submit "Valider", class: "cta-validate" %>
+            <% end %>
+        <div>
+        </div>
       </div>
     </div>
   </div>
