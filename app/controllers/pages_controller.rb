@@ -15,6 +15,6 @@ class PagesController < ApplicationController
     @maraudes_as_owner = current_user.maraudes.order(created_at: :desc)
 
     #current_user.bookings.first.maraude.asso_id => l'id de l'asso par rapport au user
-
+    render layout: "dashboard"
   end
 end

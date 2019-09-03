@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>ALVEOLE</title>
+    <%= favicon_link_tag 'alveole.png' %>
+    <%= csrf_meta_tags %>
+    <%= action_cable_meta_tag %>
+    <%= stylesheet_link_tag 'application', media: 'all' %>
+    <link href="https://fonts.googleapis.com/css?family=Acme&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <%= stylesheet_pack_tag 'application', media: 'all' %><!-- Uncomment if you import CSS in app/javascript/packs/application.js -->
+  </head>
+  <body>
+
+    <%= render 'shared/flashes' %>
+    <div class="content-dashboard">
+
+      <%= yield %>
+
+    </div>
+
+
+    <!-- <%#= render 'shared/footer' %> -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+    <%= javascript_include_tag 'application' %>
+    <%= javascript_pack_tag 'application' %>
+  </body>
+</html>
