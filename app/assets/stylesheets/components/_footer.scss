@@ -2,9 +2,24 @@
   max-width: 300px;
   margin: 0 auto;
   margin-bottom: 20px;
+  color: white;
 }
 footer {
   padding: 30px 0 0 0;
   height: 125px;
-  background: #C1DEE2;
+  background: #212629;
+  color: white;
 }
+ footer a{
+  color: #FECB1F;
+ }
+
+ .fab:hover{
+  color: #FECB1F;
+  transform: scale(1.5);
+  transition: .5s ;
+  cursor: grab;
+ }
+ .text-yellow{
+  color: #FECB1F;
+ }

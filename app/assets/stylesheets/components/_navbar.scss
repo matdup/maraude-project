@@ -2,7 +2,6 @@
   justify-content: space-between;
   background: white;
   background-color: transparent;
-  transition: 0.5s background-color ease;
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -20,4 +19,16 @@
 
 .color-white {
   color: white !important;
+}
+
+.navbar-black {
+  background-color: #212529 !important;
+}
+
+#mainNav.navbar-small-height {
+  padding: 0px;
+}
+
+#mainNav.navbar-small-height .navbar-brand {
+  transform: scale(0.8) !important;
 }
