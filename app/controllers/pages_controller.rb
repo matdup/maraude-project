@@ -3,6 +3,7 @@ class PagesController < ApplicationController
 
   def home
     @maraudes = Maraude.last(6)
+    render layout: "home"
   end
 
   def dashboard
