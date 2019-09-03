@@ -31,7 +31,12 @@
   <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
     <source src="https://st.depositphotos.com/1039548/4550/v/600/depositphotos_45501585-stock-video-soup-kitchen-volunteers-help-to.mp4">
   </video>
-  <h1>Alveole</h1>
+  <div class="title-maraude-homepage">
+    <h1 class="title-homepage">Alveole</h1>
+    <h5>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur possimus, cum, odit, optio velit architecto sunt blanditiis.
+    </h5>
+  </div>
 </header>
 
   <div class="container h-100">
@@ -50,6 +55,7 @@
 
   <div class="wrapper">
     <div class="container">
+
     <h2>SERVICES</h2>
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
 
@@ -90,7 +96,8 @@
     <div class="row" style="margin: 0;">
       <% @maraudes.each do |maraude| %>
       <div class="col-4" style="padding: 18px;">
-        <div class="card-trip zoom picture" data-aos="zoom-in-down" data-id='<%= maraude.id %>' >
+        <div class="card-trip zoom picture" data-aos="fade-up"
+     data-aos-duration="3000" data-id='<%= maraude.id %>' >
           <%= cl_image_tag maraude.photo %>
           <div class="card-trip-infos">
             <div>
@@ -108,7 +115,8 @@
 
     <br>
     <h2 class="mt-3 text-center mauraude-h2">Les derniers partenaires</h2>
-    <div class="partners" data-aos="flip-left">
+    <div class="partners" data-aos="fade-up"
+     data-aos-duration="3000">
       <div class="partner">
         <%= image_tag "partner1.svg", alt: "Le Wagon", width: 250, height: 150 %>
       </div>
