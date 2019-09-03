@@ -15,7 +15,7 @@
             <p>Débute dans <strong><%= number_of_days(DateTime.now, maraude.starts_at)%></strong> jours à <%=maraude.starts_at.strftime("%H:%M")%>
             le <%= maraude.starts_at.strftime("%d/%m/%Y") %></p>
           <% end %>
-            <div><p><%= link_to "Plus d'info", maraude_path(maraude), class: 'btn btn-primary booking-btn' %></p></div>
+            <div><p><%= link_to "Plus d'info", maraude_path(maraude), class: 'btn btn-warning booking-btn' %></p></div>
         </div>
 
       </div>
