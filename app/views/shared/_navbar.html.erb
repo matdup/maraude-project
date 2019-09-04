@@ -20,6 +20,9 @@
           <li class="nav-item">
             <a class="nav-link" href="#equipe">Qui sommes-nous ?</a>
           </li>
+          <li class="nav-item">
+            <%= link_to "Trouver une maraude", maraudes_path, class: "nav-link" %>
+          </li>
         </ul>
       </div>
     </div>
@@ -32,7 +35,7 @@
             <% if user_signed_in? %>
 
               <li class="nav-item">
-                <%= link_to "My dashboard", "/dashboard", class: "nav-link #{"home-nav-item color-black" if params[:controller] == "maraudes" && params[:action] == "index"}" %>
+                <p style="margin: 0;" class="nav-link <%= "home-nav-item color-black" if params[:controller] == "maraudes" && params[:action] == "index" %>">Bonjour <%= current_user.first_name %></p>
               </li>
               <li class="nav-item dropdown">
                 <% if current_user.assos != [] %>
@@ -41,6 +44,7 @@
                 <%= image_tag "#{current_user.photo}", class: "avatar-bordered dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
                 <% end %>
                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                  <%= link_to "My dashboard", "/dashboard", class: "dropdown-item #{"home-nav-item color-black" if params[:controller] == "maraudes" && params[:action] == "index"}" %>
                   <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
                 </div>
               </li>

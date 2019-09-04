@@ -7,7 +7,6 @@ const initUpdateNavbarOnScroll = () => {
     window.addEventListener('scroll', () => {
       // console.log(window.innerHeight)
       if (window.scrollY >= 50) {
-        console.log("test")
         navbar.classList.add('navbar-black');
         navbar.classList.add('navbar-small-height');
         // if (navItems.length > 0) {

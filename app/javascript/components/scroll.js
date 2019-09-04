@@ -1,5 +1,5 @@
 const scrollToElement = () => {
-  const navLinks = document.querySelectorAll('.nav-link');
+  const navLinks = document.querySelectorAll('.nav-scroll');
   navLinks.forEach((link) => {
     link.addEventListener('click', (event) => {
       event.preventDefault();
