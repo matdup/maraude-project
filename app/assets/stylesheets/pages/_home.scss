@@ -1,1 +1,21 @@
 // Specific CSS for your home-page
+.about-us-container {
+  margin-top: 30px;
+}
+
+.wrapper-yellow {
+  background-color: $yellow;
+}
+
+
+.about-us-container {
+  h2 {
+    padding: 50px 0px;
+    font-family: $homepage-font;
+  }
+  .about-us {
+    text-align: justify;
+    margin-bottom: 30px;
+
+  }
+}
