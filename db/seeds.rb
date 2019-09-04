@@ -272,15 +272,15 @@ puts ""
 puts "Maraude 1 - Creation maraude"
 a = Maraude.new(
   title: "La maraude de Paris",
-  address_start: "16 rue villa gaudelet, paris",
+  address_start: "106 rue saint maur, paris",
   address_end: "13 rue de clichy, paris",
   description: "Les assos de maraudes mettent en place des maraudes à destination des personnes sans abri, à la rue. Le but est de maintenir un lien social, d'encourager l'orientation vers des travailleurs sociaux et d'alerter les pouvoirs publics en recensant les situations rencontrées.",
   # photo: "https://images.unsplash.com/photo-1526928648912-6b2ac1cc14d7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=3902&q=80",
   asso_id: Asso.all[0].id,
   capacity: 10,
   status: "available",
-  starts_at: DateTime.new(2018, 9, 7, 21, 30),
-  ends_at: DateTime.new(2018, 9, 7, 23, 30)
+  starts_at: DateTime.new(2019, 9, 6, 21, 30),
+  ends_at: DateTime.new(2019, 9, 6, 23, 30)
 )
 a.remote_photo_url = "https://images.unsplash.com/photo-1526928648912-6b2ac1cc14d7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=3902&q=80"
 a.save!
@@ -298,8 +298,8 @@ a = Maraude.new(
   asso_id: Asso.all[1].id,
   capacity: 15,
   status: "available",
-  starts_at: DateTime.new(2018, 10, 7, 21, 30),
-  ends_at: DateTime.new(2018, 10, 7, 23, 30)
+  starts_at: DateTime.new(2019, 10, 7, 21, 30),
+  ends_at: DateTime.new(2019, 10, 7, 23, 30)
 )
 a.remote_photo_url = "https://images.unsplash.com/photo-1537729958-061041429d90?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2784&q=80"
 a.save!
@@ -334,8 +334,8 @@ a = Maraude.new(
   asso_id: Asso.all[3].id,
   capacity: 25,
   status: "available",
-  starts_at: DateTime.new(2019, 3, 18, 21, 30),
-  ends_at: DateTime.new(2019, 3, 18, 23, 30)
+  starts_at: DateTime.new(2019, 11, 18, 21, 30),
+  ends_at: DateTime.new(2019, 11, 18, 23, 30)
 )
 a.remote_photo_url = "https://images.unsplash.com/photo-1516510717845-1d1758eb0824?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1234&q=80"
 a.save!
@@ -345,15 +345,15 @@ puts ""
 puts "Maraude 5 - Creation maraude"
 a = Maraude.new(
   title: "La maraude de Gaudelet",
-  address_start: "16 rue villa gaudelet, paris",
+  address_start: "13 rue moret, paris",
   address_end: "13 rue de clichy, paris",
   description: "Les assos de maraudes mettent en place des maraudes à destination des personnes sans abri, à la rue. Le but est de maintenir un lien social, d'encourager l'orientation vers des travailleurs sociaux et d'alerter les pouvoirs publics en recensant les situations rencontrées.",
   # photo: "https://images.unsplash.com/photo-1541802645635-11f2286a7482?ixlib=rb-1.2.1&auto=format&fit=crop&w=2550&q=80",
   asso_id: Asso.all[4].id,
   capacity: 30,
   status: "available",
-  starts_at: DateTime.new(2019, 5, 6, 21, 30),
-  ends_at: DateTime.new(2019, 5, 6, 23, 30)
+  starts_at: DateTime.new(2019, 10, 6, 21, 30),
+  ends_at: DateTime.new(2019, 10, 6, 23, 30)
 )
 a.remote_photo_url = "https://images.unsplash.com/photo-1469571486292-0ba58a3f068b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2550&q=80"
 a.save!
@@ -363,7 +363,7 @@ puts ""
 puts "Maraude 6 - Creation maraude"
 a = Maraude.new(
   title: "La marche sociale",
-  address_start: "16 rue villa gaudelet, paris",
+  address_start: "20 boulevard de ménilmontant, paris",
   address_end: "13 rue du chemin vert, paris",
   description: "Les assos de maraudes mettent en place des maraudes à destination des personnes sans abri, à la rue. Le but est de maintenir un lien social, d'encourager l'orientation vers des travailleurs sociaux et d'alerter les pouvoirs publics en recensant les situations rencontrées.",
   # photo: "https://images.unsplash.com/photo-1526168637801-e9f490d6bc04?ixlib=rb-1.2.1&auto=format&fit=crop&w=2466&q=80",
@@ -406,8 +406,8 @@ a = Maraude.new(
   asso_id: Asso.all[0].id,
   capacity: 10,
   status: "available",
-  starts_at: DateTime.new(2018, 12, 25, 21, 30),
-  ends_at: DateTime.new(2018, 12, 25, 23, 30)
+  starts_at: DateTime.new(2019, 12, 25, 21, 30),
+  ends_at: DateTime.new(2019, 12, 25, 23, 30)
 )
 a.remote_photo_url = "https://images.unsplash.com/photo-1531171074112-291d5807273d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2550&q=80"
 a.save!
@@ -442,8 +442,8 @@ a = Maraude.new(
   asso_id: Asso.all[1].id,
   capacity: 20,
   status: "available",
-  starts_at: DateTime.new(2019, 9, 7, 21, 30),
-  ends_at: DateTime.new(2019, 9, 7, 23, 30)
+  starts_at: DateTime.new(2019, 12, 7, 21, 30),
+  ends_at: DateTime.new(2019, 12, 7, 23, 30)
 )
 a.remote_photo_url = "https://images.unsplash.com/photo-1519430044529-9a9a57177865?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2510&q=80"
 a.save!
@@ -453,15 +453,15 @@ puts ""
 puts "Maraude 11 - Creation maraude"
 a = Maraude.new(
   title: "La maraude de clichy",
-  address_start: "16 rue villa gaudelet, paris",
+  address_start: "5 rue oberkampf, paris",
   address_end: "13 rue de clichy, paris",
   description: "Les assos de maraudes mettent en place des maraudes à destination des personnes sans abri, à la rue. Le but est de maintenir un lien social, d'encourager l'orientation vers des travailleurs sociaux et d'alerter les pouvoirs publics en recensant les situations rencontrées.",
   # photo: "https://images.unsplash.com/photo-1444664361762-afba083a4d77?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2000&q=80",
   asso_id: Asso.all[2].id,
   capacity: 25,
   status: "available",
-  starts_at: DateTime.new(2019, 4, 15, 21, 30),
-  ends_at: DateTime.new(2019, 4, 15, 23, 30)
+  starts_at: DateTime.new(2019, 11, 15, 21, 30),
+  ends_at: DateTime.new(2019, 11, 15, 23, 30)
 )
 a.remote_photo_url = "https://images.unsplash.com/photo-1444664361762-afba083a4d77?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2000&q=80"
 a.save!
