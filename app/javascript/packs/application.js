@@ -10,9 +10,11 @@ import '@mapbox/mapbox-gl-geocoder/dist/mapbox-gl-geocoder.css';
 import { initAutocomplete } from '../components/auto-complete';
 // import { initCardPicker } from '../components/card-picker';
 import { sideNavFunction } from '../components/side-nav';
+import { moreInfos } from '../components/js-maraude-show';
 import { scrollToElement } from '../components/scroll';
 
 initMapbox();
+moreInfos();
 // reviewMaraude();
 // previewImageOnFileSelect();
 // loadDynamicBannerText();
