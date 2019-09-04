@@ -12,7 +12,9 @@
 .right-part-header {
   margin-top : 10px;
   border-bottom : 2px solid yellow;
-
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 // .right-part-header p {
@@ -40,6 +42,26 @@
     font-size: 24px;
     opacity: 1 !important;
   }
+}
+
+.add-a-maraude {
+  margin-right: 0px;
+  margin-bottom: 11px;
+}
+
+.participe {
+  font-size : 16px;
+}
+
+.nav-link-dashboard.active {
+  background-color: #fdfa72 !important;
+  color: black !important;
+}
+
+.nav-link-dashboard {
+  width: 100%;
+  height: 64px;
+  padding-top: 17px;
 }
 
 // .dashboard-activity-image p {
