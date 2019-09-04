@@ -69,7 +69,7 @@
   height: 100%;
   width: 230px;
   object-fit: cover;
-  opacity:0.2;
+  opacity:0.8;
 }
 
 .card-product-dashboard h2 {
@@ -94,5 +94,6 @@
   display:flex;
   justify-content:space-between;
   flex-grow: 1;
+  height: 100%;
 }
 
