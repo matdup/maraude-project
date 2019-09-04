@@ -100,6 +100,7 @@
       <div class="row" style="margin: 0;">
         <% @maraudes.each do |maraude| %>
         <div class="col-4" style="padding: 18px;">
+          <%= link_to maraude_path(maraude) do %>
           <div class="card-trip zoom picture" data-aos="fade-up"
        data-aos-duration="3000" data-id='<%= maraude.id %>' >
             <%= cl_image_tag maraude.photo %>
@@ -112,6 +113,7 @@
               <img src="<%= maraude.asso.photo %>" class="card-trip-user avatar-bordered" />
             </div>
           </div>
+          <% end %>
         </div>
         <% end %>
       </div>
