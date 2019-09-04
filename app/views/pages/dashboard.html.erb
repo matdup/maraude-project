@@ -136,23 +136,51 @@
   </div>
 
 
-  <div class="sidenav d-none">
+  <div class="sidenav">
     <div class="sidenav-left-part">
 
     </div>
     <div class="sidenav-right-part">
       <div>
-            <%= simple_form_for Maraude.new, remote: true do |f| %>
-              <%= f.input :title, label: "Titre" %>
+            <h1>Créez votre Maraude</h1>
+      <%= simple_form_for Maraude.new, remote: true do |f| %>
+        <div>
+          <div>
+            <div>
+              <%= f.input :title, label: "Titre", input_html: { class: "create-style"} %>
+            </div>
+            <div>
               <%= f.input :description, label: "Description",input_html: { class: "create-style"} %>
-              <%= f.input :address_start, label: "Adresse Départ"%>
-              <%= f.input :address_end, label: "Adresse Arrivée"%>
+            </div>
+          </div>
+          <div>
+            <div>
+              <%= f.input :address_start, label: "Adresse Départ",input_html: { class: "create-style autocomplete" }%>
+            </div>
+            <div>
+              <%= f.input :address_end, label: "Adresse Arrivée",input_html: { class: "create-style autocomplete" } %>
+            </div>
+          </div>
+          <div>
+            <div>
               <%= f.input :starts_at, label: "Débute le",as: :string, input_html: { id: "starts_at", class: "create-style"} %>
-              <%= f.input :ends_at, label: "Termine le",as: :string %>
+            </div>
+            <div>
+              <%= f.input :ends_at, label: "Termine le",as: :string, input_html: { id: "ends_at", class: "create-style"} %>
+            </div>
+          </div>
+          <div>
+            <div>
               <%= f.input :capacity, label: "Nombre de place",input_html: { class: "create-style"} %>
-              <%= f.input :photo, input_html: { class: "create-style"} %>
-              <%= f.submit "Valider", class: "cta-validate" %>
-            <% end %>
+            </div>
+            <div>
+            <%= f.input :photo, input_html: { class: "create-style"} %>
+            </div>
+          </div>
+​
+        </div>
+        <%= f.submit "Valider", class: "cta-validate" %>
+      <% end %>
         <div>
         </div>
       </div>

@@ -6,11 +6,11 @@ const sideNavFunction = () => {
 
   if (addMaraudeBtn) {
     addMaraudeBtn.addEventListener("click", (event) => {
-      sideNav.classList.remove("d-none");
+      sideNav.classList.add("active");
       sideNavRight.classList.add("sidenav-transition");
       sideNavLeft.addEventListener("click", (event) => {
         sideNavRight.classList.remove("sidenav-transition");
-        sideNav.classList.add("d-none");
+        sideNav.classList.remove("active");
       })
     })
   }
