@@ -11,7 +11,7 @@
   <div class="mauraude-main-container">
     <div class="mauraude-container-left">
 
-      <p style="font-weight: 600;"><%= @maraude.starts_at.strftime("%A %d %B %H:%M") %> / <%= @maraude.ends_at.strftime("%H:%M") %></p>
+      <p style="font-weight: 600;"><%= I18n.l(@maraude.starts_at, format: :long, locale: :'fr')%> / <%= @maraude.ends_at.strftime("%H:%M") %></p>
       <p class=""style="font-weight: 100;"><%= @maraude.description%></p>
       <p class="mx-5" style="font-weight: 600;"><i class="fas fa-map-marker-alt"></i> départ : <%= @maraude.address_start %>
 
