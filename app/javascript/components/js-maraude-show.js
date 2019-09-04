@@ -7,5 +7,3 @@ const moreInfos = () => {
 }
 
 export { moreInfos };
-
-

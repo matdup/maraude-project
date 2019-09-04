@@ -185,14 +185,18 @@ ul li a,{
   color: #fed136;
 }
 
+
   #mainNav {
-    background-color: #212529;
-    padding-top: 25px;
-    padding-bottom: 25px;
     transition: padding-top 0.3s, padding-bottom 0.3s;
-    border: none;
     background-color: transparent;
+    padding: 10px 0px;
+    border: none;
+    &.black-nav {
+      background-color: #212529;
+    }
   }
+
+
   #mainNav .navbar-brand {
     font-size: 2em;
     transition: all 0.3s;
