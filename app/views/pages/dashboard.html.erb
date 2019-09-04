@@ -42,7 +42,7 @@
                       <h2><%= booking.maraude.title %></h2>
                       <p><i class="fas fa-map-marker-alt"></i> <%= booking.maraude.address_start %></p>
                       <p> <i class="fas fa-flag-checkered"></i> <%= booking.maraude.address_end%></p>
-                      <p> Je participe avec <strong> <%= booking.maraude.remaining_places %></strong> personnes</p>
+                      <p class="participe"> Je participe avec <strong> <%= booking.maraude.remaining_places %></strong> personnes</p>
                     </div>
                     <div class="booking-time">
                       <div>
@@ -70,8 +70,7 @@
                     <img src="<%= booking.maraude.photo %>" />
                     <div class="card-product-dashboard-infos">
                       <div class="booking-info">
-                        <h2><%= booking.maraude.title %></h2>
-                        <p><%= booking.maraude.description.truncate(15) %></p>
+                        <h2><%= booking.maraude.title %> ✅</h2>
                       </div>
                     </div>
                   </div>
