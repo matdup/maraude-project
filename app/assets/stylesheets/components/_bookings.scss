@@ -1,9 +1,15 @@
 .booking-info {
   width: 55%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .booking-info h2 {
   font-size:24px;
+}
+.booking-info p {
+  font-size:16px;
 }
 
 
@@ -19,14 +25,21 @@
 .booking-time {
   display: flex;
   align-items: center;
-
+  flex-direction: column;
+  justify-content: center;
+  p {
+    font-size: 17px;
+    margin-bottom: 11px;
+  }
+  a {
+    margin-left: 0;
+  }
 }
 
-.booking-time p {
-  font-size: 14px;
+// .booking-time p {
 
 
-}
+// }
 
 .green p {
   background-color:green;
