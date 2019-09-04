@@ -32,3 +32,23 @@
 #mainNav.navbar-small-height .navbar-brand {
   transform: scale(0.8) !important;
 }
+
+.mauraude-navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex: 1;
+  padding: 0px 20px;
+  .navbar-left {
+    display: flex;
+  }
+}
+
+.us{
+  border: 1px solid black;
+  border-radius: 10px;
+  background-color: #fff;
+  padding: 20px;
+  margin-bottom: 200px;
+}
+
