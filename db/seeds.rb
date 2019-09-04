@@ -273,7 +273,7 @@ puts "Maraude 1 - Creation maraude"
 a = Maraude.new(
   title: "La maraude de Paris",
   address_start: "106 rue saint maur, paris",
-  address_end: "13 rue de clichy, paris",
+  address_end: "56 rue du mont cenis, paris",
   description: "Les assos de maraudes mettent en place des maraudes à destination des personnes sans abri, à la rue. Le but est de maintenir un lien social, d'encourager l'orientation vers des travailleurs sociaux et d'alerter les pouvoirs publics en recensant les situations rencontrées.",
   # photo: "https://images.unsplash.com/photo-1526928648912-6b2ac1cc14d7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=3902&q=80",
   asso_id: Asso.all[0].id,
@@ -346,7 +346,7 @@ puts "Maraude 5 - Creation maraude"
 a = Maraude.new(
   title: "La maraude de Gaudelet",
   address_start: "13 rue moret, paris",
-  address_end: "13 rue de clichy, paris",
+  address_end: "118 rue amelot, paris",
   description: "Les assos de maraudes mettent en place des maraudes à destination des personnes sans abri, à la rue. Le but est de maintenir un lien social, d'encourager l'orientation vers des travailleurs sociaux et d'alerter les pouvoirs publics en recensant les situations rencontrées.",
   # photo: "https://images.unsplash.com/photo-1541802645635-11f2286a7482?ixlib=rb-1.2.1&auto=format&fit=crop&w=2550&q=80",
   asso_id: Asso.all[4].id,
@@ -400,7 +400,7 @@ puts "Maraude 8 - Creation maraude"
 a = Maraude.new(
   title: "Les maraudes rouges",
   address_start: "16 rue de lagny, paris",
-  address_end: "13 rue de clichy, paris",
+  address_end: "15 Rue de Meaux, paris",
   description: "Les assos de maraudes mettent en place des maraudes à destination des personnes sans abri, à la rue. Le but est de maintenir un lien social, d'encourager l'orientation vers des travailleurs sociaux et d'alerter les pouvoirs publics en recensant les situations rencontrées.",
   # photo: "https://images.unsplash.com/photo-1531171074112-291d5807273d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2550&q=80",
   asso_id: Asso.all[0].id,
