@@ -8,7 +8,7 @@ class BookingsController < ApplicationController
     @booking = Booking.new
     @booking.user = current_user
     @booking.maraude = @maraude
-    current_user.update(user_params)
+    # current_user.update(user_params)
     if @booking.save
       redirect_to dashboard_path
     else
