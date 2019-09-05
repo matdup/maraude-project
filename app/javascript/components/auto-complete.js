@@ -4,7 +4,12 @@ const initAutocomplete = () => {
   const addressInput = document.querySelectorAll('.autocomplete');
   if (addressInput) {
     addressInput.forEach((input) => {
-      places({ container: input });
+      let placesAutocomplete = places({
+        container: input
+      }).configure({
+        language: "fr",
+        countries: ["fr"]
+      });
 
     })
   }
