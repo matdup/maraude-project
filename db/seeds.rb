@@ -23,17 +23,17 @@ User.create!(
 puts "User 1 - Marie-France : compte créé !"
 puts ""
 
-puts "User 2 : Creation du compte de Wadi !"
+puts "User 2 : Creation du compte de Bruce !"
 User.create!(
-  first_name: "Wadi",
-  last_name: "Ben Mimoun",
+  first_name: "Bruce",
+  last_name: "Banner",
   address: "13 rue de clichy, paris",
   photo: "https://randomuser.me/api/portraits/men/17.jpg",
-  email: "wadi.benmimoun@outlook.com",
+  email: "bruce.banner@outlook.com",
   password: "123456",
   phone_number: "06 53 38 95 10"
   )
-puts "User 2 - Wadi : compte créé !"
+puts "User 2 - Bruce : compte créé !"
 puts ""
 
 puts "User 3 : Creation du compte de Michael B!"
@@ -101,17 +101,17 @@ User.create!(
 puts "User 7 - Edward : compte créé !"
 puts ""
 
-puts "User 8 : Creation du compte de Bruce !"
+puts "User 8 : Creation du compte de Wadi !"
 User.create!(
-  first_name: "Bruce",
-  last_name: "Banner",
+  first_name: "Wadi",
+  last_name: "Ben Mimoun",
   address: "1 rue de Rivoli",
   photo: "https://randomuser.me/api/portraits/men/67.jpg",
-  email: "bruce.banner@outlook.com",
+  email: "wadi.benmimoun@outlook.com",
   password: "123456",
   phone_number: "06 53 38 95 10"
   )
-puts "User 8 - Bruce : compte créé !"
+puts "User 8 - Wadi : compte créé !"
 puts ""
 
 ################################################################################
@@ -279,8 +279,8 @@ a = Maraude.new(
   asso_id: Asso.all[0].id,
   capacity: 10,
   status: "available",
-  starts_at: DateTime.new(2019, 9, 6, 21, 30),
-  ends_at: DateTime.new(2019, 9, 6, 23, 30)
+  starts_at: DateTime.new(2019, 9, 15, 21, 30),
+  ends_at: DateTime.new(2019, 9, 15, 23, 30)
 )
 a.remote_photo_url = "https://images.unsplash.com/photo-1526928648912-6b2ac1cc14d7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=3902&q=80"
 a.save!
@@ -388,8 +388,8 @@ a = Maraude.new(
   asso_id: Asso.all[5].id,
   capacity: 40,
   status: "available",
-  starts_at: DateTime.new(2019, 6, 17, 17, 30),
-  ends_at: DateTime.new(2019, 6, 17, 19, 30)
+  starts_at: DateTime.new(2019, 11, 17, 17, 30),
+  ends_at: DateTime.new(2019, 11, 17, 19, 30)
 )
 a.remote_photo_url = "https://images.unsplash.com/photo-1509059852496-f3822ae057bf?ixlib=rb-1.2.1&auto=format&fit=crop&w=2056&q=80"
 a.save!
@@ -424,8 +424,8 @@ a = Maraude.new(
   asso_id: Asso.all[0].id,
   capacity: 15,
   status: "available",
-  starts_at: DateTime.new(2019, 8, 27, 21, 30),
-  ends_at: DateTime.new(2019, 8, 27, 23, 30)
+  starts_at: DateTime.new(2019, 9, 27, 21, 30),
+  ends_at: DateTime.new(2019, 9, 27, 23, 30)
 )
 a.remote_photo_url = "https://images.unsplash.com/photo-1529520161780-2573a0926b31?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2550&q=80"
 a.save!
@@ -478,8 +478,8 @@ a = Maraude.new(
   asso_id: Asso.all[3].id,
   capacity: 30,
   status: "available",
-  starts_at: DateTime.new(2019, 7, 7, 21, 30),
-  ends_at: DateTime.new(2019, 7, 7, 23, 30)
+  starts_at: DateTime.new(2019, 10, 7, 21, 30),
+  ends_at: DateTime.new(2019, 10, 7, 23, 30)
 )
 a.remote_photo_url = "https://images.unsplash.com/photo-1502444330042-d1a1ddf9bb5b?ixlib=rb-1.2.1&auto=format&fit=crop&w=2553&q=80"
 a.save!
@@ -514,8 +514,8 @@ a = Maraude.new(
   asso_id: Asso.all[0].id,
   capacity: 15,
   status: "available",
-  starts_at: DateTime.new(2019, 2, 24, 21, 30),
-  ends_at: DateTime.new(2019, 2, 24, 23, 30)
+  starts_at: DateTime.new(2019, 12, 24, 21, 30),
+  ends_at: DateTime.new(2019, 12, 24, 23, 30)
 )
 a.remote_photo_url = "https://images.unsplash.com/photo-1531206715517-5c0ba140b2b8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=3150&q=80"
 a.save!
@@ -550,8 +550,8 @@ a = Maraude.new(
   asso_id: Asso.all[5].id,
   capacity: 25,
   status: "available",
-  starts_at: DateTime.new(2019, 9, 7, 21, 30),
-  ends_at: DateTime.new(2019, 9, 7, 23, 30)
+  starts_at: DateTime.new(2019, 8, 7, 21, 30),
+  ends_at: DateTime.new(2019, 8, 7, 23, 30)
 )
 a.remote_photo_url = "https://images.unsplash.com/photo-1523325343676-4136d25d013b?ixlib=rb-1.2.1&auto=format&fit=crop&w=2550&q=80"
 a.save!
