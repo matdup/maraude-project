@@ -35,7 +35,7 @@
             <% if user_signed_in? %>
 
               <li class="nav-item">
-                <p style="margin: 0;" class="nav-link <%= "home-nav-item color-black" if params[:controller] == "maraudes" && params[:action] == "index" %>">Bonjour <%= current_user.first_name %></p>
+                <p style="margin: 0;" class="nav-link <%= "home-nav-item color-black" if params[:controller] == "maraudes" && params[:action] == "index" %>">Bonjour 👋  <%= current_user.first_name %></p>
               </li>
               <li class="nav-item dropdown">
                 <% if current_user.assos != [] %>
