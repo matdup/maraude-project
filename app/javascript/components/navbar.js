@@ -18,6 +18,7 @@ const initUpdateNavbarOnScroll = () => {
         navbar.classList.remove('navbar-black');
         navbar.classList.remove('navbar-small-height');
         // if (navItems.length > 0) {
+        // if (navItems.length > 0) {
         //   navItems.forEach((item) => {
         //     item.classList.add('color-white');
         //   })
