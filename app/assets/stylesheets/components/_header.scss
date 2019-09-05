@@ -62,12 +62,6 @@ header {
 
 }
 
-.scroll-container{
-  scroll-behavior: smooth;
-   overflow-y: scroll;
-
-
-}
 
 
 ul li a,{
@@ -106,7 +100,7 @@ ul li a,{
 }
 .wrapper {
   background-color: #fff;
-  padding: 65px 0px 150px 0;
+  padding: 65px 0px 65px 0;
 }
 .wrapper h2,
 .wrapper p{
@@ -217,6 +211,17 @@ ul li a,{
     font-size: 1.25em;
     padding: 12px 0;
   }
+
+.team-member{
+  text-align: center;
+}
+
+p.large.text-muted{
+  margin-top: 25px;
+  text-align: justify;
+  color: #222729 !important;
+  margin-bottom: 35px;
+}
 
 
 
