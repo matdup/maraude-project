@@ -1,9 +1,14 @@
-<div class="maraude-show-background" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('<%= cl_image_path(@maraude.photo) %>');">
-    <div class="container-retour" data-aos="fade-up">
+<div class="maraude-show-background" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('<%= cl_image_path(@maraude.photo) %>');position: relative;">
+    <div class="back-to-maraudes">
       <%= link_to maraudes_path do %>
-        <h3 id="section-retour"><i class="far fa-arrow-alt-circle-left"></i>Retour aux missions</h3>
+        <h3 class="section-retour"><i class="far fa-arrow-alt-circle-left" style="padding-right: 10px;"></i>Retour aux missions</h3>
       <% end %>
     </div>
+    <!-- <div class="container-retour" data-aos="fade-up">
+      <%#= link_to maraudes_path do %>
+        <h3 id="section-retour"><i class="far fa-arrow-alt-circle-left"></i>Retour aux missions</h3>
+      <%# end %>
+    </div> -->
 
   <div class="maraude-show-card">
     <div class="maraude-card-left-part">
@@ -19,15 +24,12 @@
         <%= cl_image_tag(@maraude.photo) %>
         <h3><strong><%= @maraude.title %></strong></h3>
         <p><%= @maraude.description %></p>
-        <div class="maraude-more-infos">
-          <p>Plus d'infos</p>
-        </div>
       </div>
       <div class="maraude-show-details">
-        <p style="margin-top: 39px;"><strong><%= I18n.l(@maraude.starts_at, format: :long, locale: :'fr')%> / <%= @maraude.ends_at.strftime("%H:%M") %></strong></p>
-         <p class="mx-5" style="font-weight: 600;"><i class="fas fa-map-marker-alt"></i> départ : <%= @maraude.address_start %></p>
-         <p class="mx-5" style="font-weight: 600;"><i class="fas fa-flag-checkered"></i> arrivée : <%= @maraude.address_end %></p>
-         <p class="mb-5">La demande de <%=@maraude.asso.name %> est de <strong><%= @maraude.capacity %> personnes</strong>. Il reste <strong> <%= @remaining_places %> </strong> places !</p>
+        <p style="margin-top: 39px;"><i class="far fa-calendar-alt" style="padding-right: 6px;"></i><strong><%= I18n.l(@maraude.starts_at, format: :long, locale: :'fr')%> / <%= @maraude.ends_at.strftime("%H:%M") %></strong></p>
+         <p class="" style="font-weight: 600;"><i class="fas fa-map-marker-alt" style="padding-right: 6px;"></i> départ : <%= @maraude.address_start %></p>
+         <p class="" style="font-weight: 600;"><i class="fas fa-flag-checkered" style="padding-right: 6px;"></i> arrivée : <%= @maraude.address_end %></p>
+         <p class="mb-5">La demande de <%=@maraude.asso.name %> est de <strong><%= @maraude.capacity %> personnes</strong>.<span style="background-color:#FED137">Il reste <strong> <%= @remaining_places %> </strong> places !</p></span>
 
 
          <div class="mt-3">
@@ -38,34 +40,17 @@
                <h2>Il n'y a plus de place</h2>
              <% else %>
                <div class="mb-4">
-                 <p>Inscrivez-vous :</p>
+                 <p>Organisé par :</p>
+                 <div class="asso-infos">
+                  <%= cl_image_tag(@maraude.asso.photo, width: 100, height: 100, crop: :fill, class: "image-bordered") %>
+                  <div style="padding-left: 10px;">
+                   <p><%= @maraude.asso.name %></p>
+                   <p><%= @maraude.asso.address %></p>
+                   <p><%= @maraude.asso.phone_number %></p>
+                  </div>
+                 </div>
                </div>
                <%= simple_form_for [@maraude, @booking] do |f| %>
-
-                 <!-- <div class="d-flex justify-content-between mb-4"> -->
-
-                   <div class="" style="">
-                     <%=  text_field_tag "user[first_name]", current_user.first_name, placeholder: 'first name' %>
-                   </div>
-
-                   <div class="" style="">
-                     <%= text_field_tag "user[last_name]", current_user.last_name, placeholder: 'last name' %>
-                   </div>
-
-                 <!-- </div> -->
-
-                 <!-- <div class="d-flex justify-content-between mb-4 border-0"> -->
-
-                   <div class="" style="">
-                     <%= text_field_tag "user[email]", current_user.email, placeholder: 'email' %>
-                   </div>
-
-                   <div class="" style="">
-                     <%= text_field_tag "user[phone_number]", current_user.phone_number, placeholder: 'phone number' %>
-                   </div>
-
-                 <!-- </div> -->
-
                  <div class="d-flex justify-content-center mb-4">
                    <%= f.submit "Participez à cette maraude", class: "btn", style: "background-color: #FFE436; border-radius: 15px; padding: 10px; width: 330px;"%>
                  </div>
@@ -77,9 +62,4 @@
       </div>
     </div>
   </div>
-</div>
-<div class="maraude-asso-infos d-none">
-  <p><%= @maraude.asso.name %></p>
-  <p><%= @maraude.asso.address %></p>
-  <p><%= @maraude.asso.phone_number %></p>
 </div>
