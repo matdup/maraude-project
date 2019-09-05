@@ -8,7 +8,7 @@ const buildMap = () => {
   mapboxgl.accessToken = mapElement.dataset.mapboxApiKey;
   return new mapboxgl.Map({
     container: 'map',
-    style: 'mapbox://styles/mapbox/streets-v10'
+    style: 'mapbox://styles/mapbox/dark-v10'
   });
 };
 
@@ -154,7 +154,7 @@ const itineraire = (map, steps, id = 0) => {
     },
     "paint": {
       // pour changer la couleur de la route
-      "line-color": "#009661",
+      "line-color": "#FEC501",
       "line-width": 8,
       "line-opacity": (id === 0) ? 0.8 : 0
     }
