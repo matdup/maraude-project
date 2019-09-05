@@ -69,12 +69,27 @@ body {
 
 .maraude-show-background {
   width: 100vw;
-  min-height: 100vh;
+  height: calc(100vh - 79px);
   background-size: cover;
   background-position: center;
   display: flex;
   justify-content: center;
   align-items: center;
+  .back-to-maraudes {
+    position: absolute;
+    top: 5%;
+    left: 7%;
+    a:hover {
+      text-decoration: none;
+    }
+
+    .section-retour {
+      color: white;
+      &:hover {
+        color: #fed136;
+      }
+    }
+  }
   .maraude-show-card {
     background: white;
     position: absolute;
@@ -138,8 +153,6 @@ body {
   }
 }
 
-.maraude-asso-infos {
-  width: 85vw;
-  margin-left: auto;
-  margin-right: auto;
+.asso-infos {
+  display: flex;
 }
