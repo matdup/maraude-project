@@ -19,9 +19,8 @@
                     <h2><%= maraude.title %></h2>
                     <p><%= I18n.l(maraude.starts_at, format: :long, locale: :'fr')%></p>
                   </div>
-                  <h2><%= maraude.capacity.to_i - maraude.bookings.size %> places disponibles</h2>
-                  <img src="<%= maraude.asso.photo %>" class="card-trip-user avatar-bordered" />
-
+                  <h2><%= maraude.capacity.to_i - maraude.bookings.size %> places</h2>
+                  <%= cl_image_tag(maraude.asso.photo, width: 40, height: 40, crop: :fill, class: "avatar-bordered card-trip-user") %>
                 </div>
               </div>
           <% end %>

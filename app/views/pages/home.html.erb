@@ -143,7 +143,7 @@
                 <p><%= maraude.starts_at.strftime("%A %d %B %H:%M") %></p>
               </div>
               <h2><%= maraude.capacity.to_i - maraude.bookings.size %> places</h2>
-              <img src="<%= maraude.asso.photo %>" class="card-trip-user avatar-bordered" />
+              <%= cl_image_tag(maraude.asso.photo, width: 40, height: 40, crop: :fill, class: "avatar-bordered card-trip-user") %>
             </div>
           </div>
           <% end %>
