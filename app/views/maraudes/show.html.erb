@@ -1,7 +1,7 @@
 <div class="maraude-show-background" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('<%= cl_image_path(@maraude.photo) %>');position: relative;">
     <div class="back-to-maraudes">
-      <%= link_to maraudes_path do %>
-        <h3 class="section-retour"><i class="far fa-arrow-alt-circle-left" style="padding-right: 10px;"></i>Retour aux missions</h3>
+      <%= link_to request.referer do %>
+        <h3 class="section-retour"><i class="far fa-arrow-alt-circle-left" style="padding-right: 10px;"></i>Retour aux maraudes</h3>
       <% end %>
     </div>
     <!-- <div class="container-retour" data-aos="fade-up">
