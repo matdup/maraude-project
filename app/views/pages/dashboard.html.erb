@@ -4,6 +4,11 @@
 
       <h4>Alvéole</h4>
 
+       <!-- <div class="avatar-image" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab" aria-controls="v-pills-messages" aria-selected="false">
+        <a><%= image_tag current_user.photo, class: "avatar-large-dashboard" %></a>
+      </div> -->
+
+
       <!-- <div style="display: flex;height: 58px;"> -->
         <a class="nav-link nav-link-dashboard active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true">Mes réservations</a>
       <!-- </div> -->
@@ -18,10 +23,7 @@
         <!-- </div> -->
       <% end %>
 
-      <div style="flex-grow: 1;display: flex;justify-content: center;">
-        <a class="nav-link avatar-image" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab" aria-controls="v-pills-messages" aria-selected="false"><%= image_tag current_user.photo, class: "avatar-large-dashboard" %></a>
-      </div>
-    </div>
+         </div>
 
     <div class="right-part p-3 bg-white rounded">
         <%= link_to " ← Retour aux maraudes", maraudes_path %>

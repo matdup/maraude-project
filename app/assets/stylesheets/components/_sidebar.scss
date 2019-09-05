@@ -1,13 +1,13 @@
 .sidebar {
   width:20%;
-  background-color: rgb(240, 240, 240);
+  background-color: #202528;
 
 }
 
 .sidebar a {
   // background-color: #fdfa72 !important;
   // padding-top: 20px;
-  color: black;
+  color: white;
   padding-left: 30px;
   font-size: larger;
 
@@ -18,6 +18,7 @@
   margin-top: 36px;
   margin-bottom: 25px;
   font-size: 45px;
+  color:white;
 }
 
 .avatar-large-dashboard {
@@ -28,6 +29,17 @@
 
 }
 
-.avatar-image{
-  align-self: flex-end;
-}
+// .avatar-image{
+//   width: 40px;
+//   border-radius: 50%;
+//   height : 40px;
+//   margin-bottom: 40px;
+//   margin-left: 19%;
+//   margin-top: 20px;
+
+
+
+//  .avatar-image:hover {
+// cursor:pointer;
+//  }
+
